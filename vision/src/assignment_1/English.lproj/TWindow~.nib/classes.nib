@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = MyDocument; LANGUAGE = ObjC; SUPERCLASS = NSDocument; }, 
+        {CLASS = TImageView; LANGUAGE = ObjC; SUPERCLASS = NSImageView; }, 
+        {
+            ACTIONS = {changeThreshold = id; }; 
+            CLASS = TWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                thresholdSliderControl = NSSlider; 
+                thresholdTextControl = NSTextField; 
+                view = TImageView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

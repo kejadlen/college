@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+/usr/local/bin/iperf -c $1 --udp --port $2 --bandwidth 2m --time 60 --len $3

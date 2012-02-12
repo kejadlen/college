@@ -1,0 +1,24 @@
+------------------------------------------------------------
+Server listening on UDP port 5001
+Receiving 1470 byte datagrams
+UDP buffer size: 8.00 KByte (default)
+------------------------------------------------------------
+[1968] local 192.0.2.24 port 5001 connected with 192.0.2.25 port 1052
+[ ID] Interval       Transfer     Bandwidth       Jitter   Lost/Total Datagrams
+[1968]  0.0-10.0 sec  1.25 MBytes  1.05 Mbits/sec  0.000 ms    0/  893 (0%)
+[1968] local 192.0.2.24 port 5001 connected with 192.0.2.25 port 1053
+[ ID] Interval       Transfer     Bandwidth       Jitter   Lost/Total Datagrams
+[1968]  0.0- 9.8 sec  1.25 MBytes  1.07 Mbits/sec  0.367 ms    0/  893 (0%)
+[1968] local 192.0.2.24 port 5001 connected with 192.0.2.23 port 3034
+[ ID] Interval       Transfer     Bandwidth       Jitter   Lost/Total Datagrams
+[1968]  0.0- 9.9 sec  1.25 MBytes  1.06 Mbits/sec  0.003 ms    0/  893 (0%)
+[1968] local 192.0.2.24 port 5001 connected with 192.0.2.25 port 1054
+[ ID] Interval       Transfer     Bandwidth       Jitter   Lost/Total Datagrams
+[1968]  0.0-10.4 sec  9.17 MBytes  7.39 Mbits/sec  4.000 ms   43/ 6585 (0.65%)
+[1968] WARNING: ack of last datagram failed after 10 tries.
+[1968] local 192.0.2.24 port 5001 connected with 192.0.2.23 port 3047
+[ ID] Interval       Transfer     Bandwidth       Jitter   Lost/Total Datagrams
+[1968]  0.0-10.0 sec  12.6 MBytes  10.6 Mbits/sec  1.997 ms   58/ 9077 (0.64%)
+[1968] local 192.0.2.24 port 5001 connected with 192.0.2.25 port 1055
+[ ID] Interval       Transfer     Bandwidth       Jitter   Lost/Total Datagrams
+[1968]  0.0- 9.9 sec  10.1 MBytes  8.57 Mbits/sec  2.581 ms    0/ 7218 (0%)

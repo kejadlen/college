@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+\usepackage{pgf}
+\usepackage[left=1in,top=1in,right=1in,nohead]{geometry}
+
+\def\thesection{\Roman{section}}
+\def\thesubsection{\arabic{subsection}}
+\def\thesubsubsection{(\alph{subsubsection})}
+
+\begin{document}
+
+\begin{flushright}
+{ECE 4570}\\{E07}\\{Ben Andrews (bandrews@vt.edu)}\\{Alpha Chen (alchen@vt.edu)}\\{ECE-Blacksburg}\end{flushright}
+
+\section{In-class Experiments and Analysis}
+
+\subsection{}
+
+See Figures \ref{ping}, \ref{no_rts}, and \ref{rts}.
+
+\begin{figure}[hp]
+	\pgfimage[width=\textwidth]{ping_rts_off}
+	\caption{\emph{ping} output at receiver showing connectivity}
+	\label{ping}
+\end{figure}
+
+\begin{figure}[hp]
+	\pgfimage[width=\textwidth]{rts_off}
+	\caption{\emph{iperf} output with RTS/CTS disabled and datagram length of 50 bytes}
+	\label{no_rts}
+\end{figure}
+
+\begin{figure}[hp]
+	\pgfimage[width=\textwidth]{rts_on}
+	\caption{\emph{iperf} output with RTS/CTS enabled and datagram length of 50 bytes}
+	\label{rts}
+\end{figure}
+
+\subsection{}
+
+See Figure \ref{graph}.
+
+\begin{figure}[hp]
+	\pgfimage[width=\textwidth]{graph}
+	\caption{throughput vs. packet size with and without RTS/CTS}
+	\label{graph}
+\end{figure}
+
+\section{At-home Assignment}
+
+\subsection{}
+
+\subsection{}
+
+\subsubsection{}
+
+The throughput curves for the two scenarios intersect when the packet size is 200 bytes.
+
+\subsubsection{}
+
+We have faster throughput with RTS/CTS enabled when the packet size is 50 bytes. When the packet size is 600 bytes or more, the throughput is greater without RTS/CTS. With 200 and 400 byte packets, the throughput remains largely the same.
+
+\subsubsection{}
+
+From our data, we can see that the virtual sensing mechanism should be used mainly when transmitting with small packet sizes of up to 400 bytes. Appropriately enough, the default value is generally 400 bytes\footnote{http://en.wikipedia.org/wiki/802.11\_RTS/CTS}.
+
+\section{General Conclusions}
+
+This lab shows the RTS/CTS mechanism at work, using \emph{iperf} to measure transmission rates to a single server. We can see that RTS/CTS works best with smaller packet sizes, as the tradeoff between overhead and retransmitting makes it worth it with packet sizes of under 400 bytes. As the packet sizes get larger, the overhead incurred by RTS/CTS outweighs the cost of retransmission.
+
+There are a couple of ways this lab could be improved. First would be to position the groups in such a way to have definite hidden nodes, which should improve the performance of RTS/CTS by having more collisions at the server. Second would be to coordinate the sending and receiving efforts (as well as collect data) from a single machine, as communication between computers is far faster and more accurate than communication between humans in each group. It would be trivial to kickstart each client through SSH commands and redirect \emph{iperf}'s output to store it.
+
+Miscommunications and delays with each group can cause spurious data, as transmission rates would be affected very much if one group starts later than all the other groups and does not incur any collisions due to the lag in stopping transmission.
+
+\end{document}

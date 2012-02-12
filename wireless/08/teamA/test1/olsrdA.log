@@ -1,0 +1,99 @@
+00:41:21.369 Add neighbor: 10.0.1.1
+00:41:21.391 Add neighbor: 10.0.1.8
+00:41:21.432 Add neighbor: 10.0.1.4
+00:41:21.586 Add neighbor: 10.0.1.6
+00:41:21.624 Add neighbor: 10.0.1.7
+00:41:21.742 Add neighbor: 10.0.1.2
+00:41:22.124 Changes in neighborhood, updating routing table
+00:41:22.124 Updating MPRs
+00:41:22.124 Finish updating MPRs
+00:41:22.238 Add neighbor: 10.0.1.5
+00:41:22.577 Changes in neighborhood, updating routing table
+00:41:22.577 Updating MPRs
+00:41:22.577 Finish updating MPRs
+00:41:24.128 Changes in neighborhood, updating routing table
+00:41:24.128 Updating MPRs
+00:41:24.128 Finish updating MPRs
+00:41:24.500 Changes in neighborhood, updating routing table
+00:41:24.501 Updating MPRs
+00:41:24.501 Finish updating MPRs
+00:41:24.630 Changes in neighborhood, updating routing table
+00:41:24.630 Updating MPRs
+00:41:24.630 Finish updating MPRs
+00:41:24.844 Changes in neighborhood, updating routing table
+00:41:24.844 Updating MPRs
+00:41:24.844 Finish updating MPRs
+00:41:25.033 Changes in neighborhood, updating routing table
+00:41:25.030 Updating MPRs
+00:41:25.030 Change neighbor status: select 10.0.1.4 as MPR
+00:41:25.030 Finish updating MPRs
+00:41:25.030 Add kernel route 10.0.1.4 via 10.0.1.4 hopcount 1
+00:41:25.057 Changes in neighborhood, updating routing table
+00:41:25.057 Updating MPRs
+00:41:25.057 Change neighbor status: select 10.0.1.4 as MPR
+00:41:25.057 Change neighbor status: select 10.0.1.1 as MPR
+00:41:25.057 Finish updating MPRs
+00:41:25.057 Add kernel route 10.0.1.1 via 10.0.1.1 hopcount 1
+00:41:25.454 Changes in topology, updating routing table
+00:41:25.455 Add kernel route 10.0.1.8 via 10.0.1.1 hopcount 2
+00:41:25.455 Add kernel route 10.0.1.7 via 10.0.1.1 hopcount 2
+00:41:25.455 Add kernel route 10.0.1.6 via 10.0.1.1 hopcount 2
+00:41:25.455 Add kernel route 10.0.1.5 via 10.0.1.1 hopcount 2
+00:41:25.599 Changes in topology, updating routing table
+00:41:25.681 Changes in topology, updating routing table
+00:41:25.681 Delete kernel route 10.0.1.8 via 10.0.1.1 hopcount 2
+00:41:25.681 Delete kernel route 10.0.1.7 via 10.0.1.1 hopcount 2
+00:41:25.681 Delete kernel route 10.0.1.5 via 10.0.1.1 hopcount 2
+00:41:25.682 Add kernel route 10.0.1.8 via 10.0.1.4 hopcount 2
+00:41:25.682 Add kernel route 10.0.1.7 via 10.0.1.4 hopcount 2
+00:41:25.682 Add kernel route 10.0.1.5 via 10.0.1.4 hopcount 2
+00:41:25.682 Add kernel route 10.0.1.2 via 10.0.1.4 hopcount 2
+00:41:25.833 Changes in topology, updating routing table
+00:41:25.846 Changes in neighborhood, updating routing table
+00:41:25.846 Updating MPRs
+00:41:25.846 Change neighbor status: select 10.0.1.4 as MPR
+00:41:25.846 Change neighbor status: select 10.0.1.1 as MPR
+00:41:25.846 Finish updating MPRs
+00:41:25.846 Delete kernel route 10.0.1.7 via 10.0.1.4 hopcount 2
+00:41:25.846 Delete kernel route 10.0.1.6 via 10.0.1.1 hopcount 2
+00:41:25.846 Add kernel route 10.0.1.7 via 10.0.1.7 hopcount 1
+00:41:25.846 Add kernel route 10.0.1.6 via 10.0.1.7 hopcount 2
+00:41:26.230 Changes in neighborhood, updating routing table
+00:41:26.230 Updating MPRs
+00:41:26.230 Change neighbor status: select 10.0.1.1 as MPR
+00:41:26.230 Finish updating MPRs
+00:41:26.230 Delete kernel route 10.0.1.6 via 10.0.1.7 hopcount 2
+00:41:26.230 Add kernel route 10.0.1.6 via 10.0.1.6 hopcount 1
+00:41:26.292 Changes in neighborhood, updating routing table
+00:41:26.292 Updating MPRs
+00:41:26.292 Change neighbor status: select 10.0.1.1 as MPR
+00:41:26.292 Finish updating MPRs
+00:41:26.292 Delete kernel route 10.0.1.8 via 10.0.1.4 hopcount 2
+00:41:26.292 Add kernel route 10.0.1.8 via 10.0.1.8 hopcount 1
+00:41:26.465 Changes in topology, updating routing table
+00:41:26.882 Changes in topology, updating routing table
+00:41:27.060 Changes in neighborhood, updating routing table
+00:41:27.060 Updating MPRs
+00:41:27.060 Change neighbor status: select 10.0.1.1 as MPR
+00:41:27.060 Finish updating MPRs
+00:41:27.060 Delete kernel route 10.0.1.5 via 10.0.1.4 hopcount 2
+00:41:27.060 Add kernel route 10.0.1.5 via 10.0.1.5 hopcount 1
+00:41:29.012 Changes in neighborhood, updating routing table
+00:41:29.012 Updating MPRs
+00:41:29.012 Finish updating MPRs
+00:41:29.012 Delete kernel route 10.0.1.2 via 10.0.1.4 hopcount 2
+00:41:29.012 Add kernel route 10.0.1.2 via 10.0.1.2 hopcount 1
+00:41:29.064 Changes in topology, updating routing table
+00:41:29.774 Changes in topology, updating routing table
+00:41:30.069 Changes in topology, updating routing table
+00:41:30.623 Changes in topology, updating routing table
+00:41:32.527 Changes in topology, updating routing table
+00:41:37.950 Changes in topology, updating routing table
+00:41:39.100 Changes in topology, updating routing table
+00:41:40.100 Changes in topology, updating routing table
+00:41:42.550 Changes in topology, updating routing table
+00:42:46.600 Delete neighbor: 10.0.1.1
+00:42:46.600 Changes in neighborhood, updating routing table
+00:42:46.600 Updating MPRs
+00:42:46.600 Finish updating MPRs
+00:42:46.600 Delete kernel route 10.0.1.1 via 10.0.1.1 hopcount 1

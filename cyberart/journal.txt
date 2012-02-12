@@ -1,0 +1,172 @@
+h1. CyberArts Journal - by Alpha Chen
+
+h2. 2005.09.07
+
+"The Uncanny Valley":http://en.wikipedia.org/wiki/Uncanny_Valley
+
+h2. 2005.09.12
+
+"Food Art":http://www.movable-feast.com/2005/09/food_design.html
+
+h2. Sketch 1 (Techno Junk Sculpture)
+
+* Concept: Conflict
+* destroy technology, scatter around area
+** trail of destroyed technology?
+* circuitboards
+** armor from boards
+** "Samurai armor":http://images.google.com/images?q=samurai+armor&hl=en&lr=&safe=off&sa=N&tab=ii&oi=imagest - plates held together, can have modern take on armor
+** weapons? CD, circuitboards
+* forgot the other ideas, though this was settled pretty quickly
+
+h2. 2005.09.23
+
+"Flickr interestingness":http://www.flickr.com/explore/interesting/7days/
+
+h2. 2005.09.25
+
+"Infinite cats":http://www.infinitecat.com/
+
+h2. 2005.10.01
+
+"Junk to Art":http://junktoart.net/Junk/Junk.html
+
+h2. 2005.10.09
+
+"OrganicHTML":http://organichtml.com/
+
+h2. Sketch 2 (Elemental Senses Minus Sight)
+
+* Touch, Hearing, Scent, Taste
+** four senses - four elements
+*** one element for each sense?
+** wind, water, fire, earth -- (duh)
+** spring, summer, autumn, winter
+* Nathan - chair of annoyance
+** uncomfortable chair?
+* involve the entire class
+** communal experience
+* bread
+** elemental
+** community - civilization
+*** bread (farming) -> civilization
+** breaking bread -> community
+
+h2. 2005.10.21
+
+"GigaPxl":http://gigapxl.org/project.htm
+
+"Math":http://www.justinmullins.com/
+
+h2. 2005.10.23
+
+"Potato":http://onsight.id.gu.se/~sue/potato/index.php
+
+h2. 2005.10.24
+
+"Bio-art":http://tecfa.unige.ch/perso/staf/nova/blog/2005/10/19/bio-art-and-meat-production-without-victimization/
+
+<blockquote>
+"Get in a line." 
+"Please close your eyes for the remainder of this presentation."
+
+Set up tarps.
+
+Guide them in. Start yeast.
+
+"Please be seated."
+"You should now be in a group of two or three."
+
+Add flour.
+
+"Now reach forward and examine the substance in front of you."
+"Feel the texture."
+"Make a communal mound in front of you."
+
+"Now that you've created a mound, we will add another substance to this creation."
+
+Add water.
+
+"Be careful; this part may be a little messy."
+"Now feel your new mound. Play with it. Become familiar with it."
+"The next addition you should be able to smell. Can you smell it? Let us add it."
+
+Add yeast.
+Dough.
+
+"Do you know what you have on your hands?"
+"Now, knead. Play, again."
+"Be sure to pound it against the ground, feel and hear the impact."
+
+Cleanup.
+
+
+
+Eat.
+</blockquote>
+
+h2. 2005.10.26
+
+"HIPerWall":http://vis.eng.uci.edu/cg/projects/hiperwall/
+
+h2. Project
+
+h2. 2005.11.02 - Ideas
+
+"human remote control":http://www.mercurynews.com/mld/mercurynews/business/technology/personal_technology/13102397.htm
+
+"blind sight":http://news.scotsman.com/uk.cfm?id=2176562005
+
+* Meta
+** cool idea, but no substance
+* human remote control
+** reverse control between human and computer (computer-human interaction?)
+
+<blockquote>
+Computer Human Interaction
+
+People expect to control computers. What if this were turned around?
+
+VR - people look around, their actions affect what they *see*. More immersive.
+
+Environment can control the person. Visuals change, then the human remote control moves the person.
+
+Probably not feasible to get/make a human remote control.
+</blockquote>
+
+h2. 2005.11.06
+
+"Diagrams":http://www.threetwoone.org/diagrams/
+
+h2. 2005.11.28
+
+Things to do:
+* find content
+* program displays
+* build/construct globe+moat
+
+Lighting:
+* fiberoptic cables
+* EL lights
+* xmas tree lights
+
+greenscreen videos? - Hossanah
+
+Music - Joel
+
+* sound
+* construction
+** lighting (ambient + globe)
+** moat
+** globve
+** computer + monitors/TVs
+** materials
+* content
+** audio
+** visual
+** video
+* technical (programming)
+
+Hang from ceiling? vs. making a globe
+
+Idea: throw ball from monitor to monitor. Express flatness (connectedness) of Earth.

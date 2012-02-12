@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaService1", "http://localhost/PizzaService1/PizzaService1.csproj", "{7FE798F3-1CBF-43E5-96AF-540A9DF3887E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{20D4826A-C6FA-45DB-90F4-C717570B9F32}") = "PizzaShack", "..\PizzaShack\PizzaShack.csdproj", "{8E0DF229-5BB9-4A35-AA89-820E3843243A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{7FE798F3-1CBF-43E5-96AF-540A9DF3887E}.Debug.ActiveCfg = Debug|.NET
+		{7FE798F3-1CBF-43E5-96AF-540A9DF3887E}.Debug.Build.0 = Debug|.NET
+		{7FE798F3-1CBF-43E5-96AF-540A9DF3887E}.Release.ActiveCfg = Release|.NET
+		{7FE798F3-1CBF-43E5-96AF-540A9DF3887E}.Release.Build.0 = Release|.NET
+		{8E0DF229-5BB9-4A35-AA89-820E3843243A}.Debug.ActiveCfg = Debug|Pocket PC
+		{8E0DF229-5BB9-4A35-AA89-820E3843243A}.Debug.Build.0 = Debug|Pocket PC
+		{8E0DF229-5BB9-4A35-AA89-820E3843243A}.Debug.Deploy.0 = Debug|Pocket PC
+		{8E0DF229-5BB9-4A35-AA89-820E3843243A}.Release.ActiveCfg = Release|Pocket PC
+		{8E0DF229-5BB9-4A35-AA89-820E3843243A}.Release.Build.0 = Release|Pocket PC
+		{8E0DF229-5BB9-4A35-AA89-820E3843243A}.Release.Deploy.0 = Release|Pocket PC
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,92 @@
+\documentclass[11pt]{article}
+\usepackage{pgf}
+\usepackage[left=1in,top=1in,right=1in,nohead]{geometry}
+
+\def\thesection{\Roman{section}}
+\def\thesubsection{\arabic{subsection}}
+\def\thesubsubsection{(\alph{subsubsection})}
+
+\begin{document}
+
+\begin{flushright}
+{ECE 4570}\\{E08}\\{Ben Andrews (bandrews@vt.edu)}\\{Alpha Chen (alchen@vt.edu)}\\{ECE-Blacksburg}\end{flushright}
+
+\section{At-home Laboratory Assignment and Report}
+
+\subsection{}
+
+\subsubsection{}
+
+See Figures \ref{topology_1} and \ref{topology_2}. I could not get the \verb|print_rt| or \verb|print_log| programs to work, so these were created by reading through the \verb|olsrd.log| files. The topologies were relatively stable, and the main differences came in the end, when various machines were disconnecting from the network. Thus, the two time instances chosen with each test happened to have the same topology.
+
+\begin{figure}[hp]
+	\pgfimage[width=\textwidth]{topology1}
+	\caption{Topology layout for test 1}
+	\label{topology_1}
+\end{figure}
+
+\begin{figure}[hp]
+	\pgfimage[width=\textwidth]{topology2}
+	\caption{Topology layout for test 2}
+	\label{topology_2}
+\end{figure}
+
+\subsubsection{}
+
+Different parameter settings could have changed the topology quite a bit. Longer intervals between each of these would make the network adjust much slower to changes, and nodes coming in and out would take longer to fully establish their neighbors and MPRs.
+
+\subsection{}
+
+In the first test, there are no MPRs, since all nodes see every other node. In the second test, the only MPR is 10.0.1.7, as it is the only connection between 10.0.1.4 and the rest of the computers. This fits with the network topology.
+
+\subsection{}
+
+Using team A2's data, there was no packet loss for the entire length of the testing period. There is no need to graph this result, as such a graph would be useless.
+
+\subsection{}
+
+There was no iperf data for test 2. The results for test 1 can be found in Figure \ref{throughput_graph}
+
+\begin{figure}[hp]
+	\pgfimage[width=\textwidth]{throughput}
+	\caption{Throughput vs. time}
+	\label{throughput_graph}
+\end{figure}
+
+\subsection{}
+
+Both topologies have no packet loss, although the ping round trip delay was much faster in the second test than the first.
+
+\subsection{}
+
+See Figures \ref{rt_1}, \ref{n_1}, \ref{rt_2}, and \ref{n_2}.
+
+\begin{figure}[hp]
+	\pgfimage[width=\textwidth]{rt1}
+	\caption{Routing table for test 1}
+	\label{rt_1}
+\end{figure}
+
+\begin{figure}[hp]
+	\pgfimage[width=\textwidth]{n1}
+	\caption{Neighbors for test 1}
+	\label{n_1}
+\end{figure}
+
+\begin{figure}[hp]
+	\pgfimage[width=\textwidth]{rt2}
+	\caption{Routing table for test 2}
+	\label{rt_2}
+\end{figure}
+
+\begin{figure}[hp]
+	\pgfimage[width=\textwidth]{n2}
+	\caption{Neighbors for test 2}
+	\label{n_2}
+\end{figure}
+
+\section{General Conclusions}
+
+It is very hard to draw many conclusions from this lab. Much of this has to do with the method; the collected data did not really match up with what we were supposed to do. However, this did show how to set up and watch an OSLR network, so it was successful in that regard. It is difficult to coordinate this many groups within the short time period that we have to do the lab. 
+
+\end{document}

@@ -1,0 +1,93 @@
+File List:
+	ifcfg-eth0
+		internal network connection configuration
+	ifcfg-eth1
+		external network connection configuration
+	dhcpd.conf
+		dhcpd configuration
+	iptables.config
+		iptables configuration
+	
+	iptables_setup
+		manually load iptables rules
+	
+	startup
+		initialize laptop to act as gateway
+	shutdown
+		shuts down gateway services
+	add_ip
+		allow an internal IP to access the external network
+	rm_ip
+		remove an internal IP from accessing the external network
+		
+Firewall
+	(via the iptables_setup script)
+		#!/usr/bin/env bash
+
+		iptables --flush
+		iptables -t nat --flush
+
+		iptables --policy INPUT DROP
+		iptables --policy FORWARD DROP
+		iptables --policy OUTPUT DROP
+
+		iptables -t nat --policy PREROUTING DROP
+		iptables -t nat --policy POSTROUTING DROP
+
+		# connect to external world
+		iptables --append INPUT --destination $ETH1_IP --match state --state ESTABLISHED,RELATED -j ACCEPT
+		iptables --append OUTPUT --source $ETH1_IP -j ACCEPT
+
+		# accept connections to gateway from local network
+		iptables --append INPUT --destination 192.168.1.1 --source 192.168.1.0/24 --protocol tcp --destination-port 80 -j ACCEPT
+		iptables --append OUTPUT --destination 192.168.1.0/24 --source 192.168.1.1 -j ACCEPT
+
+		# accept forwarding from (but not to) local network
+		iptables --append FORWARD --source 192.168.1.0/24 -j ACCEPT
+		iptables --append FORWARD --destination 192.168.1.0/24 --match state --state ESTABLISHED,RELATED -j ACCEPT
+
+		# make keep-alive less of a royal pain in the butt
+		iptables --insert FORWARD --source 192.168.1.0/24 --destination ! 192.168.1.1 --protocol tcp --match state --state ESTABLISHED -j REJECT --reject-with tcp-reset
+
+		# set up DNS to go through
+		iptables -t nat --append PREROUTING --protocol udp --destination-port 53 -j ACCEPT
+		iptables -t nat --append POSTROUTING --protocol udp --destination-port 53 --out-interface eth1 -j SNAT --to-source $ETH1_IP
+
+		# set up PREROUTING to redirect HTTP to the gateway by default
+		iptables -t nat --append PREROUTING --source 192.168.1.0/24 --protocol tcp --destination-port 80 -j DNAT --to-destination 192.168.1.1
+
+	(via the add_ip script)
+		#!/usr/bin/env bash
+
+		# allow an internal IP to access the external network
+		iptables --insert FORWARD --source $1 -j ACCEPT
+		iptables --insert FORWARD --destination $1 --match state --state ESTABLISHED -j ACCEPT
+		iptables -t nat --insert PREROUTING --source $1 -j ACCEPT
+		iptables -t nat --insert POSTROUTING --source $1 --out-interface eth1 -j SNAT --to-source $ETH1_IP
+	
+	The base firewall rules were not hard to construct after understanding how iptables filters packets. The main problem we ran into was after removing internal IPs from accessing the external network, existing connections would continue to work. This is because the nat table is only used on new connections. This problem was most evident with HTTP Keep-Alive, as "new" connections would actually reuse an already existing connection with an ACK+PSH. The firewall would unknowingly forward this packet, as there were no rules in the forwarding policy to deal with this. Thus, the "Keep-Alive rule" was created to reset all such connections by default. This has the unfortunate side effect of not being able to redirect already existing HTTP connections to the gateway login page, but we deemed this an acceptable tradeoff considering the tools and specification we had to work with.
+	
+Routing
+	No.     Time        Source                Destination           Protocol Info
+	      1 0.000000    192.168.1.96          10.1.1.1              TCP      1166 > http [SYN] Seq=0 Ack=0 Win=32768 Len=0 MSS=1460 WS=0 TSV=0 TSER=0
+	      2 0.000049    10.1.1.104            10.1.1.1              TCP      1166 > http [SYN] Seq=0 Ack=0 Win=32768 Len=0 MSS=1460 WS=0 TSV=0 TSER=0
+      	  3 0.010280    10.1.1.1              10.1.1.104            TCP      http > 1166 [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 WS=0
+      	  4 0.010295    10.1.1.1              192.168.1.96          TCP      http > 1166 [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 WS=0
+
+	Here we can see the initial SNATed packet as we make a connection from the internal iPaq (192.168.1.96) to the external HTTP server (10.1.1.1). The initial packet arrives at the gateway, and is SNATed to the gateway's IP (10.1.1.104) once it leaves the gateway. Upon returning from the server, note that the packet's destination IP is for the gateway and not the iPaq. The gateway then fixes the packet by correcting the destination and sends it back to the iPaq, which is expecting the SYN+ACK response from the server.
+	
+Answers to Questions:
+	1. One security issue is that all authentication is done through the source IP on the internal network. IPs are easily spoofed, and it would be trivial to impersonate an authenticated IP and use that to access the external network. Not only can an attacker bypass authentication entirely, the admin interface is based off IP address, so that would allow an attacker to obtain admin privileges if an admin is logged on. This is made even easier due to the fact that this is wireless and therefore an IP can be easily found by sniffing traffic and then even assigned manually. A second security issue is that the passwords are stored in plaintext. This is very bad, as an attacker with physical (or network) access who can access the file can easily change user passwords or even just add new users and passwords. Even though the file is chmodded 700, the file is still read/writeable by the apache user, so if apache is compromised, then the password file is compromised as well.
+	2. A solution to the security hole from IP spoofing would be to check the MAC addresses of incoming packets and filter by MAC address as well as by IP. This basically raises the activation energy required to get free internet; MAC spoofing is much harder than IP spoofing, although it can still be done. To fix the problem with the admin interface authenticating by IP, the authentication should be moved to using sessions or cookies. To solve the latter problem of password storage in plaintext, the solution is to store hashed passwords and do a double hash on the client side to check against. However, this may or may not be cryptographically secure and we should be using SHA1 instead of MD5, as MD5 has known vulnerabilities.
+	3. Any application which acts as a server will have trouble with IP masquerading. Because the firewall only allows established and related connections through to the internal network, external clients cannot establish new connections with any internal clients. These types of applications can be "normal" servers such as HTTP, FTP, etc., or peer-to-peer applications which publish an IP so other clients can connect directly to them.
+	4. The first major problem was attacking this project without fully understanding how iptables worked. Another was with existing connections persisting after logging out, explained previously in the report. There was also trouble with PHP4 not quite working correctly with the times received from the client. Testing on the iPaq revealed that we fix the HTML and Javascript to make the webpage work on Pocket Internet Explorer. Finally, a major problem we ran into was forgetting to set ip_forward in the startup script, which took quite a long time to debug at the demo.
+	5. There was not an existing dhcpd.conf file, which I thought was strange. This was easily remedied, but I was under the impression that the file would be there and require modification, rather than requiring a new conf file to be created from scratch. A second matter was that of HTTP Keep-Alive. We would prefer this to be redirected to the gateway page, but we could not find a solution under the time constraints.
+	6	i.		0
+		ii.		0
+		iii.	0
+		iv.		0
+		v.		0
+		vi.		0
+		vii.	?
+		viii.	0
+		

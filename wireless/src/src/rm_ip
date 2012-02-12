@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+ETH1_IP=10.1.1.104
+
+iptables --delete FORWARD --source $1 -j ACCEPT
+iptables --delete FORWARD --destination $1 --match state --state ESTABLISHED -j ACCEPT
+iptables -t nat --delete PREROUTING --source $1 -j ACCEPT
+iptables -t nat --delete POSTROUTING --source $1 --out-interface eth1 -j SNAT --to-source $ETH1_IP

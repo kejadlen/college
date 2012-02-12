@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+echo "Resetting firewall..."
+iptables --flush
+iptables -t nat --flush
+
+echo "Shutting down services..."
+/etc/init.d/iptables stop
+/etc/init.d/dhcpd stop
+/etc/init.d/httpd stop

@@ -1,0 +1,155 @@
+%%% Alpha Chen
+%%% Homework Template (v.05)
+
+%% Begin Header %%
+
+%% Document Settings
+
+\documentclass[11pt]{article}
+\usepackage{graphics}
+\usepackage{amssymb,amsmath,mathdots}
+\usepackage{eucal}
+\oddsidemargin 0cm
+\topmargin -2cm
+\textwidth 16.5cm
+\textheight 23.5cm
+
+%% New Commands and Renew Commands
+
+\newcommand{\adj}{\dagger}
+\newcommand{\proof}{\noindent\textsl{Proof.} }
+\newcommand{\proofof}[1]{\noindent\textsl{Proof #1.} }
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Rationals}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Integers}{\mathbb{Z}}
+\newcommand{\Naturals}{\mathbb{N}}
+\newcommand{\nonzero}{\neq 0}
+\newcommand{\cm}{\text{,}}
+\newcommand{\pd}{\text{.}}
+\newcommand{\n}{\noindent}
+\newcommand{\Bl}{\bigl}
+\newcommand{\Br}{\bigr}
+\newcommand{\rar}{\rightarrow}
+\newcommand{\loghat}{\widehat{\log}}
+\newcommand{\iteratesuperproblem}{\refstepcounter{superproblem}\setcounter{problem}{0}}
+\newcommand{\pdv}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdvop}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\ppdv}[2]{\frac{\partial^2 #1}{\partial #2^2}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ms}{\medspace}
+\newcommand{\conj}{\overline}
+\newcommand{\B}{\mathbf}
+\newcommand{\tot}{\tfrac{\theta}{2}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\f}{\mathfrak}
+\newcommand{\Cinfty}{\mathcal{C}^\infty}
+\newcommand{\Res}[1]{\underset{#1}{\Ressans}\ms}
+\newcommand{\Zn}{\mathbb{Z}_n}
+\newcommand{\Zns}{\mathbb{Z}_n^*}
+\newcommand{\Zs}{\mathbb{Z}^*}
+\newcommand{\Znl}{\mathbb{Z}_n^\lambda}
+\newcommand{\ZnsNT}{\mathbb{Z}_n^\lambda(\NT)}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sO}{\mathcal{O}}
+\newcommand{\W}{\mathcal{W}}
+\newcommand{\Ptw}{\mathcal{P}_2}
+\newcommand{\Ttw}{\mathcal{T}_2}
+\newcommand{\lngrar}{\longrightarrow}
+\newcommand{\Zmod}[1]{\Integers/#1\Integers}
+\newcommand{\ZZmod}[2]{\Zmod{#1}\oplus\Zmod{#2}}
+\newcommand{\dZmod}[1]{\frac{\Integers}{#1\Integers}}
+\newcommand{\dZZmod}[2]{\dZmod{#1}\oplus\dZmod{#2}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\xand}{\text{, and}}
+\newcommand{\qandq}{\quad\text{and}\quad}
+\newcommand{\qorq}{\quad\text{or}\quad}
+\newcommand{\qwithq}{\quad\text{with}\quad}
+\newcommand{\xor}{\text{, or}}
+\newcommand{\Kron}[2]{\left(\frac{#1}{#2}\right)}
+\renewcommand{\P}{\mathcal{P}}
+\renewcommand{\k}{\Bbbk}
+\renewcommand{\S}{\mathcal{S}}
+\renewcommand{\O}{\mathrm{O}}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\iff}{\Longleftrightarrow}
+\renewcommand{\Re}{\Rep}
+\renewcommand{\Im}{\Imp}
+
+%% Math Operators
+
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\modop}{mod}
+\DeclareMathOperator{\modulo}{\medspace mod}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\Imp}{Im}
+\DeclareMathOperator{\Rep}{Re}
+\DeclareMathOperator{\cis}{cis}
+\DeclareMathOperator{\chord}{chord}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\Log}{Log}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\U}{U}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\NT}{NT}
+\DeclareMathOperator{\T}{T}
+\DeclareMathOperator{\Rng}{Rng}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Ressans}{Res}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\tor}{tor}
+
+%% End Header %%
+
+\begin{document}
+
+%% Problem Environments, Subject to Customization %%
+
+\newcounter{problem}
+\newcounter{superproblem}
+\refstepcounter{superproblem}
+\renewcommand{\thesuperproblem}{\Roman{superproblem}}
+
+\newenvironment{problem}[1]
+{\noindent{\large \textbf{Problem #1}}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{problemunnum}
+{\refstepcounter{problem}\noindent{\large \textbf{Problem \thesuperproblem}}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{problemcit}[1]
+{\refstepcounter{problem}\noindent{\large \textbf{Problem \theproblem}: #1}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{subproblem}[1]
+{\noindent\textbf{Part (#1)}: \begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{ps}[1]
+{\bigskip}
+{\bigskip}
+
+\newenvironment{soln}
+{\noindent}
+{\medskip}
+
+\newcommand{\prbsans}{\refstepcounter{problem}\noindent{\large\textbf{Problem \thesuperproblem-\theproblem}}\medskip}
+\newcommand{\secheading}[1]{\noindent\textsc{\large #1}}
+
+%% Standard Heading
+
+\begin{flushright}
+{George J. Schaeffer}\\{xx-xxx Class Title}\\{Professor X}\\{Assignment}\\{Date}\end{flushright}
+
+%% Document! %%
+
+\end{document}

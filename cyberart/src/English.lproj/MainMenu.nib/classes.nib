@@ -1,0 +1,14 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {"check_in" = id; fullscreen = id; "show_preference_panel" = id; }; 
+            CLASS = CAController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {montinent = Montinent; }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = Montinent; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

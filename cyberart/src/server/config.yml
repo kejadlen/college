@@ -1,0 +1,38 @@
+:server_port: 3142
+:client_port: 3141
+:size:
+  :x: 21
+  :y: 56
+:montinents:
+  - :host: mirepoix.local
+    :location:
+      :x: 2
+      :y: 2
+    :resolution:
+      :x: 1024
+      :y: 768
+    :size: 20
+  - :host: mez3s-computer.local
+    :location:
+      :x: 2
+      :y: 15
+    :resolution:
+      :x: 1680
+      :y: 1050
+    :size: 20
+  - :host: mez4s-computer.local
+    :location:
+      :x: 2
+      :y: 28
+    :resolution:
+      :x: 1680
+      :y: 1050
+    :size: 20
+  - :host: mez2s-computer.local
+    :location:
+      :x: 2
+      :y: 41
+    :resolution:
+      :x: 1680
+      :y: 1050
+    :size: 20

@@ -1,0 +1,184 @@
+\documentclass[11pt]{article}
+\usepackage{pgf}
+%\oddsidemargin 0cm
+%\topmargin -2cm
+%\textwidth 16.5cm
+%\textheight 23.5cm
+% the following produces 1 inch margins all around with no header or footer
+\topmargin  =10.mm    % beyond 25.mm
+\oddsidemargin  =0.mm   % beyond 25.mm
+\evensidemargin =0.mm   % beyond 25.mm
+\headheight =0.mm
+\headsep  =0.mm
+\textheight =220.mm
+\textwidth  =165.mm
+
+%\def\thesubsubsection{\thesubsection(\alph{subsubsection})}
+\def\thesection{\Roman{section}}
+\def\thesubsubsection{(\alph{subsubsection})}
+
+\begin{document}
+
+\begin{flushright}
+{ECE 4570}\\{E01}\\{Ben Andrews (bandrews@vt.edu)}\\{Alpha Chen (alchen@vt.edu)}\\{ECE-Blacksburg}\end{flushright}
+
+%% Document! %%
+
+\section{In-class Experiments}
+
+\subsection{Experiments with the \emph{Xircom Client Utility}}
+
+\subsubsection{}
+
+The MAC address of the IEEE 802.11b access point was 00:05:3C:06:92:10
+
+\subsubsection{}
+
+3476 bytes were received when we accessed the IP address 192.0.2.100.
+
+\subsubsection{}
+
+The signal strength varied from 90-98\% and the signal quality from 81-84\%.
+
+\subsubsection{}
+
+The link test showed no packet loss; 100\% of the packets were received.
+
+\subsection{Experiments with \emph{wsttcp}}
+
+\subsubsection{}
+
+We were able to obtain a throughput of 82.28 kBps.
+
+\subsection{Experiments with \emph{iwconfig}}
+
+\subsubsection{}
+
+To set the SSID to ``ECECS4570'' and the transmit power to 1 mW, the following command was used:
+
+\verb|$ iwconfig eth1 essid ECECS4570 txpower 0 key restricted ABCDEF4570|
+
+\subsection{Experiments with IEEE 802.11a access points}
+
+\subsubsection{}
+
+The MAC address of the IEEE 802.11a access point we used was 00:05:3C:06:93:0F.
+
+\subsubsection{}
+
+The signal level of the access point we used was 20.
+
+\section{At-home Experiments}
+
+\subsection{Experiments with \emph{ping}}
+
+\subsubsection{}
+
+To send a ping with 50 datagrams of 50 bytes to www.vt.edu, the following command is used:
+
+\begin{verbatim}
+phoenix:~# ping -c 50 -s 50 www.vt.edu
+PING www.vt.edu (198.82.160.129): 50 data bytes
+58 bytes from 198.82.160.129: icmp_seq=0 ttl=53 time=8.2 ms
+58 bytes from 198.82.160.129: icmp_seq=1 ttl=53 time=8.1 ms
+...
+58 bytes from 198.82.160.129: icmp_seq=48 ttl=53 time=8.3 ms
+58 bytes from 198.82.160.129: icmp_seq=49 ttl=53 time=8.2 ms
+
+--- www.vt.edu ping statistics ---
+50 packets transmitted, 50 packets received, 0% packet loss
+round-trip min/avg/max = 8.1/8.3/8.8 ms
+\end{verbatim}
+
+The average round trip time was 8.3 ms. There were no packets lost.
+
+\subsubsection{}
+
+For 1000 byte datagrams:
+
+\begin{verbatim}
+phoenix:~# ping -c 50 -s 1000 www.vt.edu
+PING www.vt.edu (198.82.160.129): 1000 data bytes
+1008 bytes from 198.82.160.129: icmp_seq=0 ttl=53 time=9.2 ms
+1008 bytes from 198.82.160.129: icmp_seq=1 ttl=53 time=9.3 ms
+...
+1008 bytes from 198.82.160.129: icmp_seq=48 ttl=53 time=9.2 ms
+1008 bytes from 198.82.160.129: icmp_seq=49 ttl=53 time=9.3 ms
+
+--- www.vt.edu ping statistics ---
+50 packets transmitted, 50 packets received, 0% packet loss
+round-trip min/avg/max = 9.1/9.2/9.8 ms
+\end{verbatim}
+
+The average round trip time was 9.2 ms. There were no packets lost.
+
+\subsubsection{}
+
+The round trip time for the 1000 byte datagrams was about 1 ms greater than for the 50 byte datagrams. This is most likely because we are sending 950 more bytes with the second set of pings. The majority of the round trip time is just the latency between the two computers, but the additional 1 ms is for the extra couple hundred kilobytes of data being sent.
+
+\subsection{Experiments with \emph{tracert}}
+
+\subsubsection{}
+
+\begin{verbatim}
+phoenix:~# traceroute www.yahoo.com
+traceroute: Warning: www.yahoo.com has multiple addresses; using 216.109.117.207
+traceroute to www.yahoo.akadns.net (216.109.117.207), 30 hops max, 38 byte packets
+1  64.124.101.3 (64.124.101.3)  0.435 ms  0.435 ms  0.351 ms
+2  so-4-0-0.mpr1.iad1.us.above.net (64.125.28.213)  9.022 ms  0.802 ms  0.771 ms
+3  so-0-0-0.mpr2.iad1.us.above.net (64.125.29.110)  0.807 ms  0.807 ms  0.761 ms
+4  so-6-0-0.cr2.dca2.us.above.net (64.125.27.210)  1.111 ms  1.086 ms  1.117 ms
+5  so-2-3-0.cr2.dfw2.us.above.net (64.125.29.13)  29.347 ms  29.244 ms  34.612 ms
+6  so-0-0-0.cr1.dfw2.us.above.net (64.125.28.209)  29.009 ms  29.011 ms  28.986 ms
+7  yahoo-above-gig.dfw2.above.net (64.125.12.10)  29.069 ms  29.133 ms  29.003 ms
+8  so-4-1-0.pat2.dce.yahoo.com (216.115.101.146)  57.099 ms  57.061 ms  57.136 ms
+9  ae1.p421.msr2.dcn.yahoo.com (216.115.96.187)  68.713 ms \
+   vlan201-msr1.dcn.yahoo.com (216.115.96.163)  57.377 ms \
+   vlan221-msr2.dcn.yahoo.com (216.115.96.167)  68.772 ms
+10  ge2-2.bas2-m.dcn.yahoo.com (216.109.120.153)  57.465 ms \
+    ge3-1.bas2-m.dcn.yahoo.com (216.109.120.146)  68.805 ms \
+    ge9-3.bas2-m.dcn.yahoo.com (216.109.120.155)  68.764 ms
+11  p20.www.dcn.yahoo.com (216.109.117.207)  57.567 ms  68.869 ms  57.724 ms
+\end{verbatim}
+
+\subsubsection{}
+
+\emph{traceroute} sends three probes for each ttl, so one delay for each probe is outputted by the program.
+
+\subsection{Experiments with \emph{netstat}}
+
+\subsubsection{}
+
+\emph{netstat} reported 4333416 TCP segments received before downloading the file.
+
+\subsubsection{}
+
+After downloading the file, there were 4333480 segments received.
+
+\subsubsection{}
+
+FTP reported that the file was 55719 bytes, and transferred at 98.97 KBps.
+
+\subsubsection{}
+
+Ethereal reports that 57933 bytes of FTP data were received at 104408.799 bytes/second (101.96 KBps). Considering that there is protocol overhead, this is expected; 41 packets were received with 54 extra bytes each. That corresponds to 20 bytes for TCP, 20 for IP, and 14 for Ethernet. The variation in throughput is likely due to the way each program does the calculation. FTP most likely solely calculates the data transfer, while Ethereal includes the overhead in its calculation.
+
+\subsection{Experiments with \emph{Ethereal}}
+
+\subsubsection{}
+
+The initial GET requeset was sent at time 2.297706 and the response was received at 2.339319. A simple calculation reveals that the server responded in 4.16 ms.
+
+\subsubsection{}
+
+\pgfimage[width=\textwidth]{ethereal}
+
+\section{General Conclusions}
+
+This lab provided a quick and general overview of how to monitor various wireless settings in both Windows and Linux. A collection of utilities was used, from the basic \emph{ping} to the complex \emph{Ethereal}. The only hard part was with the Linux configuration; I believed that the SSID and WEP password were not case-sensitive, but they were, which made getting the \verb|if|-scripts to work take much longer than it should have.
+
+One thing that made this lab slightly harder was the fact that my internet provider blocks ICMP. This prevented me from using \emph{ping} and \emph{traceroute} from my home. However, it is fortunate that I have access to Linux servers which do not have ICMP blocked, so that I could finish this assignment. In the future, it may be good to keep in mind that NTC (which many off-campus students have as a provider) blocks ICMP, and it may have been much more difficult to finish this lab for people who do not have access to ``external'' servers.
+
+Another interesting thing that I noticed was that while Google responded to pings of small packets, it did not respond to my pings of large packets (of 1000 bytes) from one computer but did respond to those large packet pings from another computer! Unfortunately, I did not have to time to investigate this further; the server with rejected pings was located at Above.net, while the one with accepted pings was on-campus.
+
+\end{document}

@@ -1,0 +1,11 @@
+kernel vec4 thresholdEffect(sampler image, float threshold)
+{
+	vec4 s;
+	vec3 rgb;
+	float c;
+	s = sample(image, samplerCoord(image));
+	rgb = s.rgb;
+	c = (rgb[0] + rgb[1] + rgb[2]) / 3.0;
+	s.rgb = (c >= (1.0-threshold)) ? vec3(1.0, 1.0, 1.0) : vec3(c, c, c);
+	return s;
+}

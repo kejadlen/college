@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+#echo -n "Datagram length: "
+#read length
+
+#echo
+
+/opt/local/bin/iperf -s --udp --port 5000 --len $1 &
+/opt/local/bin/iperf -s --udp --port 5001 --len $1 &
+/opt/local/bin/iperf -s --udp --port 5002 --len $1 &
+
+wait

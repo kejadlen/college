@@ -1,0 +1,21 @@
+A. Artistic Review -- What is the work trying to say?
+Critique the message or idea that the concept is trying to communicate. So first, tell us what you think that idea is. (No fair copying from the on-line description. You must tell us what you understood from seeing it.) Then, describe how you react to the message or idea Ñ and if you heard other people's reactions, report them. Does this idea make you understand something in a new way? is there an association you have with this idea that gets in the way of you experiencing the concept? Are the artists doing the strongest thing they could or are they avoiding confronting the issues that are part of the idea?
+
+The idea that our project is trying to convey is that of a "flat world". This concept came from "The World is Flat", by Thomas Friedman. However, this has slowly changed as we worked, and our project is now about how various elements of our world interact and create the whole. I suggested that a possible theme along these lines could be "the whole is greater than the sum of its parts".
+
+At least, that is what I see from the latest iteration of our project. There are three distinct parts of the project; the content, audio, and interactivity. The content expresses the differences between each element (continent). The audio has songs for each element that come together to form a harmonious composition. This not only shows differences, but also how each distinct part can come together to form something better than just the sum of the parts. I think the interactivity is more ambiguous, so it can be used to advance a variety of different visions.
+
+Our project currently has a visual theme of falling, or raining, displays. However, I'm not sure how this visual aspect ties into the theme besides being pleasing to look at. It doesn't suggest a flat world, or even the whole world, to me. There's a slight suggestion that each drop forms the rain, but I don't think this is a very strong association with the theme.
+
+The audio definitely fits very strongly with the general theme of the world as a sum of its elements. Each tune is very distinctive by itself, but they come together naturally to form something else.
+
+It seems that the interactivity is more related to the flat world concept. It's a pretty good representation of what makes the world flat. The internet (among other things) levels the playing field, and I think this does a good job conveying that concept while being interesting and dynamic due to the interactivity.
+
+B. Design Review -- How is the work trying to say it?
+How well does the proposed form of the work of art communicate? Again, first tell us what you think the work of art will be like. Describe your understanding of the experience of it. Then describe what can be done better. Does this engage the audience appropriately for its message? (For example, if it is an all-encompassing idea, is the piece all-encompassing?) Does the technology seem reasonable? Is there a technology or hack that would make this work better? What can taken out of the project concept to make it clearer? Is making the idea clearer, making it better? What might be added?
+
+This project could choose a theme and have all there parts stick to that theme better, as I mentioned above. The audio suggests the "whole" theme, the interactivity the "flat" theme, and the displays a general "world" them. A single theme could really tie the three aspects together.
+
+One idea I had for the displays would be making one cohesive thing out of all of the monitors. The "whole is greater than the sum of the parts" theme could definitely be done well with seven or so displays; each display could form a part of a whole. Currently, there is no plan to unify what is being displayed, but this possibility should be examined.
+
+On the other hand, the displays suggest a "global" theme, which is supported both by the interactivity and audio. So perhaps this could be emphasized, and the message broadened. Either way, unifying the themes of the three components would be good.

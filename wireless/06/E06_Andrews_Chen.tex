@@ -1,0 +1,95 @@
+\documentclass[11pt]{article}
+\usepackage{pgf}
+\usepackage[left=1in,top=1in,right=1in,nohead]{geometry}
+
+%\def\thesubsubsection{\thesubsection(\alph{subsubsection})}
+\def\thesection{\Roman{section}}
+\def\thesubsubsection{(\alph{subsubsection})}
+
+\begin{document}
+
+\begin{flushright}
+{ECE 4570}\\{E06}\\{Ben Andrews (bandrews@vt.edu)}\\{Alpha Chen (alchen@vt.edu)}\\{ECE-Blacksburg}\end{flushright}
+
+\section{In-class Experiments and Analysis}
+
+\subsection{Experiments with the Bluetooth piconet}
+
+\subsubsection{}
+
+The MAC addresses of the Bluetooth adapters were 00:10:A4:C8:A9:3C and 00:10:A4:C8:AA:7B.
+
+\subsubsection{}
+
+There are four basic Bluetooth application profiles\footnote{http://www.conniq.com/Bluetooth/Bluetooth\_profile.htm}: Generic Access Profile, Serial Port Profile, Service Discovery Profile, and Generic Object Exchange Profile.
+
+\subsection{Experiments with Bluetooth and 802.11b interference}
+
+\subsubsection{}
+
+See Figures \ref{ping}, \ref{1Mb_no_bluetooth}, and \ref{1Mb_w_bluetooth}.
+
+\begin{figure}[hp]
+	\pgfimage[width=\textwidth]{ping}
+	\caption{\emph{ping} output}
+	\label{ping}
+\end{figure}
+
+\begin{figure}[hp]
+	\pgfimage[width=\textwidth]{1MbNoBlue}
+	\caption{\emph{netperf} output showing thoughput at 1 Mbps without interference}
+	\label{1Mb_no_bluetooth}
+\end{figure}
+
+\begin{figure}[hp]
+	\pgfimage[width=\textwidth]{1MbWBlue}
+	\caption{\emph{netperf} output showing thoughput at 1 Mbps with interference}
+	\label{1Mb_w_bluetooth}
+\end{figure}
+
+\subsubsection{}
+
+See Figure \ref{graph}
+
+\begin{figure}[hp]
+	\pgfimage[width=\textwidth]{graph}
+	\caption{Throughput results}
+	\label{graph}
+\end{figure}
+
+\subsection{Discussion of results}
+
+\subsubsection{}
+
+It is apparent from Figure \ref{graph} that there is a significant amount of interference between Bluetooth and 802.11b. The throughput drops roughly 50\% for all data rates.
+
+\subsubsection{}
+
+\begin{eqnarray*}
+T^m_{data}(L) & = & tPLCPPreamble + tPLCPHeader + \frac{8*(28 + L)}{m * 1000000} \\
+& = & 144\mu + 48\mu + 0.001 = 0.0013~\textrm{sec}\\
+T^n_{ack} & = & tPLCPPreamble + tPLCPHeader + \frac{8*14}{n * 1000000} \\
+& = & 144\mu + 48\mu + 5.6\cdot 10^{-5} = 0.248~\textrm{msec} \\
+\overline{T}_{bk} & = & \frac{CW\textrm{min}}{2} * aSlotTime \\
+& = & 15.5 * 20\mu = 310~\mu\textrm{sec} \\
+\end{eqnarray*}
+\begin{eqnarray*}
+T(m,n) & = & \frac{8*L}{aDIFSTime + \overline{T}_{bk} + T^m_{data}(L) + aSIFSTime + T^n_{ack}} \\
+& = & \frac{12000}{50\mu + 310\mu + 0.0013 + 10\mu + 0.248\textrm{m}} = 6.26~\textrm{Mbps}\\
+\end{eqnarray*}
+
+\subsubsection{}
+
+The measured throughput at the ``auto'' setting was 4.49, and indeed less than our theoretical maximum of 6.26 Mbps. This is not unexpected, as the theoretical maximum is assuming best possible conditions. In the real world, not everything is going to be perfect; not all packets will reach their destination in the least possible time, nor will we get such precise timing that all packets immediately leave after one another and no time is wasted.
+
+\subsubsection{}
+
+The basic way to reduce the effect of Bluetooth interference in a 802.11b network is to keep the received signal strength high. This can be done several ways. The simplest may be to change the power at which the transmitter is transmitting. Another way is to keep the receiver closer to the transmitter. Both of these will keep the RSS high, and lessen the effect of Bluetooth transmission on 802.11b.
+
+\section{General Conclusions}
+
+This lab demonstrated how Bluetooth interferes with 802.11b. We used \emph{netpref} to measure throughput on 802.11b at different transmission levels with and without Bluetooth interference. Our group somehow did not have data for transmitting at the 2 Mbps and Auto data rates, but we were able to get this data from another group.
+
+In the future, this lab could quite possibly be done with fewer groups. Working with five groups made the lab somewhat complicated, as communication was key for group success. Perhaps this could be lessened in the future by using Bluetooth on PDAs for a simpler lab.
+
+\end{document}

@@ -1,0 +1,4521 @@
+No.     Time        Source                Destination           Protocol Info
+      1 0.000000    192.168.1.96          10.1.1.1              TCP      1166 > http [SYN] Seq=0 Ack=0 Win=32768 Len=0 MSS=1460 WS=0 TSV=0 TSER=0
+
+Frame 1 (80 bytes on wire, 80 bytes captured)
+    Arrival Time: May  2, 2006 19:32:00.983039000
+    Time delta from previous packet: 0.000000000 seconds
+    Time since reference or first frame: 0.000000000 seconds
+    Frame Number: 1
+    Packet Length: 80 bytes
+    Capture Length: 80 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 64
+    Identification: 0x8907 (35079)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0xa4a6 [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1166 (1166), Dst Port: http (80), Seq: 0, Ack: 0, Len: 0
+    Source port: 1166 (1166)
+    Destination port: http (80)
+    Sequence number: 0    (relative sequence number)
+    Header length: 44 bytes
+    Flags: 0x0002 (SYN)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0xebf4 [correct]
+    Options: (24 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        Window scale: 0 (multiply by 1)
+        NOP
+        NOP
+        Time stamp: tsval 0, tsecr 0
+        NOP
+        NOP
+        SACK permitted
+
+No.     Time        Source                Destination           Protocol Info
+      2 0.000049    10.1.1.104            10.1.1.1              TCP      1166 > http [SYN] Seq=0 Ack=0 Win=32768 Len=0 MSS=1460 WS=0 TSV=0 TSER=0
+
+Frame 2 (80 bytes on wire, 80 bytes captured)
+    Arrival Time: May  2, 2006 19:32:00.983088000
+    Time delta from previous packet: 0.000049000 seconds
+    Time since reference or first frame: 0.000049000 seconds
+    Frame Number: 2
+    Packet Length: 80 bytes
+    Capture Length: 80 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 64
+    Identification: 0x8907 (35079)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x5c46 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1166 (1166), Dst Port: http (80), Seq: 0, Ack: 0, Len: 0
+    Source port: 1166 (1166)
+    Destination port: http (80)
+    Sequence number: 0    (relative sequence number)
+    Header length: 44 bytes
+    Flags: 0x0002 (SYN)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0xa294 [correct]
+    Options: (24 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        Window scale: 0 (multiply by 1)
+        NOP
+        NOP
+        Time stamp: tsval 0, tsecr 0
+        NOP
+        NOP
+        SACK permitted
+
+No.     Time        Source                Destination           Protocol Info
+      3 0.010280    10.1.1.1              10.1.1.104            TCP      http > 1166 [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 WS=0
+
+Frame 3 (68 bytes on wire, 68 bytes captured)
+    Arrival Time: May  2, 2006 19:32:00.993319000
+    Time delta from previous packet: 0.010231000 seconds
+    Time since reference or first frame: 0.010280000 seconds
+    Frame Number: 3
+    Packet Length: 68 bytes
+    Capture Length: 68 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 52
+    Identification: 0x0000 (0)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x245a [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1166 (1166), Seq: 0, Ack: 1, Len: 0
+    Source port: http (80)
+    Destination port: 1166 (1166)
+    Sequence number: 0    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x0012 (SYN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 5840
+    Checksum: 0x8cad [correct]
+    Options: (12 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        NOP
+        SACK permitted
+        NOP
+        Window scale: 0 (multiply by 1)
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 2
+        The RTT to ACK the segment was: 0.010231000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+      4 0.010295    10.1.1.1              192.168.1.96          TCP      http > 1166 [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 WS=0
+
+Frame 4 (68 bytes on wire, 68 bytes captured)
+    Arrival Time: May  2, 2006 19:32:00.993334000
+    Time delta from previous packet: 0.000015000 seconds
+    Time since reference or first frame: 0.010295000 seconds
+    Frame Number: 4
+    Packet Length: 68 bytes
+    Capture Length: 68 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 52
+    Identification: 0x0000 (0)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0x6eba [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1166 (1166), Seq: 0, Ack: 1, Len: 0
+    Source port: http (80)
+    Destination port: 1166 (1166)
+    Sequence number: 0    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x0012 (SYN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 5840
+    Checksum: 0xd60d [correct]
+    Options: (12 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        NOP
+        SACK permitted
+        NOP
+        Window scale: 0 (multiply by 1)
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 1
+        The RTT to ACK the segment was: 0.010295000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+      5 0.014003    192.168.1.96          10.1.1.1              TCP      1166 > http [ACK] Seq=1 Ack=1 Win=32768 Len=0
+
+Frame 5 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:00.997042000
+    Time delta from previous packet: 0.003708000 seconds
+    Time since reference or first frame: 0.014003000 seconds
+    Frame Number: 5
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+    Trailer: 020405B40103
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x8b07 (35591)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0xa2be [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1166 (1166), Dst Port: http (80), Seq: 1, Ack: 1, Len: 0
+    Source port: 1166 (1166)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0xada8 [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 4
+        The RTT to ACK the segment was: 0.003708000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+      6 0.014016    10.1.1.104            10.1.1.1              TCP      1166 > http [ACK] Seq=1 Ack=1 Win=32768 Len=0
+
+Frame 6 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:00.997055000
+    Time delta from previous packet: 0.000013000 seconds
+    Time since reference or first frame: 0.014016000 seconds
+    Frame Number: 6
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x8b07 (35591)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x5a5e [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1166 (1166), Dst Port: http (80), Seq: 1, Ack: 1, Len: 0
+    Source port: 1166 (1166)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0x6448 [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 3
+        The RTT to ACK the segment was: 0.003736000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+      7 0.021524    192.168.1.96          10.1.1.1              HTTP     GET / HTTP/1.1
+
+Frame 7 (469 bytes on wire, 469 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.004563000
+    Time delta from previous packet: 0.007508000 seconds
+    Time since reference or first frame: 0.021524000 seconds
+    Frame Number: 7
+    Packet Length: 469 bytes
+    Capture Length: 469 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 453
+    Identification: 0x8c07 (35847)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0xa021 [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1166 (1166), Dst Port: http (80), Seq: 1, Ack: 1, Len: 413
+    Source port: 1166 (1166)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 414    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0x2850 [correct]
+Hypertext Transfer Protocol
+    GET / HTTP/1.1\r\n
+        Request Method: GET
+        Request URI: /
+        Request Version: HTTP/1.1
+    Accept: */*\r\n
+    UA-OS: Windows CE (POCKET PC) - Version 3.0\r\n
+    UA-color: color16\r\n
+    UA-pixels: 240x320\r\n
+    UA-CPU: ARM SA1110\r\n
+    UA-Voice: FALSE\r\n
+    UA-Language: JavaScript\r\n
+    Accept-Encoding: gzip, deflate\r\n
+    If-Modified-Since: Sun, 25 Jan 2004 16:35:41 GMT\r\n
+    If-None-Match: "13c3d8-20ec-3e671140"\r\n
+    User-Agent: Mozilla/2.0 (compatible; MSIE 3.02; Windows CE; PPC; 240x320)\r\n
+    Host: 10.1.1.1\r\n
+    Connection: Keep-Alive\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+      8 0.021539    10.1.1.104            10.1.1.1              HTTP     GET / HTTP/1.1
+
+Frame 8 (469 bytes on wire, 469 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.004578000
+    Time delta from previous packet: 0.000015000 seconds
+    Time since reference or first frame: 0.021539000 seconds
+    Frame Number: 8
+    Packet Length: 469 bytes
+    Capture Length: 469 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 453
+    Identification: 0x8c07 (35847)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x57c1 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1166 (1166), Dst Port: http (80), Seq: 1, Ack: 1, Len: 413
+    Source port: 1166 (1166)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 414    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0xdeef [correct]
+Hypertext Transfer Protocol
+    GET / HTTP/1.1\r\n
+        Request Method: GET
+        Request URI: /
+        Request Version: HTTP/1.1
+    Accept: */*\r\n
+    UA-OS: Windows CE (POCKET PC) - Version 3.0\r\n
+    UA-color: color16\r\n
+    UA-pixels: 240x320\r\n
+    UA-CPU: ARM SA1110\r\n
+    UA-Voice: FALSE\r\n
+    UA-Language: JavaScript\r\n
+    Accept-Encoding: gzip, deflate\r\n
+    If-Modified-Since: Sun, 25 Jan 2004 16:35:41 GMT\r\n
+    If-None-Match: "13c3d8-20ec-3e671140"\r\n
+    User-Agent: Mozilla/2.0 (compatible; MSIE 3.02; Windows CE; PPC; 240x320)\r\n
+    Host: 10.1.1.1\r\n
+    Connection: Keep-Alive\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+      9 0.038887    10.1.1.1              10.1.1.104            TCP      http > 1166 [ACK] Seq=1 Ack=414 Win=6432 Len=0
+
+Frame 9 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.021926000
+    Time delta from previous packet: 0.017348000 seconds
+    Time since reference or first frame: 0.038887000 seconds
+    Frame Number: 9
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+    Trailer: 010000000000
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xb574 (46452)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x6ef1 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1166 (1166), Seq: 1, Ack: 414, Len: 0
+    Source port: http (80)
+    Destination port: 1166 (1166)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 414    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0xc98b [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 8
+        The RTT to ACK the segment was: 0.017348000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     10 0.038924    10.1.1.1              192.168.1.96          TCP      http > 1166 [ACK] Seq=1 Ack=414 Win=6432 Len=0
+
+Frame 10 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.021963000
+    Time delta from previous packet: 0.000037000 seconds
+    Time since reference or first frame: 0.038924000 seconds
+    Frame Number: 10
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xb574 (46452)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0xb951 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1166 (1166), Seq: 1, Ack: 414, Len: 0
+    Source port: http (80)
+    Destination port: 1166 (1166)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 414    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0x12ec [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 7
+        The RTT to ACK the segment was: 0.017400000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     11 0.039696    10.1.1.1              10.1.1.104            HTTP     HTTP/1.1 304 Not Modified
+
+Frame 11 (210 bytes on wire, 210 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.022735000
+    Time delta from previous packet: 0.000772000 seconds
+    Time since reference or first frame: 0.039696000 seconds
+    Frame Number: 11
+    Packet Length: 210 bytes
+    Capture Length: 210 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 194
+    Identification: 0xb575 (46453)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x6e56 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1166 (1166), Seq: 1, Ack: 414, Len: 154
+    Source port: http (80)
+    Destination port: 1166 (1166)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 155    (relative sequence number)
+    Acknowledgement number: 414    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0x0a51 [correct]
+Hypertext Transfer Protocol
+    HTTP/1.1 304 Not Modified\r\n
+        Request Version: HTTP/1.1
+        Response Code: 304
+    Date: Sat, 28 Feb 2004 17:56:30 GMT\r\n
+    Server: Apache/2.0.40 (Red Hat Linux)\r\n
+    Connection: close\r\n
+    ETag: "13c3d8-20ec-3e671140"\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+     12 0.039707    10.1.1.1              192.168.1.96          HTTP     HTTP/1.1 304 Not Modified
+
+Frame 12 (210 bytes on wire, 210 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.022746000
+    Time delta from previous packet: 0.000011000 seconds
+    Time since reference or first frame: 0.039707000 seconds
+    Frame Number: 12
+    Packet Length: 210 bytes
+    Capture Length: 210 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 194
+    Identification: 0xb575 (46453)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0xb8b6 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1166 (1166), Seq: 1, Ack: 414, Len: 154
+    Source port: http (80)
+    Destination port: 1166 (1166)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 155    (relative sequence number)
+    Acknowledgement number: 414    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0x53b1 [correct]
+Hypertext Transfer Protocol
+    HTTP/1.1 304 Not Modified\r\n
+        Request Version: HTTP/1.1
+        Response Code: 304
+    Date: Sat, 28 Feb 2004 17:56:30 GMT\r\n
+    Server: Apache/2.0.40 (Red Hat Linux)\r\n
+    Connection: close\r\n
+    ETag: "13c3d8-20ec-3e671140"\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+     13 0.040193    10.1.1.1              10.1.1.104            TCP      http > 1166 [FIN, ACK] Seq=155 Ack=414 Win=6432 Len=0
+
+Frame 13 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.023232000
+    Time delta from previous packet: 0.000486000 seconds
+    Time since reference or first frame: 0.040193000 seconds
+    Frame Number: 13
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+    Trailer: 020000000000
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xb576 (46454)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x6eef [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1166 (1166), Seq: 155, Ack: 414, Len: 0
+    Source port: http (80)
+    Destination port: 1166 (1166)
+    Sequence number: 155    (relative sequence number)
+    Acknowledgement number: 414    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0011 (FIN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...1 = Fin: Set
+    Window size: 6432
+    Checksum: 0xc8f0 [correct]
+
+No.     Time        Source                Destination           Protocol Info
+     14 0.040204    10.1.1.1              192.168.1.96          TCP      http > 1166 [FIN, ACK] Seq=155 Ack=414 Win=6432 Len=0
+
+Frame 14 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.023243000
+    Time delta from previous packet: 0.000011000 seconds
+    Time since reference or first frame: 0.040204000 seconds
+    Frame Number: 14
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xb576 (46454)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0xb94f [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1166 (1166), Seq: 155, Ack: 414, Len: 0
+    Source port: http (80)
+    Destination port: 1166 (1166)
+    Sequence number: 155    (relative sequence number)
+    Acknowledgement number: 414    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0011 (FIN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...1 = Fin: Set
+    Window size: 6432
+    Checksum: 0x1251 [correct]
+
+No.     Time        Source                Destination           Protocol Info
+     15 0.044488    192.168.1.96          10.1.1.1              TCP      1166 > http [ACK] Seq=414 Ack=156 Win=32614 Len=0
+
+Frame 15 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.027527000
+    Time delta from previous packet: 0.004284000 seconds
+    Time since reference or first frame: 0.044488000 seconds
+    Frame Number: 15
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+    Trailer: 474554202F20
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x8e07 (36359)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x9fbe [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1166 (1166), Dst Port: http (80), Seq: 414, Ack: 156, Len: 0
+    Source port: 1166 (1166)
+    Destination port: http (80)
+    Sequence number: 414    (relative sequence number)
+    Acknowledgement number: 156    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32614
+    Checksum: 0xac0a [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 14
+        The RTT to ACK the segment was: 0.004284000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     16 0.044501    10.1.1.104            10.1.1.1              TCP      1166 > http [ACK] Seq=414 Ack=156 Win=32614 Len=0
+
+Frame 16 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.027540000
+    Time delta from previous packet: 0.000013000 seconds
+    Time since reference or first frame: 0.044501000 seconds
+    Frame Number: 16
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x8e07 (36359)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x575e [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1166 (1166), Dst Port: http (80), Seq: 414, Ack: 156, Len: 0
+    Source port: 1166 (1166)
+    Destination port: http (80)
+    Sequence number: 414    (relative sequence number)
+    Acknowledgement number: 156    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32614
+    Checksum: 0x62aa [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 13
+        The RTT to ACK the segment was: 0.004308000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     17 0.047806    192.168.1.96          10.1.1.1              TCP      1166 > http [RST] Seq=414 Ack=156 Win=0 Len=0
+
+Frame 17 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.030845000
+    Time delta from previous packet: 0.003305000 seconds
+    Time since reference or first frame: 0.047806000 seconds
+    Frame Number: 17
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+    Trailer: 474554202F20
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x8f07 (36615)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x9ebe [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1166 (1166), Dst Port: http (80), Seq: 414, Ack: 156, Len: 0
+    Source port: 1166 (1166)
+    Destination port: http (80)
+    Sequence number: 414    (relative sequence number)
+    Header length: 20 bytes
+    Flags: 0x0004 (RST)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .1.. = Reset: Set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 0
+    Checksum: 0x2b7d [correct]
+    SEQ/ACK analysis
+
+No.     Time        Source                Destination           Protocol Info
+     18 0.047819    10.1.1.104            10.1.1.1              TCP      1166 > http [RST] Seq=414 Ack=156 Win=0 Len=0
+
+Frame 18 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.030858000
+    Time delta from previous packet: 0.000013000 seconds
+    Time since reference or first frame: 0.047819000 seconds
+    Frame Number: 18
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x8f07 (36615)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x565e [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1166 (1166), Dst Port: http (80), Seq: 414, Ack: 156, Len: 0
+    Source port: 1166 (1166)
+    Destination port: http (80)
+    Sequence number: 414    (relative sequence number)
+    Header length: 20 bytes
+    Flags: 0x0004 (RST)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .1.. = Reset: Set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 0
+    Checksum: 0xe21c [correct]
+    SEQ/ACK analysis
+
+No.     Time        Source                Destination           Protocol Info
+     19 0.276972    192.168.1.96          10.1.1.1              TCP      1167 > http [SYN] Seq=0 Ack=0 Win=32768 Len=0 MSS=1460 WS=0 TSV=0 TSER=0
+
+Frame 19 (80 bytes on wire, 80 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.260011000
+    Time delta from previous packet: 0.229153000 seconds
+    Time since reference or first frame: 0.276972000 seconds
+    Frame Number: 19
+    Packet Length: 80 bytes
+    Capture Length: 80 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 64
+    Identification: 0x9007 (36871)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x9da6 [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1167 (1167), Dst Port: http (80), Seq: 0, Ack: 0, Len: 0
+    Source port: 1167 (1167)
+    Destination port: http (80)
+    Sequence number: 0    (relative sequence number)
+    Header length: 44 bytes
+    Flags: 0x0002 (SYN)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0xeade [correct]
+    Options: (24 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        Window scale: 0 (multiply by 1)
+        NOP
+        NOP
+        Time stamp: tsval 0, tsecr 0
+        NOP
+        NOP
+        SACK permitted
+
+No.     Time        Source                Destination           Protocol Info
+     20 0.276999    10.1.1.104            10.1.1.1              TCP      1167 > http [SYN] Seq=0 Ack=0 Win=32768 Len=0 MSS=1460 WS=0 TSV=0 TSER=0
+
+Frame 20 (80 bytes on wire, 80 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.260038000
+    Time delta from previous packet: 0.000027000 seconds
+    Time since reference or first frame: 0.276999000 seconds
+    Frame Number: 20
+    Packet Length: 80 bytes
+    Capture Length: 80 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 64
+    Identification: 0x9007 (36871)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x5546 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1167 (1167), Dst Port: http (80), Seq: 0, Ack: 0, Len: 0
+    Source port: 1167 (1167)
+    Destination port: http (80)
+    Sequence number: 0    (relative sequence number)
+    Header length: 44 bytes
+    Flags: 0x0002 (SYN)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0xa17e [correct]
+    Options: (24 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        Window scale: 0 (multiply by 1)
+        NOP
+        NOP
+        Time stamp: tsval 0, tsecr 0
+        NOP
+        NOP
+        SACK permitted
+
+No.     Time        Source                Destination           Protocol Info
+     21 0.280661    10.1.1.1              10.1.1.104            TCP      http > 1167 [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 WS=0
+
+Frame 21 (68 bytes on wire, 68 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.263700000
+    Time delta from previous packet: 0.003662000 seconds
+    Time since reference or first frame: 0.280661000 seconds
+    Frame Number: 21
+    Packet Length: 68 bytes
+    Capture Length: 68 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 52
+    Identification: 0x0000 (0)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x245a [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1167 (1167), Seq: 0, Ack: 1, Len: 0
+    Source port: http (80)
+    Destination port: 1167 (1167)
+    Sequence number: 0    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x0012 (SYN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 5840
+    Checksum: 0x5b89 [correct]
+    Options: (12 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        NOP
+        SACK permitted
+        NOP
+        Window scale: 0 (multiply by 1)
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 20
+        The RTT to ACK the segment was: 0.003662000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     22 0.280672    10.1.1.1              192.168.1.96          TCP      http > 1167 [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 WS=0
+
+Frame 22 (68 bytes on wire, 68 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.263711000
+    Time delta from previous packet: 0.000011000 seconds
+    Time since reference or first frame: 0.280672000 seconds
+    Frame Number: 22
+    Packet Length: 68 bytes
+    Capture Length: 68 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 52
+    Identification: 0x0000 (0)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0x6eba [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1167 (1167), Seq: 0, Ack: 1, Len: 0
+    Source port: http (80)
+    Destination port: 1167 (1167)
+    Sequence number: 0    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x0012 (SYN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 5840
+    Checksum: 0xa4e9 [correct]
+    Options: (12 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        NOP
+        SACK permitted
+        NOP
+        Window scale: 0 (multiply by 1)
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 19
+        The RTT to ACK the segment was: 0.003700000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     23 0.284431    192.168.1.96          10.1.1.1              TCP      1167 > http [ACK] Seq=1 Ack=1 Win=32768 Len=0
+
+Frame 23 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.267470000
+    Time delta from previous packet: 0.003759000 seconds
+    Time since reference or first frame: 0.284431000 seconds
+    Frame Number: 23
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+    Trailer: 020405B40103
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x9207 (37383)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x9bbe [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1167 (1167), Dst Port: http (80), Seq: 1, Ack: 1, Len: 0
+    Source port: 1167 (1167)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0x7c84 [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 22
+        The RTT to ACK the segment was: 0.003759000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     24 0.284442    10.1.1.104            10.1.1.1              TCP      1167 > http [ACK] Seq=1 Ack=1 Win=32768 Len=0
+
+Frame 24 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.267481000
+    Time delta from previous packet: 0.000011000 seconds
+    Time since reference or first frame: 0.284442000 seconds
+    Frame Number: 24
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x9207 (37383)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x535e [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1167 (1167), Dst Port: http (80), Seq: 1, Ack: 1, Len: 0
+    Source port: 1167 (1167)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0x3324 [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 21
+        The RTT to ACK the segment was: 0.003781000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     25 0.319472    192.168.1.96          10.1.1.1              HTTP     GET /4570_logo.jpg HTTP/1.1
+
+Frame 25 (509 bytes on wire, 509 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.302511000
+    Time delta from previous packet: 0.035030000 seconds
+    Time since reference or first frame: 0.319472000 seconds
+    Frame Number: 25
+    Packet Length: 509 bytes
+    Capture Length: 509 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 493
+    Identification: 0x9307 (37639)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x98f9 [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1167 (1167), Dst Port: http (80), Seq: 1, Ack: 1, Len: 453
+    Source port: 1167 (1167)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 454    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0xaf4b [correct]
+Hypertext Transfer Protocol
+    GET /4570_logo.jpg HTTP/1.1\r\n
+        Request Method: GET
+        Request URI: /4570_logo.jpg
+        Request Version: HTTP/1.1
+    Accept: */*\r\n
+    UA-OS: Windows CE (POCKET PC) - Version 3.0\r\n
+    UA-color: color16\r\n
+    UA-pixels: 240x320\r\n
+    UA-CPU: ARM SA1110\r\n
+    UA-Voice: FALSE\r\n
+    Referer: http://10.1.1.1/\r\n
+    UA-Language: JavaScript\r\n
+    Accept-Encoding: gzip, deflate\r\n
+    If-Modified-Since: Sun, 25 Jan 2004 16:40:19 GMT\r\n
+    If-None-Match: "13c3db-2e19-4ef902c0"\r\n
+    User-Agent: Mozilla/2.0 (compatible; MSIE 3.02; Windows CE; PPC; 240x320)\r\n
+    Host: 10.1.1.1\r\n
+    Connection: Keep-Alive\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+     26 0.319504    10.1.1.104            10.1.1.1              HTTP     GET /4570_logo.jpg HTTP/1.1
+
+Frame 26 (509 bytes on wire, 509 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.302543000
+    Time delta from previous packet: 0.000032000 seconds
+    Time since reference or first frame: 0.319504000 seconds
+    Frame Number: 26
+    Packet Length: 509 bytes
+    Capture Length: 509 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 493
+    Identification: 0x9307 (37639)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x5099 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1167 (1167), Dst Port: http (80), Seq: 1, Ack: 1, Len: 453
+    Source port: 1167 (1167)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 454    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0x65eb [correct]
+Hypertext Transfer Protocol
+    GET /4570_logo.jpg HTTP/1.1\r\n
+        Request Method: GET
+        Request URI: /4570_logo.jpg
+        Request Version: HTTP/1.1
+    Accept: */*\r\n
+    UA-OS: Windows CE (POCKET PC) - Version 3.0\r\n
+    UA-color: color16\r\n
+    UA-pixels: 240x320\r\n
+    UA-CPU: ARM SA1110\r\n
+    UA-Voice: FALSE\r\n
+    Referer: http://10.1.1.1/\r\n
+    UA-Language: JavaScript\r\n
+    Accept-Encoding: gzip, deflate\r\n
+    If-Modified-Since: Sun, 25 Jan 2004 16:40:19 GMT\r\n
+    If-None-Match: "13c3db-2e19-4ef902c0"\r\n
+    User-Agent: Mozilla/2.0 (compatible; MSIE 3.02; Windows CE; PPC; 240x320)\r\n
+    Host: 10.1.1.1\r\n
+    Connection: Keep-Alive\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+     27 0.325711    10.1.1.1              10.1.1.104            TCP      http > 1167 [ACK] Seq=1 Ack=454 Win=6432 Len=0
+
+Frame 27 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.308750000
+    Time delta from previous packet: 0.006207000 seconds
+    Time since reference or first frame: 0.325711000 seconds
+    Frame Number: 27
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+    Trailer: 010000000000
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x6560 (25952)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0xbf05 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1167 (1167), Seq: 1, Ack: 454, Len: 0
+    Source port: http (80)
+    Destination port: 1167 (1167)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 454    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0x983f [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 26
+        The RTT to ACK the segment was: 0.006207000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     28 0.325722    10.1.1.1              192.168.1.96          TCP      http > 1167 [ACK] Seq=1 Ack=454 Win=6432 Len=0
+
+Frame 28 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.308761000
+    Time delta from previous packet: 0.000011000 seconds
+    Time since reference or first frame: 0.325722000 seconds
+    Frame Number: 28
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x6560 (25952)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0x0966 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1167 (1167), Seq: 1, Ack: 454, Len: 0
+    Source port: http (80)
+    Destination port: 1167 (1167)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 454    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0xe19f [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 25
+        The RTT to ACK the segment was: 0.006250000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     29 0.326496    10.1.1.1              10.1.1.104            HTTP     HTTP/1.1 304 Not Modified
+
+Frame 29 (210 bytes on wire, 210 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.309535000
+    Time delta from previous packet: 0.000774000 seconds
+    Time since reference or first frame: 0.326496000 seconds
+    Frame Number: 29
+    Packet Length: 210 bytes
+    Capture Length: 210 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 194
+    Identification: 0x6561 (25953)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0xbe6a [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1167 (1167), Seq: 1, Ack: 454, Len: 154
+    Source port: http (80)
+    Destination port: 1167 (1167)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 155    (relative sequence number)
+    Acknowledgement number: 454    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0xdf99 [correct]
+Hypertext Transfer Protocol
+    HTTP/1.1 304 Not Modified\r\n
+        Request Version: HTTP/1.1
+        Response Code: 304
+    Date: Sat, 28 Feb 2004 17:56:31 GMT\r\n
+    Server: Apache/2.0.40 (Red Hat Linux)\r\n
+    Connection: close\r\n
+    ETag: "13c3db-2e19-4ef902c0"\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+     30 0.326507    10.1.1.1              192.168.1.96          HTTP     HTTP/1.1 304 Not Modified
+
+Frame 30 (210 bytes on wire, 210 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.309546000
+    Time delta from previous packet: 0.000011000 seconds
+    Time since reference or first frame: 0.326507000 seconds
+    Frame Number: 30
+    Packet Length: 210 bytes
+    Capture Length: 210 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 194
+    Identification: 0x6561 (25953)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0x08cb [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1167 (1167), Seq: 1, Ack: 454, Len: 154
+    Source port: http (80)
+    Destination port: 1167 (1167)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 155    (relative sequence number)
+    Acknowledgement number: 454    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0x28fa [correct]
+Hypertext Transfer Protocol
+    HTTP/1.1 304 Not Modified\r\n
+        Request Version: HTTP/1.1
+        Response Code: 304
+    Date: Sat, 28 Feb 2004 17:56:31 GMT\r\n
+    Server: Apache/2.0.40 (Red Hat Linux)\r\n
+    Connection: close\r\n
+    ETag: "13c3db-2e19-4ef902c0"\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+     31 0.327166    10.1.1.1              10.1.1.104            TCP      http > 1167 [FIN, ACK] Seq=155 Ack=454 Win=6432 Len=0
+
+Frame 31 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.310205000
+    Time delta from previous packet: 0.000659000 seconds
+    Time since reference or first frame: 0.327166000 seconds
+    Frame Number: 31
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+    Trailer: 020000000000
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x6562 (25954)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0xbf03 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1167 (1167), Seq: 155, Ack: 454, Len: 0
+    Source port: http (80)
+    Destination port: 1167 (1167)
+    Sequence number: 155    (relative sequence number)
+    Acknowledgement number: 454    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0011 (FIN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...1 = Fin: Set
+    Window size: 6432
+    Checksum: 0x97a4 [correct]
+
+No.     Time        Source                Destination           Protocol Info
+     32 0.327176    10.1.1.1              192.168.1.96          TCP      http > 1167 [FIN, ACK] Seq=155 Ack=454 Win=6432 Len=0
+
+Frame 32 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.310215000
+    Time delta from previous packet: 0.000010000 seconds
+    Time since reference or first frame: 0.327176000 seconds
+    Frame Number: 32
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x6562 (25954)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0x0964 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1167 (1167), Seq: 155, Ack: 454, Len: 0
+    Source port: http (80)
+    Destination port: 1167 (1167)
+    Sequence number: 155    (relative sequence number)
+    Acknowledgement number: 454    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0011 (FIN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...1 = Fin: Set
+    Window size: 6432
+    Checksum: 0xe104 [correct]
+
+No.     Time        Source                Destination           Protocol Info
+     33 0.331632    192.168.1.96          10.1.1.1              TCP      1167 > http [ACK] Seq=454 Ack=156 Win=32614 Len=0
+
+Frame 33 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.314671000
+    Time delta from previous packet: 0.004456000 seconds
+    Time since reference or first frame: 0.331632000 seconds
+    Frame Number: 33
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+    Trailer: 474554202F34
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x9507 (38151)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x98be [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1167 (1167), Dst Port: http (80), Seq: 454, Ack: 156, Len: 0
+    Source port: 1167 (1167)
+    Destination port: http (80)
+    Sequence number: 454    (relative sequence number)
+    Acknowledgement number: 156    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32614
+    Checksum: 0x7abe [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 32
+        The RTT to ACK the segment was: 0.004456000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     34 0.331643    10.1.1.104            10.1.1.1              TCP      1167 > http [ACK] Seq=454 Ack=156 Win=32614 Len=0
+
+Frame 34 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.314682000
+    Time delta from previous packet: 0.000011000 seconds
+    Time since reference or first frame: 0.331643000 seconds
+    Frame Number: 34
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x9507 (38151)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x505e [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1167 (1167), Dst Port: http (80), Seq: 454, Ack: 156, Len: 0
+    Source port: 1167 (1167)
+    Destination port: http (80)
+    Sequence number: 454    (relative sequence number)
+    Acknowledgement number: 156    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32614
+    Checksum: 0x315e [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 31
+        The RTT to ACK the segment was: 0.004477000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     35 0.368619    192.168.1.96          10.1.1.1              TCP      1167 > http [RST] Seq=454 Ack=156 Win=0 Len=0
+
+Frame 35 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.351658000
+    Time delta from previous packet: 0.036976000 seconds
+    Time since reference or first frame: 0.368619000 seconds
+    Frame Number: 35
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+    Trailer: 474554202F34
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x9607 (38407)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x97be [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1167 (1167), Dst Port: http (80), Seq: 454, Ack: 156, Len: 0
+    Source port: 1167 (1167)
+    Destination port: http (80)
+    Sequence number: 454    (relative sequence number)
+    Header length: 20 bytes
+    Flags: 0x0004 (RST)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .1.. = Reset: Set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 0
+    Checksum: 0xfa30 [correct]
+    SEQ/ACK analysis
+
+No.     Time        Source                Destination           Protocol Info
+     36 0.368630    10.1.1.104            10.1.1.1              TCP      1167 > http [RST] Seq=454 Ack=156 Win=0 Len=0
+
+Frame 36 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:01.351669000
+    Time delta from previous packet: 0.000011000 seconds
+    Time since reference or first frame: 0.368630000 seconds
+    Frame Number: 36
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x9607 (38407)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x4f5e [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1167 (1167), Dst Port: http (80), Seq: 454, Ack: 156, Len: 0
+    Source port: 1167 (1167)
+    Destination port: http (80)
+    Sequence number: 454    (relative sequence number)
+    Header length: 20 bytes
+    Flags: 0x0004 (RST)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .1.. = Reset: Set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 0
+    Checksum: 0xb0d0 [correct]
+    SEQ/ACK analysis
+
+No.     Time        Source                Destination           Protocol Info
+     37 1.828447    192.168.1.96          10.1.1.1              TCP      1168 > http [SYN] Seq=0 Ack=0 Win=32768 Len=0 MSS=1460 WS=0 TSV=0 TSER=0
+
+Frame 37 (80 bytes on wire, 80 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.811486000
+    Time delta from previous packet: 1.459817000 seconds
+    Time since reference or first frame: 1.828447000 seconds
+    Frame Number: 37
+    Packet Length: 80 bytes
+    Capture Length: 80 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 64
+    Identification: 0x9707 (38663)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x96a6 [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1168 (1168), Dst Port: http (80), Seq: 0, Ack: 0, Len: 0
+    Source port: 1168 (1168)
+    Destination port: http (80)
+    Sequence number: 0    (relative sequence number)
+    Header length: 44 bytes
+    Flags: 0x0002 (SYN)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0xe4ce [correct]
+    Options: (24 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        Window scale: 0 (multiply by 1)
+        NOP
+        NOP
+        Time stamp: tsval 0, tsecr 0
+        NOP
+        NOP
+        SACK permitted
+
+No.     Time        Source                Destination           Protocol Info
+     38 1.828498    10.1.1.104            10.1.1.1              TCP      1168 > http [SYN] Seq=0 Ack=0 Win=32768 Len=0 MSS=1460 WS=0 TSV=0 TSER=0
+
+Frame 38 (80 bytes on wire, 80 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.811537000
+    Time delta from previous packet: 0.000051000 seconds
+    Time since reference or first frame: 1.828498000 seconds
+    Frame Number: 38
+    Packet Length: 80 bytes
+    Capture Length: 80 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 64
+    Identification: 0x9707 (38663)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x4e46 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1168 (1168), Dst Port: http (80), Seq: 0, Ack: 0, Len: 0
+    Source port: 1168 (1168)
+    Destination port: http (80)
+    Sequence number: 0    (relative sequence number)
+    Header length: 44 bytes
+    Flags: 0x0002 (SYN)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0x9b6e [correct]
+    Options: (24 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        Window scale: 0 (multiply by 1)
+        NOP
+        NOP
+        Time stamp: tsval 0, tsecr 0
+        NOP
+        NOP
+        SACK permitted
+
+No.     Time        Source                Destination           Protocol Info
+     39 1.833740    10.1.1.1              10.1.1.104            TCP      http > 1168 [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 WS=0
+
+Frame 39 (68 bytes on wire, 68 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.816779000
+    Time delta from previous packet: 0.005242000 seconds
+    Time since reference or first frame: 1.833740000 seconds
+    Frame Number: 39
+    Packet Length: 68 bytes
+    Capture Length: 68 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 52
+    Identification: 0x0000 (0)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x245a [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1168 (1168), Seq: 0, Ack: 1, Len: 0
+    Source port: http (80)
+    Destination port: 1168 (1168)
+    Sequence number: 0    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x0012 (SYN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 5840
+    Checksum: 0xc206 [correct]
+    Options: (12 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        NOP
+        SACK permitted
+        NOP
+        Window scale: 0 (multiply by 1)
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 38
+        The RTT to ACK the segment was: 0.005242000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     40 1.833755    10.1.1.1              192.168.1.96          TCP      http > 1168 [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 WS=0
+
+Frame 40 (68 bytes on wire, 68 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.816794000
+    Time delta from previous packet: 0.000015000 seconds
+    Time since reference or first frame: 1.833755000 seconds
+    Frame Number: 40
+    Packet Length: 68 bytes
+    Capture Length: 68 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 52
+    Identification: 0x0000 (0)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0x6eba [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1168 (1168), Seq: 0, Ack: 1, Len: 0
+    Source port: http (80)
+    Destination port: 1168 (1168)
+    Sequence number: 0    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x0012 (SYN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 5840
+    Checksum: 0x0b67 [correct]
+    Options: (12 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        NOP
+        SACK permitted
+        NOP
+        Window scale: 0 (multiply by 1)
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 37
+        The RTT to ACK the segment was: 0.005308000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     41 1.837600    192.168.1.96          10.1.1.1              TCP      1168 > http [ACK] Seq=1 Ack=1 Win=32768 Len=0
+
+Frame 41 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.820639000
+    Time delta from previous packet: 0.003845000 seconds
+    Time since reference or first frame: 1.837600000 seconds
+    Frame Number: 41
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+    Trailer: 020405B40103
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x9907 (39175)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x94be [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1168 (1168), Dst Port: http (80), Seq: 1, Ack: 1, Len: 0
+    Source port: 1168 (1168)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0xe301 [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 40
+        The RTT to ACK the segment was: 0.003845000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     42 1.837613    10.1.1.104            10.1.1.1              TCP      1168 > http [ACK] Seq=1 Ack=1 Win=32768 Len=0
+
+Frame 42 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.820652000
+    Time delta from previous packet: 0.000013000 seconds
+    Time since reference or first frame: 1.837613000 seconds
+    Frame Number: 42
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x9907 (39175)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x4c5e [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1168 (1168), Dst Port: http (80), Seq: 1, Ack: 1, Len: 0
+    Source port: 1168 (1168)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0x99a1 [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 39
+        The RTT to ACK the segment was: 0.003873000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     43 1.900592    192.168.1.96          10.1.1.1              HTTP     GET /intel_ack.jpg HTTP/1.1
+
+Frame 43 (509 bytes on wire, 509 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.883631000
+    Time delta from previous packet: 0.062979000 seconds
+    Time since reference or first frame: 1.900592000 seconds
+    Frame Number: 43
+    Packet Length: 509 bytes
+    Capture Length: 509 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 493
+    Identification: 0x9a07 (39431)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x91f9 [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1168 (1168), Dst Port: http (80), Seq: 1, Ack: 1, Len: 453
+    Source port: 1168 (1168)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 454    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0xbde5 [correct]
+Hypertext Transfer Protocol
+    GET /intel_ack.jpg HTTP/1.1\r\n
+        Request Method: GET
+        Request URI: /intel_ack.jpg
+        Request Version: HTTP/1.1
+    Accept: */*\r\n
+    UA-OS: Windows CE (POCKET PC) - Version 3.0\r\n
+    UA-color: color16\r\n
+    UA-pixels: 240x320\r\n
+    UA-CPU: ARM SA1110\r\n
+    UA-Voice: FALSE\r\n
+    Referer: http://10.1.1.1/\r\n
+    UA-Language: JavaScript\r\n
+    Accept-Encoding: gzip, deflate\r\n
+    If-Modified-Since: Sun, 25 Jan 2004 16:35:41 GMT\r\n
+    If-None-Match: "13c3d9-27a4-3e671140"\r\n
+    User-Agent: Mozilla/2.0 (compatible; MSIE 3.02; Windows CE; PPC; 240x320)\r\n
+    Host: 10.1.1.1\r\n
+    Connection: Keep-Alive\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+     44 1.900631    10.1.1.104            10.1.1.1              HTTP     GET /intel_ack.jpg HTTP/1.1
+
+Frame 44 (509 bytes on wire, 509 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.883670000
+    Time delta from previous packet: 0.000039000 seconds
+    Time since reference or first frame: 1.900631000 seconds
+    Frame Number: 44
+    Packet Length: 509 bytes
+    Capture Length: 509 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 493
+    Identification: 0x9a07 (39431)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x4999 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1168 (1168), Dst Port: http (80), Seq: 1, Ack: 1, Len: 453
+    Source port: 1168 (1168)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 454    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0x7485 [correct]
+Hypertext Transfer Protocol
+    GET /intel_ack.jpg HTTP/1.1\r\n
+        Request Method: GET
+        Request URI: /intel_ack.jpg
+        Request Version: HTTP/1.1
+    Accept: */*\r\n
+    UA-OS: Windows CE (POCKET PC) - Version 3.0\r\n
+    UA-color: color16\r\n
+    UA-pixels: 240x320\r\n
+    UA-CPU: ARM SA1110\r\n
+    UA-Voice: FALSE\r\n
+    Referer: http://10.1.1.1/\r\n
+    UA-Language: JavaScript\r\n
+    Accept-Encoding: gzip, deflate\r\n
+    If-Modified-Since: Sun, 25 Jan 2004 16:35:41 GMT\r\n
+    If-None-Match: "13c3d9-27a4-3e671140"\r\n
+    User-Agent: Mozilla/2.0 (compatible; MSIE 3.02; Windows CE; PPC; 240x320)\r\n
+    Host: 10.1.1.1\r\n
+    Connection: Keep-Alive\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+     45 1.906193    10.1.1.1              10.1.1.104            TCP      http > 1168 [ACK] Seq=1 Ack=454 Win=6432 Len=0
+
+Frame 45 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.889232000
+    Time delta from previous packet: 0.005562000 seconds
+    Time since reference or first frame: 1.906193000 seconds
+    Frame Number: 45
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+    Trailer: 010000000000
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xf05f (61535)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x3406 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1168 (1168), Seq: 1, Ack: 454, Len: 0
+    Source port: http (80)
+    Destination port: 1168 (1168)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 454    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0xfebc [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 44
+        The RTT to ACK the segment was: 0.005562000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     46 1.906206    10.1.1.1              192.168.1.96          TCP      http > 1168 [ACK] Seq=1 Ack=454 Win=6432 Len=0
+
+Frame 46 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.889245000
+    Time delta from previous packet: 0.000013000 seconds
+    Time since reference or first frame: 1.906206000 seconds
+    Frame Number: 46
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xf05f (61535)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0x7e66 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1168 (1168), Seq: 1, Ack: 454, Len: 0
+    Source port: http (80)
+    Destination port: 1168 (1168)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 454    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0x481d [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 43
+        The RTT to ACK the segment was: 0.005614000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     47 1.908500    10.1.1.1              10.1.1.104            HTTP     HTTP/1.1 304 Not Modified
+
+Frame 47 (210 bytes on wire, 210 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.891539000
+    Time delta from previous packet: 0.002294000 seconds
+    Time since reference or first frame: 1.908500000 seconds
+    Frame Number: 47
+    Packet Length: 210 bytes
+    Capture Length: 210 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 194
+    Identification: 0xf060 (61536)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x336b [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1168 (1168), Seq: 1, Ack: 454, Len: 154
+    Source port: http (80)
+    Destination port: 1168 (1168)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 155    (relative sequence number)
+    Acknowledgement number: 454    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0x42a8 [correct]
+Hypertext Transfer Protocol
+    HTTP/1.1 304 Not Modified\r\n
+        Request Version: HTTP/1.1
+        Response Code: 304
+    Date: Sat, 28 Feb 2004 17:56:32 GMT\r\n
+    Server: Apache/2.0.40 (Red Hat Linux)\r\n
+    Connection: close\r\n
+    ETag: "13c3d9-27a4-3e671140"\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+     48 1.908512    10.1.1.1              192.168.1.96          HTTP     HTTP/1.1 304 Not Modified
+
+Frame 48 (210 bytes on wire, 210 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.891551000
+    Time delta from previous packet: 0.000012000 seconds
+    Time since reference or first frame: 1.908512000 seconds
+    Frame Number: 48
+    Packet Length: 210 bytes
+    Capture Length: 210 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 194
+    Identification: 0xf060 (61536)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0x7dcb [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1168 (1168), Seq: 1, Ack: 454, Len: 154
+    Source port: http (80)
+    Destination port: 1168 (1168)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 155    (relative sequence number)
+    Acknowledgement number: 454    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0x8c08 [correct]
+Hypertext Transfer Protocol
+    HTTP/1.1 304 Not Modified\r\n
+        Request Version: HTTP/1.1
+        Response Code: 304
+    Date: Sat, 28 Feb 2004 17:56:32 GMT\r\n
+    Server: Apache/2.0.40 (Red Hat Linux)\r\n
+    Connection: close\r\n
+    ETag: "13c3d9-27a4-3e671140"\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+     49 1.909007    10.1.1.1              10.1.1.104            TCP      http > 1168 [FIN, ACK] Seq=155 Ack=454 Win=6432 Len=0
+
+Frame 49 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.892046000
+    Time delta from previous packet: 0.000495000 seconds
+    Time since reference or first frame: 1.909007000 seconds
+    Frame Number: 49
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+    Trailer: 020000000000
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xf061 (61537)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x3404 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1168 (1168), Seq: 155, Ack: 454, Len: 0
+    Source port: http (80)
+    Destination port: 1168 (1168)
+    Sequence number: 155    (relative sequence number)
+    Acknowledgement number: 454    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0011 (FIN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...1 = Fin: Set
+    Window size: 6432
+    Checksum: 0xfe21 [correct]
+
+No.     Time        Source                Destination           Protocol Info
+     50 1.909018    10.1.1.1              192.168.1.96          TCP      http > 1168 [FIN, ACK] Seq=155 Ack=454 Win=6432 Len=0
+
+Frame 50 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.892057000
+    Time delta from previous packet: 0.000011000 seconds
+    Time since reference or first frame: 1.909018000 seconds
+    Frame Number: 50
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xf061 (61537)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0x7e64 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1168 (1168), Seq: 155, Ack: 454, Len: 0
+    Source port: http (80)
+    Destination port: 1168 (1168)
+    Sequence number: 155    (relative sequence number)
+    Acknowledgement number: 454    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0011 (FIN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...1 = Fin: Set
+    Window size: 6432
+    Checksum: 0x4782 [correct]
+
+No.     Time        Source                Destination           Protocol Info
+     51 1.913286    192.168.1.96          10.1.1.1              TCP      1168 > http [ACK] Seq=454 Ack=156 Win=32614 Len=0
+
+Frame 51 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.896325000
+    Time delta from previous packet: 0.004268000 seconds
+    Time since reference or first frame: 1.913286000 seconds
+    Frame Number: 51
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+    Trailer: 474554202F69
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x9c07 (39943)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x91be [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1168 (1168), Dst Port: http (80), Seq: 454, Ack: 156, Len: 0
+    Source port: 1168 (1168)
+    Destination port: http (80)
+    Sequence number: 454    (relative sequence number)
+    Acknowledgement number: 156    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32614
+    Checksum: 0xe13b [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 50
+        The RTT to ACK the segment was: 0.004268000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     52 1.913298    10.1.1.104            10.1.1.1              TCP      1168 > http [ACK] Seq=454 Ack=156 Win=32614 Len=0
+
+Frame 52 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:02.896337000
+    Time delta from previous packet: 0.000012000 seconds
+    Time since reference or first frame: 1.913298000 seconds
+    Frame Number: 52
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x9c07 (39943)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x495e [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1168 (1168), Dst Port: http (80), Seq: 454, Ack: 156, Len: 0
+    Source port: 1168 (1168)
+    Destination port: http (80)
+    Sequence number: 454    (relative sequence number)
+    Acknowledgement number: 156    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32614
+    Checksum: 0x97db [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 49
+        The RTT to ACK the segment was: 0.004291000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     53 2.060461    192.168.1.96          10.1.1.1              TCP      1168 > http [RST] Seq=454 Ack=156 Win=0 Len=0
+
+Frame 53 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:03.043500000
+    Time delta from previous packet: 0.147163000 seconds
+    Time since reference or first frame: 2.060461000 seconds
+    Frame Number: 53
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+    Trailer: 474554202F69
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x9d07 (40199)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x90be [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1168 (1168), Dst Port: http (80), Seq: 454, Ack: 156, Len: 0
+    Source port: 1168 (1168)
+    Destination port: http (80)
+    Sequence number: 454    (relative sequence number)
+    Header length: 20 bytes
+    Flags: 0x0004 (RST)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .1.. = Reset: Set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 0
+    Checksum: 0x60ae [correct]
+    SEQ/ACK analysis
+
+No.     Time        Source                Destination           Protocol Info
+     54 2.060499    10.1.1.104            10.1.1.1              TCP      1168 > http [RST] Seq=454 Ack=156 Win=0 Len=0
+
+Frame 54 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:03.043538000
+    Time delta from previous packet: 0.000038000 seconds
+    Time since reference or first frame: 2.060499000 seconds
+    Frame Number: 54
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x9d07 (40199)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x485e [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1168 (1168), Dst Port: http (80), Seq: 454, Ack: 156, Len: 0
+    Source port: 1168 (1168)
+    Destination port: http (80)
+    Sequence number: 454    (relative sequence number)
+    Header length: 20 bytes
+    Flags: 0x0004 (RST)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .1.. = Reset: Set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 0
+    Checksum: 0x174e [correct]
+    SEQ/ACK analysis
+
+No.     Time        Source                Destination           Protocol Info
+     55 3.167862    192.168.1.96          10.1.1.1              TCP      1169 > http [SYN] Seq=0 Ack=0 Win=32768 Len=0 MSS=1460 WS=0 TSV=0 TSER=0
+
+Frame 55 (80 bytes on wire, 80 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.150901000
+    Time delta from previous packet: 1.107363000 seconds
+    Time since reference or first frame: 3.167862000 seconds
+    Frame Number: 55
+    Packet Length: 80 bytes
+    Capture Length: 80 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 64
+    Identification: 0x9e07 (40455)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x8fa6 [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1169 (1169), Dst Port: http (80), Seq: 0, Ack: 0, Len: 0
+    Source port: 1169 (1169)
+    Destination port: http (80)
+    Sequence number: 0    (relative sequence number)
+    Header length: 44 bytes
+    Flags: 0x0002 (SYN)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0xdf92 [correct]
+    Options: (24 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        Window scale: 0 (multiply by 1)
+        NOP
+        NOP
+        Time stamp: tsval 0, tsecr 0
+        NOP
+        NOP
+        SACK permitted
+
+No.     Time        Source                Destination           Protocol Info
+     56 3.167910    10.1.1.104            10.1.1.1              TCP      1169 > http [SYN] Seq=0 Ack=0 Win=32768 Len=0 MSS=1460 WS=0 TSV=0 TSER=0
+
+Frame 56 (80 bytes on wire, 80 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.150949000
+    Time delta from previous packet: 0.000048000 seconds
+    Time since reference or first frame: 3.167910000 seconds
+    Frame Number: 56
+    Packet Length: 80 bytes
+    Capture Length: 80 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 64
+    Identification: 0x9e07 (40455)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x4746 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1169 (1169), Dst Port: http (80), Seq: 0, Ack: 0, Len: 0
+    Source port: 1169 (1169)
+    Destination port: http (80)
+    Sequence number: 0    (relative sequence number)
+    Header length: 44 bytes
+    Flags: 0x0002 (SYN)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0x9632 [correct]
+    Options: (24 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        Window scale: 0 (multiply by 1)
+        NOP
+        NOP
+        Time stamp: tsval 0, tsecr 0
+        NOP
+        NOP
+        SACK permitted
+
+No.     Time        Source                Destination           Protocol Info
+     57 3.172056    10.1.1.1              10.1.1.104            TCP      http > 1169 [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 WS=0
+
+Frame 57 (68 bytes on wire, 68 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.155095000
+    Time delta from previous packet: 0.004146000 seconds
+    Time since reference or first frame: 3.172056000 seconds
+    Frame Number: 57
+    Packet Length: 68 bytes
+    Capture Length: 68 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 52
+    Identification: 0x0000 (0)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x245a [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1169 (1169), Seq: 0, Ack: 1, Len: 0
+    Source port: http (80)
+    Destination port: 1169 (1169)
+    Sequence number: 0    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x0012 (SYN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 5840
+    Checksum: 0x9541 [correct]
+    Options: (12 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        NOP
+        SACK permitted
+        NOP
+        Window scale: 0 (multiply by 1)
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 56
+        The RTT to ACK the segment was: 0.004146000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     58 3.172071    10.1.1.1              192.168.1.96          TCP      http > 1169 [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 WS=0
+
+Frame 58 (68 bytes on wire, 68 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.155110000
+    Time delta from previous packet: 0.000015000 seconds
+    Time since reference or first frame: 3.172071000 seconds
+    Frame Number: 58
+    Packet Length: 68 bytes
+    Capture Length: 68 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 52
+    Identification: 0x0000 (0)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0x6eba [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1169 (1169), Seq: 0, Ack: 1, Len: 0
+    Source port: http (80)
+    Destination port: 1169 (1169)
+    Sequence number: 0    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x0012 (SYN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..1. = Syn: Set
+        .... ...0 = Fin: Not set
+    Window size: 5840
+    Checksum: 0xdea1 [correct]
+    Options: (12 bytes)
+        Maximum segment size: 1460 bytes
+        NOP
+        NOP
+        SACK permitted
+        NOP
+        Window scale: 0 (multiply by 1)
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 55
+        The RTT to ACK the segment was: 0.004209000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     59 3.175996    192.168.1.96          10.1.1.1              TCP      1169 > http [ACK] Seq=1 Ack=1 Win=32768 Len=0
+
+Frame 59 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.159035000
+    Time delta from previous packet: 0.003925000 seconds
+    Time since reference or first frame: 3.175996000 seconds
+    Frame Number: 59
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+    Trailer: 020405B40103
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xa007 (40967)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x8dbe [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1169 (1169), Dst Port: http (80), Seq: 1, Ack: 1, Len: 0
+    Source port: 1169 (1169)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0xb63c [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 58
+        The RTT to ACK the segment was: 0.003925000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     60 3.176009    10.1.1.104            10.1.1.1              TCP      1169 > http [ACK] Seq=1 Ack=1 Win=32768 Len=0
+
+Frame 60 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.159048000
+    Time delta from previous packet: 0.000013000 seconds
+    Time since reference or first frame: 3.176009000 seconds
+    Frame Number: 60
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xa007 (40967)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x455e [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1169 (1169), Dst Port: http (80), Seq: 1, Ack: 1, Len: 0
+    Source port: 1169 (1169)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0x6cdc [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 57
+        The RTT to ACK the segment was: 0.003953000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     61 3.227347    192.168.1.96          10.1.1.1              HTTP     GET /vt_logo.jpg HTTP/1.1
+
+Frame 61 (507 bytes on wire, 507 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.210386000
+    Time delta from previous packet: 0.051338000 seconds
+    Time since reference or first frame: 3.227347000 seconds
+    Frame Number: 61
+    Packet Length: 507 bytes
+    Capture Length: 507 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 491
+    Identification: 0xa107 (41223)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x8afb [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1169 (1169), Dst Port: http (80), Seq: 1, Ack: 1, Len: 451
+    Source port: 1169 (1169)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 452    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0xe751 [correct]
+Hypertext Transfer Protocol
+    GET /vt_logo.jpg HTTP/1.1\r\n
+        Request Method: GET
+        Request URI: /vt_logo.jpg
+        Request Version: HTTP/1.1
+    Accept: */*\r\n
+    UA-OS: Windows CE (POCKET PC) - Version 3.0\r\n
+    UA-color: color16\r\n
+    UA-pixels: 240x320\r\n
+    UA-CPU: ARM SA1110\r\n
+    UA-Voice: FALSE\r\n
+    Referer: http://10.1.1.1/\r\n
+    UA-Language: JavaScript\r\n
+    Accept-Encoding: gzip, deflate\r\n
+    If-Modified-Since: Sun, 25 Jan 2004 16:35:41 GMT\r\n
+    If-None-Match: "13c3da-2e19-3e671140"\r\n
+    User-Agent: Mozilla/2.0 (compatible; MSIE 3.02; Windows CE; PPC; 240x320)\r\n
+    Host: 10.1.1.1\r\n
+    Connection: Keep-Alive\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+     62 3.227361    10.1.1.104            10.1.1.1              HTTP     GET /vt_logo.jpg HTTP/1.1
+
+Frame 62 (507 bytes on wire, 507 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.210400000
+    Time delta from previous packet: 0.000014000 seconds
+    Time since reference or first frame: 3.227361000 seconds
+    Frame Number: 62
+    Packet Length: 507 bytes
+    Capture Length: 507 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 491
+    Identification: 0xa107 (41223)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x429b [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1169 (1169), Dst Port: http (80), Seq: 1, Ack: 1, Len: 451
+    Source port: 1169 (1169)
+    Destination port: http (80)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 452    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32768
+    Checksum: 0x9df1 [correct]
+Hypertext Transfer Protocol
+    GET /vt_logo.jpg HTTP/1.1\r\n
+        Request Method: GET
+        Request URI: /vt_logo.jpg
+        Request Version: HTTP/1.1
+    Accept: */*\r\n
+    UA-OS: Windows CE (POCKET PC) - Version 3.0\r\n
+    UA-color: color16\r\n
+    UA-pixels: 240x320\r\n
+    UA-CPU: ARM SA1110\r\n
+    UA-Voice: FALSE\r\n
+    Referer: http://10.1.1.1/\r\n
+    UA-Language: JavaScript\r\n
+    Accept-Encoding: gzip, deflate\r\n
+    If-Modified-Since: Sun, 25 Jan 2004 16:35:41 GMT\r\n
+    If-None-Match: "13c3da-2e19-3e671140"\r\n
+    User-Agent: Mozilla/2.0 (compatible; MSIE 3.02; Windows CE; PPC; 240x320)\r\n
+    Host: 10.1.1.1\r\n
+    Connection: Keep-Alive\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+     63 3.234580    10.1.1.1              10.1.1.104            TCP      http > 1169 [ACK] Seq=1 Ack=452 Win=6432 Len=0
+
+Frame 63 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.217619000
+    Time delta from previous packet: 0.007219000 seconds
+    Time since reference or first frame: 3.234580000 seconds
+    Frame Number: 63
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+    Trailer: 010000000000
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xd9c5 (55749)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x4aa0 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1169 (1169), Seq: 1, Ack: 452, Len: 0
+    Source port: http (80)
+    Destination port: 1169 (1169)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 452    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0xd1f9 [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 62
+        The RTT to ACK the segment was: 0.007219000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     64 3.234590    10.1.1.1              192.168.1.96          TCP      http > 1169 [ACK] Seq=1 Ack=452 Win=6432 Len=0
+
+Frame 64 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.217629000
+    Time delta from previous packet: 0.000010000 seconds
+    Time since reference or first frame: 3.234590000 seconds
+    Frame Number: 64
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xd9c5 (55749)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0x9500 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1169 (1169), Seq: 1, Ack: 452, Len: 0
+    Source port: http (80)
+    Destination port: 1169 (1169)
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 452    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0x1b5a [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 61
+        The RTT to ACK the segment was: 0.007243000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     65 3.235419    10.1.1.1              10.1.1.104            HTTP     HTTP/1.1 304 Not Modified
+
+Frame 65 (210 bytes on wire, 210 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.218458000
+    Time delta from previous packet: 0.000829000 seconds
+    Time since reference or first frame: 3.235419000 seconds
+    Frame Number: 65
+    Packet Length: 210 bytes
+    Capture Length: 210 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 194
+    Identification: 0xd9c6 (55750)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x4a05 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1169 (1169), Seq: 1, Ack: 452, Len: 154
+    Source port: http (80)
+    Destination port: 1169 (1169)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 155    (relative sequence number)
+    Acknowledgement number: 452    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0x1db1 [correct]
+Hypertext Transfer Protocol
+    HTTP/1.1 304 Not Modified\r\n
+        Request Version: HTTP/1.1
+        Response Code: 304
+    Date: Sat, 28 Feb 2004 17:56:33 GMT\r\n
+    Server: Apache/2.0.40 (Red Hat Linux)\r\n
+    Connection: close\r\n
+    ETag: "13c3da-2e19-3e671140"\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+     66 3.235430    10.1.1.1              192.168.1.96          HTTP     HTTP/1.1 304 Not Modified
+
+Frame 66 (210 bytes on wire, 210 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.218469000
+    Time delta from previous packet: 0.000011000 seconds
+    Time since reference or first frame: 3.235430000 seconds
+    Frame Number: 66
+    Packet Length: 210 bytes
+    Capture Length: 210 bytes
+    Protocols in frame: sll:ip:tcp:http
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 194
+    Identification: 0xd9c6 (55750)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0x9465 [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1169 (1169), Seq: 1, Ack: 452, Len: 154
+    Source port: http (80)
+    Destination port: 1169 (1169)
+    Sequence number: 1    (relative sequence number)
+    Next sequence number: 155    (relative sequence number)
+    Acknowledgement number: 452    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0018 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 6432
+    Checksum: 0x6711 [correct]
+Hypertext Transfer Protocol
+    HTTP/1.1 304 Not Modified\r\n
+        Request Version: HTTP/1.1
+        Response Code: 304
+    Date: Sat, 28 Feb 2004 17:56:33 GMT\r\n
+    Server: Apache/2.0.40 (Red Hat Linux)\r\n
+    Connection: close\r\n
+    ETag: "13c3da-2e19-3e671140"\r\n
+    \r\n
+
+No.     Time        Source                Destination           Protocol Info
+     67 3.236272    10.1.1.1              10.1.1.104            TCP      http > 1169 [FIN, ACK] Seq=155 Ack=452 Win=6432 Len=0
+
+Frame 67 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.219311000
+    Time delta from previous packet: 0.000842000 seconds
+    Time since reference or first frame: 3.236272000 seconds
+    Frame Number: 67
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:4a:94 (00:40:96:48:4a:94)
+    Protocol: IP (0x0800)
+    Trailer: 020000000000
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 10.1.1.104 (10.1.1.104)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xd9c7 (55751)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x4a9e [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 10.1.1.104 (10.1.1.104)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1169 (1169), Seq: 155, Ack: 452, Len: 0
+    Source port: http (80)
+    Destination port: 1169 (1169)
+    Sequence number: 155    (relative sequence number)
+    Acknowledgement number: 452    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0011 (FIN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...1 = Fin: Set
+    Window size: 6432
+    Checksum: 0xd15e [correct]
+
+No.     Time        Source                Destination           Protocol Info
+     68 3.236283    10.1.1.1              192.168.1.96          TCP      http > 1169 [FIN, ACK] Seq=155 Ack=452 Win=6432 Len=0
+
+Frame 68 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.219322000
+    Time delta from previous packet: 0.000011000 seconds
+    Time since reference or first frame: 3.236283000 seconds
+    Frame Number: 68
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: DellComp_48:1e:f4 (00:08:74:48:1e:f4)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.1 (10.1.1.1), Dst: 192.168.1.96 (192.168.1.96)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xd9c7 (55751)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (0x06)
+    Header checksum: 0x94fe [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.1 (10.1.1.1)
+    Destination: 192.168.1.96 (192.168.1.96)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 1169 (1169), Seq: 155, Ack: 452, Len: 0
+    Source port: http (80)
+    Destination port: 1169 (1169)
+    Sequence number: 155    (relative sequence number)
+    Acknowledgement number: 452    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0011 (FIN, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...1 = Fin: Set
+    Window size: 6432
+    Checksum: 0x1abf [correct]
+
+No.     Time        Source                Destination           Protocol Info
+     69 3.240515    192.168.1.96          10.1.1.1              TCP      1169 > http [ACK] Seq=452 Ack=156 Win=32614 Len=0
+
+Frame 69 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.223554000
+    Time delta from previous packet: 0.004232000 seconds
+    Time since reference or first frame: 3.240515000 seconds
+    Frame Number: 69
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+    Trailer: 474554202F76
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xa307 (41735)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x8abe [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1169 (1169), Dst Port: http (80), Seq: 452, Ack: 156, Len: 0
+    Source port: 1169 (1169)
+    Destination port: http (80)
+    Sequence number: 452    (relative sequence number)
+    Acknowledgement number: 156    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32614
+    Checksum: 0xb478 [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 68
+        The RTT to ACK the segment was: 0.004232000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     70 3.240527    10.1.1.104            10.1.1.1              TCP      1169 > http [ACK] Seq=452 Ack=156 Win=32614 Len=0
+
+Frame 70 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.223566000
+    Time delta from previous packet: 0.000012000 seconds
+    Time since reference or first frame: 3.240527000 seconds
+    Frame Number: 70
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xa307 (41735)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x425e [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1169 (1169), Dst Port: http (80), Seq: 452, Ack: 156, Len: 0
+    Source port: 1169 (1169)
+    Destination port: http (80)
+    Sequence number: 452    (relative sequence number)
+    Acknowledgement number: 156    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x0010 (ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgment: Set
+        .... 0... = Push: Not set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 32614
+    Checksum: 0x6b18 [correct]
+    SEQ/ACK analysis
+        This is an ACK to the segment in frame: 67
+        The RTT to ACK the segment was: 0.004255000 seconds
+
+No.     Time        Source                Destination           Protocol Info
+     71 3.243741    192.168.1.96          10.1.1.1              TCP      1169 > http [RST] Seq=452 Ack=156 Win=0 Len=0
+
+Frame 71 (62 bytes on wire, 62 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.226780000
+    Time delta from previous packet: 0.003214000 seconds
+    Time since reference or first frame: 3.243741000 seconds
+    Frame Number: 71
+    Packet Length: 62 bytes
+    Capture Length: 62 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Unicast to us (0)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_39:da:57 (00:40:96:39:da:57)
+    Protocol: IP (0x0800)
+    Trailer: 474554202F76
+Internet Protocol, Src: 192.168.1.96 (192.168.1.96), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xa407 (41991)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (0x06)
+    Header checksum: 0x89be [correct]
+        Good: True
+        Bad : False
+    Source: 192.168.1.96 (192.168.1.96)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1169 (1169), Dst Port: http (80), Seq: 452, Ack: 156, Len: 0
+    Source port: 1169 (1169)
+    Destination port: http (80)
+    Sequence number: 452    (relative sequence number)
+    Header length: 20 bytes
+    Flags: 0x0004 (RST)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .1.. = Reset: Set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 0
+    Checksum: 0x33eb [correct]
+    SEQ/ACK analysis
+
+No.     Time        Source                Destination           Protocol Info
+     72 3.243753    10.1.1.104            10.1.1.1              TCP      1169 > http [RST] Seq=452 Ack=156 Win=0 Len=0
+
+Frame 72 (56 bytes on wire, 56 bytes captured)
+    Arrival Time: May  2, 2006 19:32:04.226792000
+    Time delta from previous packet: 0.000012000 seconds
+    Time since reference or first frame: 3.243753000 seconds
+    Frame Number: 72
+    Packet Length: 56 bytes
+    Capture Length: 56 bytes
+    Protocols in frame: sll:ip:tcp
+Linux cooked capture
+    Packet type: Sent by us (4)
+    Link-layer address type: 1
+    Link-layer address length: 6
+    Source: Aironet_48:47:d2 (00:40:96:48:47:d2)
+    Protocol: IP (0x0800)
+Internet Protocol, Src: 10.1.1.104 (10.1.1.104), Dst: 10.1.1.1 (10.1.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0xa407 (41991)
+    Flags: 0x04 (Don't Fragment)
+        0... = Reserved bit: Not set
+        .1.. = Don't fragment: Set
+        ..0. = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 127
+    Protocol: TCP (0x06)
+    Header checksum: 0x415e [correct]
+        Good: True
+        Bad : False
+    Source: 10.1.1.104 (10.1.1.104)
+    Destination: 10.1.1.1 (10.1.1.1)
+Transmission Control Protocol, Src Port: 1169 (1169), Dst Port: http (80), Seq: 452, Ack: 156, Len: 0
+    Source port: 1169 (1169)
+    Destination port: http (80)
+    Sequence number: 452    (relative sequence number)
+    Header length: 20 bytes
+    Flags: 0x0004 (RST)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...0 .... = Acknowledgment: Not set
+        .... 0... = Push: Not set
+        .... .1.. = Reset: Set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 0
+    Checksum: 0xea8a [correct]
+    SEQ/ACK analysis

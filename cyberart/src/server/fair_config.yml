@@ -1,0 +1,22 @@
+:server_port: 3142
+:client_port: 3141
+:size:
+  :x: 21
+  :y: 28
+:montinents:
+  - :host: montinent_1
+    :location:
+      :x: 2
+      :y: 2
+    :resolution:
+      :x: 1680
+      :y: 1050
+    :size: 20
+  - :host: montinent_2
+    :location:
+      :x: 2
+      :y: 15
+    :resolution:
+      :x: 1680
+      :y: 1050
+    :size: 20

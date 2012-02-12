@@ -1,0 +1,232 @@
+\documentclass[11pt]{report}
+\usepackage{pgf}
+\usepackage{listings}
+\usepackage[margin=1in,nohead]{geometry}
+
+% the following produces 1 inch margins all around with no header or footer
+%\topmargin  =10.mm    % beyond 25.mm
+%\oddsidemargin  =0.mm   % beyond 25.mm
+%\evensidemargin =0.mm   % beyond 25.mm
+%\headheight =0.mm
+%\headsep  =0.mm
+%\textheight =220.mm
+%\textwidth  =165.mm
+
+\lstset{basicstyle=\footnotesize,columns=fullflexible,frame=lines,numbers=left,numberstyle=\tiny,stepnumber=5}
+
+\lstdefinelanguage{CSharp}
+{
+ morecomment = [l]{//}, 
+ morecomment = [l]{///},
+ morecomment = [s]{/*}{*/},
+ morestring=[b]", 
+ sensitive = true,
+ morekeywords = {abstract,  event,  new,  struct,
+   as,  explicit,  null,  switch,
+   base,  extern,  object,  this,
+   bool,  false,  operator,  throw,
+   break,  finally,  out,  true,
+   byte,  fixed,  override,  try,
+   case,  float,  params,  typeof,
+   catch,  for,  private,  uint,
+   char,  foreach,  protected,  ulong,
+   checked,  goto,  public,  unchecked,
+   class,  if,  readonly,  unsafe,
+   const,  implicit,  ref,  ushort,
+   continue,  in,  return,  using,
+   decimal,  int,  sbyte,  virtual,
+   default,  interface,  sealed,  volatile,
+   delegate,  internal,  short,  void,
+   do,  is,  sizeof,  while,
+   double,  lock,  stackalloc,   
+   else,  long,  static,   
+   enum,  namespace,  string}
+}
+
+%\def\thesubsubsection{\thesubsection(\alph{subsubsection})}
+\def\thesection{\Roman{section}}
+\def\thesubsection{\arabic{subsection}.}
+
+%\newcommand{\Section}[1]{\section{#1} \setcounter{subsection}{1}}
+\newcommand{\Section}[1]{\newpage \section{#1}}
+
+\title{P5 - UPnP Device \\ \small ECE/CS 4570: Wireless Networks and Mobile Systems \\ Blacksburg campus}
+\author{Ben Andrews and Alpha Chen \\ 9051-64091 \\ bandrews@vt.edu, alchen@vt.edu}
+\date{March 23, 2006}
+
+\begin{document}
+
+\maketitle
+
+\Section{File listing}
+% max: 0.5 page
+
+Included files:
+
+AssemblyInfo.cs
+
+Form1.cs
+
+P5\_04.cs
+
+SampleDevice.cs
+
+UnsafeNativeMethods.cs
+
+\Section{Project Discussion}
+% max: 1 page
+
+Because we are not provided with the source to the iPaq application, Ethereal is required to find the information necessary to build the service. This is unusual in that usually a service is reverse-engineered, but similar principles apply in both cases. In this case, we first sniff the UPnP traffic to find the device name that the iPaq wishes to connect to. This turns out to be ``projector:1''. Trying a blank device with this name crashes the device app, but with the appropriate settings from the spec and state variables as posted on the forum, we are able to successfully create the device app.
+
+Once the contract has been discovered, we can use this to create the actual device which will take the UPnP calls and control PowerPoint. This is done through the PPT Control DLL, which is written in unmanaged C++. The UPnP service uses this DLL to start, navigate, and close the presentation. Because this is unmanaged code, we must be especially careful with memory, and a wrapper class was written to expose managed code with error checking to the outside world. This allows the DLL lifecycle to be managed and that \verb|PPT_Stop| and \verb|PPT_ExitInstance| are \emph{always} called to clean up the DLL.
+
+Actually writing the application was fairly straightforward, with the bulk of the work coming from integrating the DLL into the application, as already described. After that, running the DLL methods was not a complicated procedure, with a lot of code being reused from action to action.
+
+In testing, it turned out that Device Spy and the debug log were not necessary. We found that using Ethereal for debugging and testing was easier and faster than the other two methods, making them largely superfluous.
+
+\Section{UPnP Discovery Process Timeline}
+% max: 2 pages
+
+UPnP uses the Simple Service Discovery Protocol for service discovery. We can see the SSDP being broadcast to the network by the control point (192.168.0.199) as it starts up, searching for the projector:1 device. Due to lack of space, we show only the basic details about the packets transmitted between the device and control point.
+
+\begin{verbatim}
+No.     Time        Source                Destination           Protocol Info
+      1 0.000000    192.168.0.199         239.255.255.250       SSDP     M-SEARCH * HTTP/1.1
+\end{verbatim}
+
+The device sees the request for a projector:1 device, and after finding the MAC address of the control point, is able to respond to the control point with an HTTP packet that briefly describes the service. The content-length is 0, as all the information is transmitted in the header.
+
+\begin{verbatim}
+No.     Time        Source                Destination           Protocol Info
+      6 7.802993    192.168.0.133         192.168.0.199         SSDP     HTTP/1.1 200 OK
+
+      HTTP/1.1 200 OK
+      LOCATION: http://192.168.0.133:52371/
+      EXT: 
+      USN: uuid:30881bf2-ba13-492b-9ade-4c84adfa55f4::urn:schemas-upnp-org:device:projector:1
+      SERVER: Windows NT/5.0, UPnP/1.0, Intel CLR SDK/1.0
+      CACHE-CONTROL: max-age=1800
+      ST: urn:schemas-upnp-org:device:projector:1
+      Content-Length: 0
+\end{verbatim}
+
+Now the Pocket PC requests a description of the service from the device.
+
+\begin{verbatim}
+No.     Time        Source                Destination           Protocol Info
+     14 7.964498    192.168.0.199         192.168.0.133         TCP      1231 > 52371 [PSH, ACK] Seq=1 Ack=1 Win=32768 Len=167
+\end{verbatim}
+
+The device now responds with that description.
+
+\begin{verbatim}
+No.     Time        Source                Destination           Protocol Info
+     16 7.972961    192.168.0.133         192.168.0.199         TCP      52371 > 1231 [PSH, ACK] Seq=1 Ack=168 Win=17353 Len=1119
+     HTTP/1.1 200 OK
+     CONTENT-TYPE: text/xml
+     Content-Length: 1054
+
+     <?xml version="1.0" encoding="utf-8"?>
+     <root xmlns="urn:schemas-upnp-org:device-1-0">
+       <specVersion>
+         <major>1</major>
+         <minor>0</minor>
+       </specVersion>
+       <device>
+         <deviceType>urn:schemas-upnp-org:device:projector:1</deviceType>
+         <friendlyName>ProjectorDevice</friendlyName>
+         <manufacturer>WNMS Group 4</manufacturer>
+         <manufacturerURL>http://www.vt.edu</manufacturerURL>
+         <modelDescription>Powerpoint Projector Controller</modelDescription>
+         <modelName>Projector Controller</modelName>
+         <modelNumber>G4</modelNumber>
+         <UDN>uuid:30881bf2-ba13-492b-9ade-4c84adfa55f4</UDN>
+         <serviceList>
+           <service>
+             <serviceType>urn:schemas-upnp-org:service:control:1</serviceType>
+             <serviceId>urn:upnp-org:serviceId:control</serviceId>
+             <SCPDURL>_control_scpd.xml</SCPDURL>
+             <controlURL>_control_control</controlURL>
+             <eventSubURL>_control_event</eventSubURL>
+           </service>
+         </serviceList>
+       </device>
+     </root>
+\end{verbatim}
+
+Note that Ethereal does not detect this as an HTTP stream, as UPnP strangely uses standard HTTP over a variant protocol of its own. The control point now subscribes to a control event, providing a callback IP to be ``pinged'' by the device. The device acknowledges the event subscription and updates the Pocket PC with the current status. The Pocket PC then acknowledges the reception of the event.
+
+\begin{verbatim}
+No.     Time        Source                Destination           Protocol Info
+     31 8.148630    192.168.0.199         192.168.0.133         TCP      1233 > 52371 [PSH, ACK] Seq=1 Ack=1 Win=32768 Len=143
+No.     Time        Source                Destination           Protocol Info
+     32 8.159065    192.168.0.133         192.168.0.199         TCP      52371 > 1233 [PSH, ACK] Seq=1 Ack=144 Win=17377 Len=171
+No.     Time        Source                Destination           Protocol Info
+     39 8.237795    192.168.0.133         192.168.0.199         TCP      3970 > 1228 [PSH, ACK] Seq=1 Ack=1 Win=17520 Len=660
+No.     Time        Source                Destination           Protocol Info
+     40 8.330090    192.168.0.199         192.168.0.133         TCP      1228 > 3970 [PSH, ACK] Seq=1 Ack=661 Win=32108 Len=186
+\end{verbatim}
+
+Now, the Pocket PC requests and receives a list of files from the device, which the device then acknowledges.
+
+\begin{verbatim}
+No.     Time        Source                Destination           Protocol Info
+     59 10.210333   192.168.0.199         192.168.0.133         TCP      1235 > 52371 [PSH, ACK] Seq=1 Ack=1 Win=32768 Len=485
+No.     Time        Source                Destination           Protocol Info
+     61 10.265631   192.168.0.133         192.168.0.199         TCP      52371 > 1235 [PSH, ACK] Seq=1 Ack=486 Win=17035 Len=498
+No.     Time        Source                Destination           Protocol Info
+     64 10.337708   192.168.0.133         192.168.0.199         TCP      3971 > 1228 [PSH, ACK] Seq=1 Ack=1 Win=17520 Len=405
+No.     Time        Source                Destination           Protocol Info
+     67 10.424386   192.168.0.199         192.168.0.133         TCP      1228 > 3971 [PSH, ACK] Seq=1 Ack=406 Win=32363 Len=186
+\end{verbatim}
+
+As can be told by the sequence numbers of the frames, there are numerous network control packets sent which are not shown, but we neglect them to show the high-level functioning of the program.
+
+\Section{Optional Features}
+% max: 1 page
+
+We did both optional features, logging to a file and building a graphical user interface to the device application.
+
+\Section{Answers}
+% max: 2 pages
+
+\subsection{What are at least two differences between UPnP services and web services?}
+
+Although UPnP services and web services are very similar, they differ in several respects. One difference is that UPnP supports direct event notifications. That is, UPnP can essentially ``callback'' subscribers with changes in state, while web services need to be polled to find these changes. Another difference is that UPnP runs at a lower level than web services. Because web services run over HTTP, there is no need for them to define lower level networking protocol; as long as two computers can talk to one another over HTTP, they can use web services with each other. Since UPnP works at the IP level, it requires finer control over the networking stack.
+
+\subsection{From what you have seen and read concerning UPnP, what extensions, services, and functionality would you add to it?}
+
+UPnP is a very powerful set of protocols which covers a lot of ground. It works very well for what it is intended to do, which is simplify implementation of networks using already existing protocols and technology. However, one gap in UPnP I would like to see fixed is the reliance on HTML as the presentation mechanism. In this current age of mobile devices, this is a bit outdated, and could be updated to use XSLT with XML or something that is more flexible.
+
+\subsection{What problems did you encounter during the project?  What steps did you take in resolving these problems?}
+
+One of the biggest problems with this project was that our iPaq was broken; the battery doesn't hold a charge, so we would have to constantly reload the software, including the wireless drivers. We used a different Pocket PC to step around this issue, although this created more problems to overcome. Namely, that with no wireless on the new Pocket PC, we had to find another way of placing it on the same network as the PC, which proved problematic. Eventually, we got a workable network setup by routing the Pocket PC through a PC using the Bluetooth network bridge to get it on the same network as the development laptop.
+
+Another problem we encountered was that it was extremely hard to find out why PowerPoint would not start with the DLL in the wrong folder. Oddly enough, the exception was thrown only when the garbage collector reclaimed the object memory, which made this extremely difficult to debug. This is not a huge problem, per se, but is interesting to note and may help in diagnosing future problems with the DLL not loading PowerPoint.
+
+\subsection{Are there any known problems or shortcomings with your project?}
+
+The project works according to spec, so the main shortcomings lie with the PointPoint controller in the DLL. The controller does not actually close PowerPoint, and if the user adjusts PointPoint through the computer, this change is not reflected on the mobile device.
+
+\subsection{What was your overall feeling of the project? Any thoughts/comments/suggestions you wish to add?}
+
+The hardest part of this project was getting the network set up correctly so that we could sniff with Ethereal. This would have been much simpler had the equipment worked, so we did not have to jump through hoops to sniff network traffic from the Pocket PC to the laptop. We also could not figure out how to obtain the state variables from a network trace, though we were able to do the project regardless because they were provided on the forum. However, this did teach how to use Ethereal to find information on UPnP streams, how to catch those requests in C\#, and integrate a DLL controller into an application.
+
+\appendix
+
+\Section{AssemblyInfo}
+\lstinputlisting[language=CSharp]{Project5UI/AssemblyInfo.cs}
+
+\Section{Form1}
+\lstinputlisting[language=CSharp]{Project5UI/Form1.cs}
+
+\Section{P504}
+\lstinputlisting[language=CSharp]{P504.cs}
+
+\Section{SampleDevice}
+\lstinputlisting[language=CSharp]{Project5UI/SampleDevice.cs}
+
+\Section{UnsafeNativeMethods}
+\lstinputlisting[language=CSharp]{Project5UI/UnsafeNativeMethods.cs}
+
+\end{document}

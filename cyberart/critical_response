@@ -1,0 +1,40 @@
+Response to Critical Review I
+
+"Information Flow"
+Alpha Chen
+Ben Congleton
+Ira Jhangiani
+Caleb Jones
+George Luc
+Hosannah Malubay
+Oluwabukunmi Otitoju
+
+Though our main group has separated into three subgroups, there is still a considerable amount of overlap, especially with our core concept. Specifically, there are subgroups for the audio, content, and code. We present one main response to the critical reviews because of the overlap between our groups and the types of criticisms and comments that we received.
+
+1. Response to Points Raised
+
+There were multiple comments on the message that we were trying to convey. We had several themes, but they were only loosly tied together. The latest iteration of our project addresses this by concentrating on the "information flow" theme. The concentration of our theme also allows us to better tie the interactivity into the project as a whole, another point that was raised in a review. See the specification below for details.
+
+Other reviews mentioned the feasibility of actually creating our work. The original plan was ambitious, and our revised plan still quite complicated. Construction of the globe or raining monitors would be hard, and getting the intended message across with either harder still. We have decided to cut back on the scope of the construction, being less blatent about our message. This also applies to other comments on how our project may have been too blunt.
+
+Another point that someone raised on our design was whether the sounds would clash or not. We plan on having all the sounds blend together harmoniously, but we do have a fallback plan. In case our original idea for the audio doesn't work, we can always vary the volume in certain areas, and this should suffice for differentiating the music for each continent-culture and the whole world.
+
+As noted above, we are subdividing the group into three subgroups to deal with the large amount of people we have working together. This will be explained in more detail in the later sections. We also intend on making this as "global" as possible, hopefully avoiding an American point of view as much as we can, which was something that Simone brought up.
+
+2. Specification
+
+The topic of our project is "information flow". This is derived strongly from George's original concept of the "flat earth". One of the things that makes the world "flat" is information; both easy access to it and the importance of information to the point that it can be worth as much as physical goods.
+
+We came up with this concept from our display in the exhibition, which suggested raining monitors. Through this, we realized that we could represent the flow of information through falling monitors. At our group meeting on February 5th, this was further simplified.
+
+The overall look should suggest flowing information (appropriately enough). It should remind viewers of rain, where pictures (representing information) fall from the sky to the ground. The "rain" will be displayed on the monitors, each monitor representing a continent. There will be six continents (we neglect Antarctica, as it does not have a serious role in the "flat earth"), and viewers should be able to recognize each as a distinct continent. Viewers should also recognize that the rain is made up of individual pictures. A projecter will project the accumulated information (pictures) on the floor, as a visual representation of the internet with information being sent and received from all over the world. Audio will be playing in the background to further suggest the feeling of rain.
+
+George: "[This] exhibit conveys the important idea of how information and technology thrives in our everday lives. This is deeply analogous to the need for rain and water to allow nature to thrive. Without technology and the information it carries, the world is static; without the rain and water it carries the world withers."
+
+Again, each monitor represents one continent. If you step up to a monitor, it should be readily apparent that the falling pictures come from all over the world. We have a couple options for both suggesting the specific continent and displaying (and choosing) pictures, but these are implementation details that have not been set in stone yet. Sound should definitely play a role in telling the viewer what continent each monitor is displaying.
+
+We hope to still retain some interactivity through the content. People should be able to upload pictures online so that the pictures truly will be global, and the information flow of the flat earth not only represented by our project, but also used.
+
+3. Decision Making and Team Process (King George)
+
+Our three subgroups will maintain the same meeting time; Sundays at 1 PM in Torgerson 1180. The subgroups are: content, audio, and coding. The content group (Ira, Kunmi, and Hossanah) will work on what the displays will actually consist of. The audio team (George and Caleb) will be in charge of making the sound work correctly. The coding group (Alpha and Ben) will assist the content group in making their vision a reality. The structure will be that of the US Cabinet. Everyone will dispense advice, but in the end, the George will have the final say. We hope that we will never come to the point where this will be necessary, but in that case, we will go with the team lead's decision. Project reviews are tentatively scheduled for the beginning of every other week's meeting. We anticipate that they should take no longer than an hour each. Each subgroup may have to meet independently as well, but one meeting each Sunday should be enough for both the subgroup and main group meetings.

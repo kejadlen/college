@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}
+\usepackage{pgf}
+\usepackage{listings}
+
+% the following produces 1 inch margins all around with no header or footer
+\topmargin  =10.mm    % beyond 25.mm
+\oddsidemargin  =0.mm   % beyond 25.mm
+\evensidemargin =0.mm   % beyond 25.mm
+\headheight =0.mm
+\headsep  =0.mm
+\textheight =220.mm
+\textwidth  =165.mm
+
+\lstset{basicstyle=\footnotesize,columns=fullflexible,frame=lines,numbers=left,numberstyle=\tiny,stepnumber=5}
+
+\lstdefinelanguage{CSharp}{ morecomment = [l]{//},  morecomment = [l]{///}, morecomment = [s]{/*}{*/}, morestring=[b]",  sensitive = true, morekeywords = {abstract,  event,  new,  struct,   as,  explicit,  null,  switch,   base,  extern,  object,  this,   bool,  false,  operator,  throw,   break,  finally,  out,  true,   byte,  fixed,  override,  try,   case,  float,  params,  typeof,   catch,  for,  private,  uint,   char,  foreach,  protected,  ulong,   checked,  goto,  public,  unchecked,   class,  if,  readonly,  unsafe,   const,  implicit,  ref,  ushort,   continue,  in,  return,  using,   decimal,  int,  sbyte,  virtual,   default,  interface,  sealed,  volatile,   delegate,  internal,  short,  void,   do,  is,  sizeof,  while,   double,  lock,  stackalloc,      else,  long,  static,      enum,  namespace,  string}}
+
+%\def\thesubsubsection{\thesubsection(\alph{subsubsection})}
+\def\thesection{\Roman{section}}
+\def\thesubsubsection{(\alph{subsubsection})}
+
+\begin{document}
+
+\begin{flushright}
+{ECE 4570}\\{E02}\\{Ben Andrews (bandrews@vt.edu)}\\{Alpha Chen (alchen@vt.edu)}\\{ECE-Blacksburg}\end{flushright}
+
+\section{In-class Report}
+
+\subsection{}
+
+C\#, Visual Basic, and C++ all support the full .NET framework.
+
+\subsection{}
+
+Both C\# and Visual Basic can be used for writing .NET compact framework applications.
+
+\subsection{}
+
+Two similarities between C\# and C++ are that they both support operator overloading and they both have very similar syntax. Two differences include the way arrays are declared and reflection (C\# supports reflection, whereas C++ does not).
+
+\subsection{}
+
+See Figure \ref{tip-screens}.
+
+\begin{figure}[p]
+	\centering
+	\pgfimage[width=0.25\textwidth]{screenshots/tip-5-15}
+	\pgfimage[width=0.25\textwidth]{screenshots/tip-5-17}
+	\pgfimage[width=0.25\textwidth]{screenshots/tip-5-20}
+	\pgfimage[width=0.25\textwidth]{screenshots/tip-025-15}
+	\pgfimage[width=0.25\textwidth]{screenshots/tip-025-17}
+	\pgfimage[width=0.25\textwidth]{screenshots/tip-025-20}
+	\pgfimage[width=0.25\textwidth]{screenshots/tip-234-15}
+	\pgfimage[width=0.25\textwidth]{screenshots/tip-234-175}
+	\pgfimage[width=0.25\textwidth]{screenshots/tip-234-20}
+	\caption{Tip Calculator screenshots}
+	\label{tip-screens}
+\end{figure}
+
+\subsection{}
+
+See Appendix \ref{tip-code}
+
+\newpage
+\section{Take-home Report}
+
+\subsection{}
+
+See Appendix \ref{pizza-code}
+
+\subsection{}
+
+See Figure \ref{pizza-screens}
+
+\begin{figure}[p]
+	\centering
+	\pgfimage[width=0.35\textwidth]{screenshots/pizza-1}
+	\pgfimage[width=0.35\textwidth]{screenshots/pizza-2}
+	\pgfimage[width=0.35\textwidth]{screenshots/pizza-3}
+	\pgfimage[width=0.35\textwidth]{screenshots/pizza-4}
+	\caption{Pizza Shack screenshots}
+	\label{pizza-screens}
+\end{figure}
+
+\subsection{}
+
+Our application uses Dictionaries to easily display the sizes and crusts while returning a decimal for the cost of each. When the Price button is clicked, the cost of the toppings is found through reflection. We iterate through each checked checkbox and add the cost of the topping for the size of the pizza to the final cost.
+
+\subsection{}
+
+Another way of designing the application would be to continually update the final price. To do so, we would need to calculate and display the price on each Form change. Unfortunately, reflection could not be used to easily handle all the toppings at once with this UI.
+
+We also do not need to use Dictionaries for the checkboxes, but we would have more code otherwise. The toppings do not have to be handled with reflection, but again, using reflection allows for less code and a more easily comprehensible program.
+
+\newpage
+\section{Conclusion}
+
+In this week's lab, we learned how to write programs for our iPaq using the .NET Compact Framework and C\#. As Ben already knew C\# from working at Microsoft, this was a simple task; we finished both programs in-lab. I (Alpha) was unfamiliar with C\#, but was pleasantly surprised at the simplicity. It is very reminiscent of Java from my perspective. The Forms reminded me of OS X's Interface Builder, which makes sense, given that they are both used to create graphical front-ends and provide easy application hooks. I personally use Ruby, and so C\# seems wordy, but the object-oriented nature of the language is familiar.
+
+The .NET CF looks like a valuable tool for developing mobile graphics applications. These first two programs were relatively simple, and the .NET CF accordingly makes it simple to develop those programs.
+
+\appendix
+
+\newpage
+\section{Tip Calculator}
+\label{tip-code}
+
+\lstinputlisting[language=CSharp]{TipCalculator/Form1.cs}
+
+\newpage
+\section{Pizza Shack}
+\label{pizza-code}
+
+\lstinputlisting[language=CSharp]{PizzaShack/Form1.cs}
+
+\end{document}

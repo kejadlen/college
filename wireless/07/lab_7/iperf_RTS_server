@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+/usr/local/bin/iperf -s --udp --port 5000 --len $1 &
+/usr/local/bin/iperf -s --udp --port 5001 --len $1 &
+/usr/local/bin/iperf -s --udp --port 5002 --len $1 &
+
+wait

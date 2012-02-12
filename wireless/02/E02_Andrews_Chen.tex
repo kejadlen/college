@@ -1,0 +1,147 @@
+\documentclass[11pt]{article}
+\usepackage{pgf}
+% the following produces 1 inch margins all around with no header or footer
+\topmargin  =10.mm    % beyond 25.mm
+\oddsidemargin  =0.mm   % beyond 25.mm
+\evensidemargin =0.mm   % beyond 25.mm
+\headheight =0.mm
+\headsep  =0.mm
+\textheight =220.mm
+\textwidth  =165.mm
+
+\def\thesection{\Roman{section}}
+\def\thesubsubsection{(\alph{subsubsection})}
+
+\begin{document}
+
+\begin{flushright}
+{ECE 4570}\\{E02}\\{Ben Andrews (bandrews@vt.edu)}\\{Alpha Chen (alchen@vt.edu)}\\{ECE-Blacksburg}\end{flushright}
+
+%% Document! %%
+
+\section{Pre-lab Assignment}
+
+\emph{Iperf} has argument flags to set whether it is in server or client mode. \emph{Iperf -s} sets server mode, and \emph{Iperf -c} sets client mode. In both modes, it measures statistics about the network or connection. For TCP, it can measure the bandwidth, report the MSS/MTU size, set the TCP window size, etc. 
+
+\section{In-class Experiments}
+
+\subsection{Throughput}
+
+We were able to obtain a throughput of 10.6 Mbps.
+
+\begin{figure}[h]
+\centering
+\pgfimage[width=0.9\textwidth]{II.1}
+\caption{Iperf Client}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\pgfimage[width=0.9\textwidth]{ece4570_lab2_screenshot1}
+\caption{Iperf Server}
+\label{iperf-server}
+\end{figure}
+
+\subsection{Packet loss}
+
+We had differing amounts of packet loss, ranging from 0\% to 0.65\%. See Figure \ref{iperf-server} for the relevant screenshot.
+
+\section{Take-home Experiments}
+
+\subsection{Experiments setting up the 802.11b access point}
+
+\subsubsection{Access point MAC address}
+
+The MAC address is 00:02:B3:A5:B9:BE.  You can change the MAC address in the
+access point firmware.
+
+\newpage
+
+\subsubsection{\emph{ipconfig}}
+
+\begin{verbatim}
+Ethernet adapter Local Area Connection:
+
+        Media State . . . . . . . . . . . : Media disconnected
+
+Ethernet adapter Wireless Network Connection:
+
+        Connection-specific DNS Suffix  . :
+        IP Address. . . . . . . . . . . . : 198.69.4.3
+        Subnet Mask . . . . . . . . . . . : 255.255.255.0
+        Default Gateway . . . . . . . . . : 198.69.4.1
+\end{verbatim}
+
+\subsection{Experiments with UDP data transfer}
+
+\subsubsection{No interference}
+
+The average throughput for a 5MB transfer was 116.26 KBps (Figure \ref{athome.01}). The signal strength during the connection varied from 92\% to 96\%. However, it must be noted that this is with the client application on the iPaq not having focus; the iPaq's video display performance is poor and because the client app is designed to generate many video updates during testing, throughput is limited primarily by the iPaq's video performance rather than network connectivity. The throughput had an average of 66.29 KBps when the client application had focus. Future tests are conducted without focusing on the client application.
+
+\begin{figure}[htbp]
+\centering
+\pgfimage[width=0.5\textwidth]{athome.01}
+\caption{5MB UDP Transfer}
+\label{athome.01}
+\end{figure}
+
+\newpage
+
+With a 10MB transfer, the average throughput was 118.18 KBps (Figure \ref{athome.02}).
+
+\begin{figure}[htbp]
+\centering
+\pgfimage[width=0.5\textwidth]{athome.02}
+\caption{10MB UDP Transfer}
+\label{athome.02}
+\end{figure}
+
+\subsubsection{Wall interference}
+
+For a 5MB transfer, the throughput was 113.63 KBps (Figure \ref{athome.03}).
+
+\begin{figure}[htbp]
+\centering
+\pgfimage[width=0.5\textwidth]{athome.03}
+\caption{5MB UDP Transfer}
+\label{athome.03}
+\end{figure}
+
+For a 10MB transfer, the throughput was 119.03 KBps (Figure \ref{athome.04}).
+
+\begin{figure}[htbp]
+\centering
+\pgfimage[width=0.5\textwidth]{athome.04}
+\caption{10MB UDP Transfer}
+\label{athome.04}
+\end{figure}
+
+\subsubsection{Microwave interference}
+
+See Table \ref{microwave-data} for the average throughput and packet loss.
+
+\subsection{Experiments with varying transmit power}
+
+See Table \ref{microwave-data}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c c c c}
+Channel & Power & Throughput & Bytes & \% Packet Loss \\
+\hline
+6 & 1 & 120.75 & 4950848 & 1\% \\6 & 1 & 121.05 & 4963136 & 1\% \\6 & 1 & 115.13 & 4950848 & 1\% \\7 & 1 & 121.05 & 4963136 & 1\% \\7 & 1 & 115.13 & 4950848 & 1\% \\7 & 1	 & 113.58 & 4950848 & 1\% \\8 & 1 & 120.85 & 4954944 & 1\% \\8 & 1 & 78.91 & 4734976 & 5\% \\8 & 1 & 19.57 & 1448768 & 71\% \\9 & 1 & 24.75 & 2772992 & 45\% \\9 & 1 & 15.36 & 1736704 & 65\% \\9 & 1 & 15.66 & 1691648 & 66\% \\10 & 1 & 6.35 & 1175552 & 76\% \\10 & 1 & 3.46 & 290816 & 94\% \\10 & 1 & 4.34 & 442368 & 91\% \\11 & 1 & 7.81 & 1445888 & 71\% \\11 & 1 & 8.31 & 557056 & 89\% \\11 & 1 & 3.43 & 450560 & 91\% \\
+11 & 30 & 17.68 & 1556480 & 69\% \\11 & 30 & 18.17 & 872448 & 83\% \\11 & 30 & 38.07 & 1028096 & 79\% \\10 & 30 & 15.53 & 745472 & 85\% \\10 & 30 & 21.5 & 86016 & 98\% \\10 & 30 & 18.4 & 1454080 & 71\% \\9 & 30 & 69.81 & 4677632 & 6\% \\9 & 30 & 8.37 & 678720 & 86\% \\9 & 30 & 16.93 & 999424 & 80\% \\8 & 30 & 84.53 & 4987712 & 0\% \\8 & 30 & 114.56 & 4811584 & 4\% \\8 & 30 & 120.35 & 4934464 & 1\% \\7 & 30 & 112.48 & 4950848 & 1\% \\7 & 30 & 118.7 & 4954944 & 1\% \\7 & 30 & 115.36 & 4950848 & 1\% \\6 & 30 & 120.24 & 4963136 & 1\% \\6 & 30 & 118.44 & 4987712 & 0\% \\6 & 30 & 121.08 & 4963136 & 1\% \\
+\end{tabular}
+\caption{Microwave data}
+\label{microwave-data}
+\end{table}
+
+\section{General Conclusions}
+
+Overall, the data collected was not unexpected. We learned how to find out the throughput, average packet loss, signal strengths, etc. of a network using various tools on both laptops and PDAs. It is fairly trivial to find these statistics, as we only need to know how large the packets are, how many are sent, and the time that it takes to send and receive them to find out the most general aspects of the network.
+
+Although \emph{iperf} was simple to understand and use, the test tool for the iPaq was a significant hinderance in obtaining data. Not only does it depend more on the video performance of the iPaq than on the network link, but if no data goes through due to 100\% data loss, the application crashes with a division by zero error when trying to calculate throughput. This was a hassle to deal with, since the test tool had to be hidden for each measurement.
+
+This was also very tedious; having a scriptable testing tool would have made this much faster and easier. Perhaps in the future, a different tool can be used to make the generation of data simpler. 
+
+\end{document}

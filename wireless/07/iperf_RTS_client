@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+#echo -n "IP address: "
+#read address
+#echo -n "Port: "
+#read port
+#echo -n "Datagram length: "
+#read length
+
+#echo
+
+/opt/local/bin/iperf -c $1 --udp --port $2 --bandwidth 2m --time 60 --len $3

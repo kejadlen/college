@@ -1,0 +1,14 @@
+:server_port: 3142
+:client_port: 3141
+:size:
+  :x: 12
+  :y: 10
+:montinents:
+  - :host: mirepoix.local
+    :location:
+      :x: 2
+      :y: 2
+    :resolution:
+      :x: 1024
+      :y: 768
+    :size: 12

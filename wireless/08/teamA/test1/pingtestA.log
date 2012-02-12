@@ -1,0 +1,48 @@
+ 
+PING 10.0.1.8 (10.0.1.8) 56(84) bytes of data.
+
+--- 10.0.1.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 1999ms
+, pipe 4
+ 
+PING 10.0.1.8 (10.0.1.8) 56(84) bytes of data.
+
+--- 10.0.1.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2000ms
+, pipe 4
+ 
+PING 10.0.1.8 (10.0.1.8) 56(84) bytes of data.
+
+--- 10.0.1.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 1999ms
+, pipe 4
+ 
+PING 10.0.1.8 (10.0.1.8) 56(84) bytes of data.
+
+--- 10.0.1.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2000ms
+, pipe 4
+ 
+PING 10.0.1.8 (10.0.1.8) 56(84) bytes of data.
+
+--- 10.0.1.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2000ms
+, pipe 4
+ 
+PING 10.0.1.8 (10.0.1.8) 56(84) bytes of data.
+
+--- 10.0.1.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2000ms
+, pipe 4
+ 
+PING 10.0.1.8 (10.0.1.8) 56(84) bytes of data.
+
+--- 10.0.1.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2000ms
+, pipe 4
+ 
+PING 10.0.1.8 (10.0.1.8) 56(84) bytes of data.
+
+--- 10.0.1.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2000ms
+, pipe 4

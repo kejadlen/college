@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Copy config files
+cp conf_files/ifcfg-eth* /etc/sysconfig/network-scripts/
+cp conf_files/dhcpd.conf /etc/
+
+# Create files 
+cp conf_files/tmp/* /var/www/tmp/
+
+# Enable NAT
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+echo "Shutting down network interfaces..."
+ifdown eth0
+ifdown eth1
+
+echo "Clearing and setting up the firewall..."
+#./iptables_setup
+iptables-restore < conf_files/iptables.config
+
+echo "Bringing up the network interfaces..."
+ifup eth0
+ifup eth1
+
+echo "Starting needed services..."
+/etc/init.d/iptables start
+/etc/init.d/dhcpd start
+/etc/init.d/httpd start
