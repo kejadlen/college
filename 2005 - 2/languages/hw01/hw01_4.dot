@@ -1,0 +1,14 @@
+
+digraph problem_4_a {
+	seq_top -> seq_left -> base_1 -> A
+	seq_top -> seq_right
+	seq_right -> seq_right_left -> base_2 -> C
+	seq_right -> seq_right_right -> base_3 -> T
+}
+
+digraph problem_4_b {
+	seq_top -> seq_right
+	seq_right -> seq_right_left -> base_2 -> A
+	seq_right -> seq_right_right -> base_3 -> C
+	seq_top -> seq_left -> base_1 -> T
+}

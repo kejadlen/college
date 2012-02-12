@@ -1,0 +1,74 @@
+%%% George J. Schaeffer
+%%% Homework Template (v.05)
+
+%% Begin Header %%
+
+%% Document Settings
+
+\documentclass[11pt]{article}
+\usepackage[left=1in,top=1in,right=1in,nohead,nofoot]{geometry}
+%\oddsidemargin 0cm
+%\topmargin -2cm
+%\textwidth 16.5cm
+%\textheight 23.5cm
+
+%% End Header %%
+
+\begin{document}
+
+%% Problem Environments, Subject to Customization %%
+
+\newcounter{problem}
+\newcounter{superproblem}
+\refstepcounter{superproblem}
+\renewcommand{\thesuperproblem}{\Roman{superproblem}}
+
+\newenvironment{problem}[1]
+{\noindent{\large \textbf{Problem #1}}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{problemunnum}
+{\refstepcounter{problem}\noindent{\large \textbf{Problem \thesuperproblem}}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{problemcit}[1]
+{\refstepcounter{problem}\noindent{\large \textbf{Problem \theproblem}: #1}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{subproblem}[1]
+{\noindent\textbf{Part (#1)}: \begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{ps}[1]
+{\bigskip}
+{\bigskip}
+
+\newenvironment{soln}
+{\noindent}
+{\medskip}
+
+\newcommand{\prbsans}{\refstepcounter{problem}\noindent{\large\textbf{Problem \thesuperproblem-\theproblem}}\medskip}
+\newcommand{\secheading}[1]{\noindent\textsc{\large #1}}
+
+%% Standard Heading
+
+\begin{flushright}
+{Alpha Chen}\\{CS4204 Computer Graphics}\\{Professor Ehrich}\\{Assignment 2}\\{September 10th, 2005}\end{flushright}
+
+%% Document! %%
+
+\begin{problemunnum}
+Consider in this homework two directed line segments $L_1$ and $L_2$ as follows:
+
+\[L_1: (10,20) \textrm{to} (-40,10)\]
+\[L_2: (-10,5) \textrm{to} (10,10)\]
+
+\begin{problem}
+\begin{problemcit}{}Express infinite lines $L_1$ and $L_2$ in slope-intercept form.\end{problemcit}
+
+
+\end{problem}
+
+\end{problemunnum}
+
+\end{document}

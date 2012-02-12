@@ -1,0 +1,329 @@
+//== While statement errors? (0 points)
+n := 0 ;
+while n do
+	print ;
+//--
+Syntax error.
+//==
+//--
+//== Syntax errors?
+a := a * b ;
+//--
+Syntax error.
+//== If statement errors? (0 points)
+if 1 then
+	if 1 then
+		if 0 then
+			print ;
+		else
+			skip ;
+	else
+		skip ;
+else
+	skip ;
+//--
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+//==
+//--
+//== From the forums! (1 points)
+while n do
+	begin
+		if g then 
+			g = g - 1 ;
+		n := n - 2 ;
+	end ;
+//--
+Syntax error.
+Syntax error.
+//==
+x := 0 ;
+if x then
+	print ;
+else
+	x := 2 ;
+print x ;
+//--
+Syntax error.
+Syntax error.
+0
+//==
+begin
+	print a ;
+	print b
+end ;
+print c ;
+//--
+0
+Syntax error.
+0
+//==
+begin
+	print a
+	print b ;
+	print c ;
+end ;
+//--
+Syntax error.
+0
+Syntax error.
+//==
+//--
+//== From the spec! (0 points)
+n := 5 ;
+s := 0 ;
+while n do
+	begin
+		s := s + n ;
+		n := n - 1 ;
+	end ;
+print s ;
+//--
+15
+//==
+n := 1 ;
+e := 0 ;
+while 10 - n do
+	begin
+		if e then
+			begin
+				print n ;
+				e := 0 - 1 ;
+			end ;
+		else
+			skip ;
+		n := n + 1 ;
+		e := e + 1 ;
+	end ;
+//--
+2
+4
+6
+8
+//==
+//--
+//== Fun with the 255 character limit (0 points)
+n := 2 ;
+while n + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0
+    + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0
+    + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0
+    + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0
+    + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0
+	   + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 do
+	n := n - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 
+			 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0
+			 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0
+			 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0
+			 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 
+			 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 0 - 1 ;
+print n ;
+//--
+0
+//== Test blocks in blocks (0 points)
+n := 4 ;
+e := 0 ;
+while n do
+  begin
+    print n ;
+    if e then 
+      begin
+        e := 0 ;
+        print e ;
+      end ;
+    else
+      begin
+        e := 1 ;
+        print e ;
+      end ;
+    n := n - 1 ;
+  end ;
+//--
+4
+1
+3
+0
+2
+1
+1
+0
+//==
+//--
+//== Basic errors 
+//--
+//== Syntax errors (3 points)
+;
+n ;
+n := ;
+ab ;
+ab := ;
+//--
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+//==
+//--
+//== Prints (1 point)
+print ab ;
+//--
+Syntax error.
+//== Blocks (2 points)
+begin ;
+begin end a ;
+begin print a ; end a ;
+begin ab ;
+begin ab end ;
+begin print end ;
+begin
+	print 1 ;
+	print 2 ;
+	print ;
+	print 3 ;
+//--
+Syntax error.
+Syntax error.
+0
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+1
+2
+Syntax error.
+3
+//== Ifs (4 points)
+if ; 
+if ab ;
+if ab then ;
+if 1 ;
+if 0 ;
+if 1 then ab ;
+if 1 then skip ; ab ;
+if 1 then skip ; else ab ;
+if 0 then ab ;
+if 0 then skip ; ab ;
+if 0 then skip ; else ab ;
+//--
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+//== Whiles (3 points)
+while ;
+while ab ;
+while ab do ;
+while 1 do ab ;
+while 1 ;
+while 0 ;
+while 0 do ab ;
+//--
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+//== Skips (1 point)
+skip skip ;
+//--
+Syntax error.
+//== Expressions (1 point)
+n := 1 + 1 + ab ;
+n := 1 + + ;
+n := 1 1 ;
+n := a a ;
+//--
+Syntax error.
+Syntax error.
+Syntax error.
+Syntax error.
+//== Operands (5 points)
+n := 12a ;
+n := ab ;
+n := a1 ;
+//--
+Syntax error.
+Syntax error.
+Syntax error.
+//==
+//--
+//== Whitespace (1 point)
+n := 1 ;
+
+ 		   print    
+n   
+  ;
+//--
+1
+//==
+//--
+//== Basic tests (26 points)
+n := 12 ;
+print n ;
+n := -14 ;
+print n ;
+n := 0 + -1 + 0 ;
+print n ;
+//--
+12
+Syntax error.
+12
+Syntax error.
+12
+//==
+begin end ;
+begin
+  n := 1 ;
+  print n ;
+end ;
+//--
+1
+//==
+if 1 then
+  print 1 ;
+else
+  print 0 ;
+
+if 0 then
+  print 1 ;
+else
+  print 0 ;
+//--
+1
+0
+//==
+while 10 - n do
+  n := n + 1 ;
+print n ;
+while n - 11 do
+	n := n + 1 ;
+print n ;
+//--
+10
+10
+//==
+skip ;
+//--
+//==
+m := 1 ;
+n := 1 + m - 3 - m + 2 ;
+print n ;
+//--
+0
+//== Block syntax error (1 point)
+begin
+  print 0 ;
+//--
+0
+Syntax error.

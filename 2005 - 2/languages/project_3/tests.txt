@@ -1,0 +1,85 @@
+//== A route with one solution (43 points)
+plan_route( pittsburgh, columbus, From_Time, 15:00, tue, Route ).
+//--
+[ From_Time = 13:30,
+  Route     = [lp1323] ]
+//== A route with multiple solutions
+plan_route( roanoke, columbus, From_Time, To_Time, mon, Route ).
+//--
+[ From_Time = 9:10,
+  To_Time   = 16:20,
+  Route     = [lp1458, lp1212] ],
+[ From_Time = 9:10,
+  To_Time   = 19:30,
+  Route     = [lp1458, lp1473] ],
+[ From_Time = 12:20,
+  To_Time   = 19:30,
+  Route     = [lp1511, lp1473] ]
+//== A route with no solutions
+plan_route( roanoke, columbus, 15:00, To_Time, Day, Route ).
+//--
+fail
+//== 43 points
+plan_route( paris, columbus, From_Time, 15:00, tue, Route ).
+//--
+fail
+//== 44 points
+plan_route( roanoke, columbus, 15:00, 13:00, tue, Route).
+//--
+fail
+//==
+plan_route( From, columbus, 15:00, To_Time, mon, Route).
+//--
+[ From = charlotte,
+  To_Time = 19:30,
+  Route = [lp1473] ]
+//== 46 points
+plan_route( roanoke, To, 10:00, To_Time, mon, Route).
+//--
+[ To = charlotte,
+  To_Time = 13:10,
+  Route = [lp1511] ],
+[ To = pittsburgh,
+  To_Time = 13:35,
+  Route = [lp1623] ],
+[ To = columbus,
+  To_Time = 19:30,
+  Route = [lp1511, lp1473] ],
+[ To = pittsburgh,
+  To_Time = 17:20,
+  Route = [lp1511, lp1805] ],
+[ To = raleigh,
+  To_Time = 19:50,
+  Route = [lp1511, lp4822] ],
+[ To = charlotte,
+  To_Time = 16:55,
+  Route = [lp1623, lp1806] ],
+[ To = raleigh,
+  To_Time = 19:50,
+  Route = [lp1623, lp1806, lp4822] ]
+//== 47 points
+plan_route( pittsburgh, columbus, 10:00, To_Time, tue, Route ).
+//--
+[ To_Time = 14:40,
+  Route = [lp1323] ]
+//==
+plan_route( pittsburgh, columbus, 10:00, 20:00, Day, [lp1323] ).
+//--
+[ Day = tue ],
+[ Day = thu ]
+//==
+plan_route( pittsburgh, columbus, 10:00, 20:00, tue, [lp1323] ).
+//--
+true
+//==
+plan_route( pittsburgh, columbus, From_Time, 20:00, tue, [lp1323] ).
+//--
+[ From_Time = 13:30 ]
+//== 48 points
+plan_route( columbus, roanoke, From_Time, To_Time, Day, Route ).
+//--
+fail
+//==
+plan_route(roanoke,columbus,From_Time,To_Time,Day,[lp1511,lp1212]).
+//--
+fail

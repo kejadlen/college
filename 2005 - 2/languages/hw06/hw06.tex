@@ -1,0 +1,116 @@
+%% Begin Header %%
+
+%% Document Settings
+
+\documentclass[11pt]{article}
+\oddsidemargin 0cm
+\topmargin -2cm
+\textwidth 16.5cm
+\textheight 23.5cm
+
+%% End Header %%
+
+\begin{document}
+
+%% Problem Environments, Subject to Customization %%
+
+\newcounter{problem}
+\newcounter{superproblem}
+\refstepcounter{superproblem}
+\renewcommand{\thesuperproblem}{\Roman{superproblem}}
+
+\newenvironment{problem}[1]
+{\noindent{\large \textbf{Problem #1}}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{problemunnum}
+{\refstepcounter{problem}\noindent{\large \textbf{Problem \thesuperproblem}}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{problemcit}[1]
+{\refstepcounter{problem}\noindent{\large \textbf{Problem \theproblem}: #1}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{subproblem}[1]
+{\noindent\textbf{Part (#1)}: \begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{ps}
+{\bigskip}
+{\bigskip}
+
+\newenvironment{soln}
+{\noindent}
+{\medskip}
+
+\newcommand{\prbsans}{\refstepcounter{problem}\noindent{\large\textbf{Problem \thesuperproblem-\theproblem}}\medskip}
+\newcommand{\secheading}[1]{\noindent\textsc{\large #1}}
+
+%% Standard Heading
+
+\begin{flushright}
+{Alpha Chen}\\{CS 3304 Comparative Languages}\\{Professor Edwards}\\{HW 06}\\{October 11th, 2005}\end{flushright}
+
+%% Document! %%
+
+\begin{ps}
+\begin{problemcit}{Chapter 6, Review Question 9}
+Define \emph{static}, \emph{fixed stack-dynamic}, \emph{stack-dynamic}, \emph{fixed heap-dynamic}, and \emph{heap-dynamic arrays}. What are the advantages of each?
+\end{problemcit}
+
+\begin{soln}
+Static arrays are efficient, not requiring any dynamic allocation or deallocation, since subscript ranges and storage allocation are determined before run time.
+
+A fixed stack-dynamic array has statically bound subscript ranges, but the allocation is done at run time, allowing for better space efficiency.
+
+A stack-dynamic array has subscript ranges and storage allocation done dynamically at run time. However, after allocation, these values are not allowed to change. This has the advantage of being flexible; the array size can be determined at run time.
+
+Fixed heap-dynamic arrays are like stack-dynamic arrays, except that the bindings are done at the request of the program and the stroage is allocaated from a heap, rather than a stack.
+
+Heap-dynamic arrays are fully dynamic, allowing users to change both the subscript ranges and the storage allocation. This is the most flexible of the array types, allowing the array to grow and shrink as needed.
+\end{soln}
+\end{ps}
+
+\begin{ps}
+\begin{problemcit}{Chapter 6, Review Question 19}
+Define \emph{union}, \emph{free union}, and \emph{discriminated union}.
+\end{problemcit}
+
+\begin{soln}
+A union is a data structure which can store several types of data at a single location. Free unions are unions where type checking is not used, while discriminated unions are unions with type indicators.
+\end{soln}
+\end{ps}
+
+\begin{ps}
+\begin{problemcit}{Chapter 6, Problem 10}
+Multidimensional arrays can be stored in row major order, as in C++, or in column major order, as in Fortran. Develop the access functions for both of these arrangements for three-dimensional arrays.
+\end{problemcit}
+
+\begin{soln}
+Let \verb|n| be the number of rows, \verb|o| the number of columns, and \verb|p| the size of the third dimensional array.
+
+Row major order:
+\begin{verbatim}
+location(a[i,j,k]) = address of a[0,0,0] +
+                      (k + p*(n*j + i))*element_size
+\end{verbatim}
+
+Column major order:
+\begin{verbatim}
+location(a[i,j,k]) = address of a[0,0,0] +
+                      (k + p*(j + o*i))*element_size
+\end{verbatim}
+\end{soln}
+\end{ps}
+
+\begin{ps}
+\begin{problemcit}{Chapter 6, Problem 11}
+In the Burroughs Extended ALGOL language, matrixes are stored as a single-dimensioned array of pointers to the rows of the matrix, which are treated as single-dimensioned arrays for values. What are the advantages and disadvantages of such a scheme?
+\end{problemcit}
+
+\begin{soln}
+The advantage of this scheme is that memory allocation is more efficient. However, there is the tradeoff of less arithmetic calculations but more loading from memory. The access function would be something like \verb|address stored in (a[0,0] + i) + j| instead of just \verb|address of a[0,0] + i + n*j|.
+\end{soln}
+\end{ps}
+
+\end{document}

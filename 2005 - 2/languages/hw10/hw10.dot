@@ -1,0 +1,15 @@
+digraph static_links {
+    nodesep = 0;
+		node [shape=record];
+		c [label="C | {param (Plums) | <d> dynamic link | <s> static link | <r> return (B)}"];
+		b [label="B | {local (Y) | local (Z) | param (Sum) | <d> dynamic link | <s> static link | <r> return (A)}"];
+		a [label="A | {local (X) | <d> dynamic link | <s> static link | <r> return (BigSub)}"];
+		bigsub [label="BigSub | {local (MySum) | <l> local (L)}"];
+		
+		c:d -> b:r;
+		c:s -> bigsub:l;
+		b:d -> a:r;
+		b:s -> a:r;
+		a:d -> bigsub:l;
+		a:s -> bigsub:l;
+	}

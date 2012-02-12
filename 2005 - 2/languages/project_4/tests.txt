@@ -1,0 +1,155 @@
+//==
+interpret_OSIL3([[a,:=,0],b],[0,0,0,0,0],N).
+//--
+fail
+//==
+interpret_OSIL3([[while,a,do,[a,:=]]],[0,0,0,0,0],N).
+//--
+fail
+//==
+interpret_OSIL3([[if,1,then,[a,:=,1],else,[b,:=,2]]],[0,0,0,0,0],N).
+//--
+[ N = [1,0,0,0,0] ]
+//== 43 points
+interpret_OSIL3([[while,do,[a,:=,a,-,1]]],[0,0,0,0,0],N).
+//--
+fail
+//==
+interpret_OSIL3([[while,a,[a,:=,a,-,1]]],[0,0,0,0,0],N).
+//--
+fail
+//== Expressions
+interpret_OSIL3([[if,z,then,[b,:=,1],else,[c,:=,1]]],[0,0,0,0,0],N).
+//--
+fail
+//==
+interpret_OSIL3([[if,~,then,[b,:=,1],else,[c,:=,1]]],[0,0,0,0,0],N).
+//--
+fail
+//==
+interpret_OSIL3([[if,3,!,2,then,[b,:=,1],else,[c,:=,1]]],[0,0,0,0,0],N).
+//--
+fail
+//==
+interpret_OSIL3([[if,1.4,then,[b,:=,1],else,[c,:=,1]]],[0,0,0,0,0],N).
+//--
+fail
+//== While statements (42 points)
+interpret_OSIL3([[while,a,do,[a,:=,a,-]]],[0,0,0,0,0],N).
+//--
+fail
+//== Expressions again (41 points)
+interpret_OSIL3([[if,a,-,then,[b,:=,1],else,[c,:=,1]]],[0,0,0,0,0],N).
+//--
+fail
+//== If statements again (40 points)
+interpret_OSIL3([[if,a,then,[b,:=],else,[c,:=,1]]],[0,0,0,0,0],N).
+//--
+fail
+//==
+interpret_OSIL3([[if,a,+,1,then,[b,:=,1],else,[c,:=]]],[0,0,0,0,0],N).
+//--
+fail
+//== Expressions (37 points)
+interpret_OSIL3([[a,:=,a,+,b,-,c,+,d,-,e]],[0,1,2,3,4],N).
+//--
+[ N = [-2,1,2,3,4] ]
+//==
+interpret_OSIL3([[a,:=,f]],[0,0,0,0,0],N).
+//--
+fail
+//==
+interpret_OSIL3([[f,:=,a]],[0,0,0,0,0],N).
+//--
+fail
+//==
+interpret_OSIL3([[a,:=,0,a]],[0,0,0,0,0],N).
+//--
+fail
+//==
+interpret_OSIL3([[a,:=,0,*,1]],[0,0,0,0,0],N).
+//--
+fail
+//==
+interpret_OSIL3([[a,:=]],[0,0,0,0,0],N).
+//--
+fail
+//==
+interpret_OSIL3([[a,:=,[]]],[0,0,0,0,0],N).
+//--
+fail
+//==
+interpret_OSIL3([[a,:=,0,+,1]],[0,0,0,0,0],N).
+//--
+[ N = [1,0,0,0,0] ]
+//==
+interpret_OSIL3([[a,:=,0,+]],[0,0,0,0,0],N).
+//--
+fail
+//== If statements (34 points)
+interpret_OSIL3([[if,then,[c,:=,0],else,[d,:=,0]]],[0,1,2,3,4],N).
+//--
+fail
+//==
+interpret_OSIL3([[if,a,[c,:=,0],else,[d,:=,0]]],[0,1,2,3,4],N).
+//--
+fail
+//==
+interpret_OSIL3([[if,a,then,else,[d,:=,0]]],[0,1,2,3,4],N).
+//--
+fail
+//==
+interpret_OSIL3([[if,a,then,[c,:=,0],[d,:=,0]]],[0,1,2,3,4],N).
+//--
+fail
+//==
+interpret_OSIL3([[if,a,then,[c,:=,0],else]],[0,1,2,3,4],N).
+//--
+fail
+//== If statements (33 points)
+interpret_OSIL3([[if,a,then,[c,:=,0],else,[d,:=,0]],[if,b,then,[c,:=,5],else,[d,:=,5]]],[0,1,2,3,4],N).
+//--
+[ N = [0, 1, 5, 0, 4] ]
+//== interpret_OSIL3 (31 points)
+interpret_OSIL3([],[0,0,0,0,0],N).
+//--
+[ N = [0, 0, 0, 0, 0] ]
+//==
+interpret_OSIL3([a,:=,1],[0,0,0,0,0],N).
+//--
+fail
+//== Examples (30 points)
+interpret_OSIL3([
+    [ a, :=, 5 ],
+    [ b, :=, 0 ],
+    [ while, a, do,
+    [
+    [ b, :=, b, +, a ],
+    [ a, :=, a, -, 1 ]
+    ]
+    ]
+    ],[0,0,0,0,0],N).
+//--
+[ N = [0, 15, 0, 0, 0] ]
+//==
+interpret_OSIL3([
+[ a, :=, 1 ],
+  [ c, :=, 0 ],
+  [ e, :=, 0 ],
+  [ while, 10, -, c, do,
+  [
+  [ if, e, then,
+  [
+  [ c, :=, c, +, 1 ],
+  [ e, :=, 0, -, 1 ]
+  ],
+  else,
+  [ ]
+  ],
+  [ a, :=, a, +, 1 ],
+  [ e, :=, e, +, 1 ]
+  ]
+  ]
+  ],[0,0,0,0,0],N).
+//--
+[ N = [21, 0, 10, 0, 0] ]

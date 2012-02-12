@@ -1,0 +1,33 @@
+digraph problem_2_a {
+	ordering=out;
+
+	id_1 [label="id"]
+	id_2 [label="id"]
+	id_3 [label="id"]
+	id_4 [label="id"]
+	expr_1 [label="expr"]
+	expr_2 [label="expr"]
+	expr_3 [label="expr"]
+	expr_4 [label="expr"]
+	expr_5 [label="expr"]
+	times_1 [label="*"]
+	A_1 [label="A"]
+	A_2 [label="A"]
+	paren_1 [label="("]
+	paren_2 [label=")"]
+	paren_3 [label="("]
+	paren_4 [label=")"]
+
+	assign -> id_1 -> A_1
+	assign -> "="
+	assign -> expr_1 -> id_2 -> A_2
+	expr_1 -> times_1
+	expr_1 -> expr_2 -> paren_1
+	expr_2 -> expr_3
+	expr_2 -> paren_2
+	expr_3 -> id_3 -> B
+	expr_3 -> "+"
+	expr_3 -> expr_4 -> paren_3
+	expr_4 -> expr_5 -> id_4 -> "C"
+	expr_4 -> paren_4
+}

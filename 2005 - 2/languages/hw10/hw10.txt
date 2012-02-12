@@ -1,0 +1,47 @@
+1. Chapter 10, Problem 2
+
+BigSub:   Local         MySum
+          Local         L
+A         Return        (MySum)
+          Static Link   (BigSub)
+          Dynamic Link  (BigSub)
+B(X)      Return        (to A)
+          Static Link   (A)
+          Dynamic Link  (A)
+          Parameter     Sum
+          Local         Y
+          Local         Z
+C(Z)      Return        (to B)
+          Static Link   (BigSub)
+          Dynamic Link  (B)
+          Parameter     (Plums)
+2. Chapter 10, Repeat Problem 2, but use a display instead of static links.
+
+BigSub:   Local         MySum
+          Local         L
+A         Return        (MySum)
+          Dynamic Link  (BigSub)
+B(X)      Return        (to A)
+          Dynamic Link  (A)
+          Parameter     Sum
+          Local         Y
+          Local         Z
+C(Z)      Return        (to B)
+          Dynamic Link  (B)
+          Parameter     (Plums)
+          
+Display:
+  BigSub
+  A
+  B
+  C
+3. Chapter 10, Problem 6
+
+If a new local variable is initialized in the same memory position as from the previous activation and the memory has not been changed, then the new local will retain the value of the one from the previous activation.
+4. Chapter 12, Problem 6
+
+Multiple inheritance has a significant advantage over interfaces when a class needs methods from both parents which do not need to be redefined. Because interfaces only defines the specification, much code needs to be rewritten if the child class needs just the methods from both parent classes.
+
+5. Chapter 12, Problem 14
+
+All Java classes inherit from the base class Object, because there are some operations that are universally needed, such as equality comparison operators.

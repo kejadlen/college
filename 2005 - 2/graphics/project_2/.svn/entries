@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="8"
+   name=""
+   committed-date="2005-11-20T17:58:44.560723Z"
+   url="svn+ssh://svn@kejadlen.net/mnt/raid/src/computer_graphics/project_2"
+   last-author="alpha"
+   kind="dir"
+   uuid="6fb666b1-ae05-0410-a662-c7f629f39189"
+   revision="8"/>
+<entry
+   committed-rev="5"
+   name="window.img"
+   text-time="2005-11-20T18:02:31.000000Z"
+   committed-date="2005-11-20T14:43:31.676348Z"
+   checksum="c7f1611de1ce364441452a6a4c9406b8"
+   last-author="alpha"
+   kind="file"
+   prop-time="2005-11-20T18:02:31.000000Z"/>
+<entry
+   committed-rev="24"
+   name="main.cpp"
+   text-time="2005-12-05T14:42:49.000000Z"
+   committed-date="2005-12-05T20:57:43.504082Z"
+   checksum="738fc01e60c5096ba29844c8e14eaaee"
+   last-author="alpha"
+   kind="file"
+   prop-time="2005-11-20T18:02:31.000000Z"
+   revision="24"/>
+<entry
+   committed-rev="5"
+   name="thomas.img"
+   text-time="2005-11-20T18:02:31.000000Z"
+   committed-date="2005-11-20T14:43:31.676348Z"
+   checksum="69c1700cd715a4f244c47cbb217d5e58"
+   last-author="alpha"
+   kind="file"
+   prop-time="2005-11-20T18:02:31.000000Z"/>
+</wc-entries>

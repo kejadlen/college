@@ -1,0 +1,68 @@
+% Author:
+% Date: 17.11.2004
+
+%% has_fish(N) is true if the fish belongs to the person with
+%% nationality N
+
+has_fish(N):-
+       %% the street is represented as a list of 5 houses
+       Street = [_House1,_House2,_House3,_House4,_House5],
+
+       %% the Brit lives in the red house
+       member(house(red,brit,_,_,_), Street),
+
+       %% The Swede keeps dogs as pets.
+       member(house(_,swede,dog,_,_), Street),
+       
+       %% The Dane drinks tea.
+       member(house(_,dane,_,tee,_), Street),
+       
+       %% The green house is on the left of the white house.
+       sublist([house(green,_,_,_,_),house(white,_,_,_,_)], Street),
+       
+       %% The green house's owner drinks coffee.
+       member(house(green,_,_,coffee,_), Street),
+       
+       %% The person who smokes Pall Mall rears birds.
+       member(house(_,_,birds,_,pallmall), Street),
+       
+       %% The owner of the yellow house smokes Dunhill.
+       member(house(yellow,_,_,_,dunhill), Street),
+       
+       %% The man living in the centre house drinks milk.
+       [_,_,house(_,_,_,milk,_),_,_]=Street,
+       
+       %% The Norwegian lives in the first house.
+       [house(_,norwegian,_,_,_)|_]=Street,
+       
+       %% The man who smokes blends lives direct next to the one with cats .
+       neighboring_houses(house(_,_,_,_,blends),house(_,_,cats,_,_), Street),
+       
+       %% The man with horses lives direct next to the man who smokes Dunhill.
+       neighboring_houses(house(_,_,_,_,dunhill),house(_,_,horse,_,_), Street),
+       
+       %% The owner who smokes BlueMaster drinks beer.
+       member(house(_,_,_,beer,bluemaster), Street),
+       
+       %% The German smokes Prince.
+       member(house(_,german,_,_,prince), Street),
+       
+       %% The Norwegian lives direct next to the blue house.
+       neighboring_houses(house(_,norwegian,_,_,_),house(blue,_,_,_,_), Street),
+       
+       %% The man who smokes blends has a direct neighbour who drinks water.
+       neighboring_houses(house(_,_,_,_,blends),house(_,_,_,water,_), Street),
+
+       %% the fish belongs to the person with nationality N
+       member(house(_,N,fish,_,_),Street).
+
+
+%% member and append are built-in predicates.
+%% sublist and neighboring_houses are defined below.
+
+sublist(SubL,L) :- append(_,S,L),append(SubL,_,S).
+
+neighboring_houses(X,Y,Street):-sublist([X,Y], Street).
+neighboring_houses(X,Y,Street):-sublist([Y,X], Street).
+
+

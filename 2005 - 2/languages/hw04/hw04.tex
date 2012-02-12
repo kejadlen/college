@@ -1,0 +1,116 @@
+%% Begin Header %%
+
+%% Document Settings
+
+\documentclass[11pt]{article}
+\oddsidemargin 0cm
+\topmargin -2cm
+\textwidth 16.5cm
+\textheight 23.5cm
+
+%% End Header %%
+
+\begin{document}
+
+%% Problem Environments, Subject to Customization %%
+
+\newcounter{problem}
+\newcounter{superproblem}
+\refstepcounter{superproblem}
+\renewcommand{\thesuperproblem}{\Roman{superproblem}}
+
+\newenvironment{problem}[1]
+{\noindent{\large \textbf{Problem #1}}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{problemunnum}
+{\refstepcounter{problem}\noindent{\large \textbf{Problem \thesuperproblem}}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{problemcit}[1]
+{\refstepcounter{problem}\noindent{\large \textbf{Problem \theproblem}: #1}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{subproblem}[1]
+{\noindent\textbf{Part (#1)}: \begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{ps}
+{\bigskip}
+{\bigskip}
+
+\newenvironment{soln}
+{\noindent}
+{\medskip}
+
+\newcommand{\prbsans}{\refstepcounter{problem}\noindent{\large\textbf{Problem \thesuperproblem-\theproblem}}\medskip}
+\newcommand{\secheading}[1]{\noindent\textsc{\large #1}}
+
+%% Standard Heading
+
+\begin{flushright}
+{Alpha Chen}\\{CS 3304 Comparative Languages}\\{Professor Edwards}\\{HW 04}\\{September 21st, 2005}\end{flushright}
+
+%% Document! %%
+
+\begin{ps}
+\begin{problemcit}{Chapter 15, Problem 6}What does the following Scheme function do?
+\begin{verbatim}
+(define (y s lis)
+  (cond
+    ((null? lis) '())
+    ((equal? s (car lis)) lis)
+    (else (y s (cdr lis)))))
+\end{verbatim}
+\end{problemcit}
+\begin{soln}
+This function returns lis if s is a top-level member of lis, and the empty set otherwise.
+\end{soln}
+\end{ps}
+
+\begin{ps}
+\begin{problemcit}{Chapter 15, Programming Exercise 13}Write a Scheme function that takes a lit as a parameter and returns it with the second top-level element removed. If the given list does not have two elements, the function should return \verb|()|.\end{problemcit}
+\begin{soln}
+\begin{verbatim}
+(define (remove-second-member lst)
+  (if (< (length lst) 2)
+    '()
+    (cons (first lst) (cddr lst))))
+\end{verbatim}
+Note that this is assuming that the problem, as stated, really asks for \verb|()| to be returned on \emph{less than} two elements, instead of ``does not have''. In the case that we are taking the problem statement literally, \verb|s/< (length lst) 2/not (= (length lst) 2)/|.
+\end{soln}
+\end{ps}
+
+\begin{ps}
+\begin{problemcit}{}Write your own implementation of the Scheme built-in function sublist:
+
+\begin{verbatim}(sublist list start end)\end{verbatim}
+
+    Returns a newly allocated list formed from the elements of list beginning at index \emph{start} (inclusive) and ending at \emph{end} (exclusive). You may assume that start and end are integers that satisfy:
+    
+\begin{verbatim}0 <= start <= end <= (length list)\end{verbatim}
+        
+Name your function \verb|my-sublist|, since sublist is already provided as a standard operation in Scheme (you may not use \verb|sublist|, \verb|list-head|, or \verb|list-tail| in your solution).
+\end{problemcit}
+\begin{soln}
+\begin{verbatim}
+(define (my-sublist lst start end)
+  (cond ((> start 0) (my-sublist (rest lst) (- start 1) (- end 1)))
+        ((= start 0) (my-sublist (reverse lst) -1 (- end 1)))
+        ((> (- (length lst) end) 0) (my-sublist (rest lst) -1 (+ end 1)))
+        (else (reverse lst))))
+\end{verbatim}
+\end{soln}
+\end{ps}
+
+\begin{ps}
+\begin{problemcit}{}Analyze the performance of your \verb|my-sublist| implementation, and describe its worst-case performance using big-oh notation, in terms of the number of \verb|car| or \verb|cdr| operations performed (including those required by any predefined operations you use). Justify your performance analysis.\end{problemcit}
+
+\begin{soln}
+The worst case scenario is O(n), or linear with the number of elements in the list. This is because my-sublist cannot perform any more cdrs (rests) than there are elements in the array. Worst case scenarios involve reducing the list to one element (since it acts inclusively on start and exclusively on end), so only (- (length lst) 1) rest operations can be performed.
+
+Although reverse may use car or cdr, I am not sure if it does, or how many it uses. I believe reverse should be O(n) anyway, as it can be accomplished by using an inject (fold-right?) method. Even if intermediate student Scheme doesn't support it, I imagine that behind the scenes, it would be performed that way. But even if it is O(n), my-sublist would still only be O(2n).
+\end{soln}
+\end{ps}
+
+\end{document}

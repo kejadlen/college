@@ -1,0 +1,113 @@
+%% Begin Header %%
+
+%% Document Settings
+
+\documentclass[11pt]{article}
+\oddsidemargin 0cm
+\topmargin -2cm
+\textwidth 16.5cm
+\textheight 23.5cm
+
+%% End Header %%
+
+\begin{document}
+
+%% Problem Environments, Subject to Customization %%
+
+\newcounter{problem}
+\newcounter{superproblem}
+\refstepcounter{superproblem}
+\renewcommand{\thesuperproblem}{\Roman{superproblem}}
+
+\newenvironment{problem}[1]
+{\noindent{\large \textbf{Problem #1}}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{problemunnum}
+{\refstepcounter{problem}\noindent{\large \textbf{Problem \thesuperproblem}}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{problemcit}[1]
+{\refstepcounter{problem}\noindent{\large \textbf{Problem \theproblem}: #1}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{subproblem}[1]
+{\noindent\textbf{Part (#1)}: \begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{ps}
+{\bigskip}
+{\bigskip}
+
+\newenvironment{soln}
+{\noindent}
+{\medskip}
+
+\newcommand{\prbsans}{\refstepcounter{problem}\noindent{\large\textbf{Problem \thesuperproblem-\theproblem}}\medskip}
+\newcommand{\secheading}[1]{\noindent\textsc{\large #1}}
+
+%% Standard Heading
+
+\begin{flushright}
+{Alpha Chen}\\{CS 3304 Comparative Languages}\\{Professor Edwards}\\{HW 03}\\{September 16th, 2005}\end{flushright}
+
+%% Document! %%
+
+\begin{ps}
+\begin{problemcit}{}Prove the following program fragment is correct. In this context, \verb|A| is an array from 0 to \verb|length-1| of integers.
+\begin{verbatim}
+{ true }
+index = 0;
+smallest = A(index);
+while index < length do
+begin
+  if A(index) < smallest then
+  begin
+    smallest := A(index);
+  end;
+  index := index + 1;
+end;
+{ smallest contains the least value in the array }
+\end{verbatim}
+\end{problemcit}
+\begin{soln}
+The loop invariant is that \verb|smallest = minimum(A[0..index-1])| and \verb|index| $\leq$ \verb|length|, assuming that the array A has at least one member. This passes all four tests. However, when \verb|index = 0|, the invariant is undefined, so we have to change the initial invariant condition to include \verb|smallest = A[0]| when \verb|index = 0|. The invariant is initially true, as it is equal to \verb|minimum(A[0]) = A[0]|. The test does not have any side effects, so it does not change the validity of the invariant. The execution of the body also does not have any effect on the validity of the invariant: if \verb|A[index-1]| is smaller than \verb|smallest|, \verb|smallest| is replaced. Last, the invariant and the negation of the test produces the postcondition: \verb|index >= length| and \verb|index| $leq$ \verb|length| imply that \verb|index = length| and therefore \verb|smallest = minimum(A)|.
+
+Using the invariant as the precondition for the loop, it becomes the postcondition for the previous statement, \verb|smallest = A(index)|. The precondition for this statement is therefore \verb|index = 0|. Thus, using this as the postcondition fo the previous statement reveals that this piece of code will always produce the given postcondition, assuming that the array has at least one member.
+\end{soln}
+\end{ps}
+
+\begin{ps}
+\begin{problemcit}{Chapter 15, Problem 11}Write a Scheme function that returns the union of two simple list parameters that represent sets.\end{problemcit}
+\begin{soln}
+\begin{verbatim}
+(define (union s1 s2)
+  (cond
+    ((null? s1) s2)
+    ((member (first s1) s2) (union (rest s1) s2))
+    (else (union (rest s1) (cons (first s1) s2)))))
+\end{verbatim}
+\end{soln}
+\end{ps}
+
+\begin{ps}
+\begin{problemcit}{}Write a Scheme function that takes a simple list of numbers as its parameter and returns the largest value in the list.\end{problemcit}
+\begin{soln}
+\begin{verbatim}
+(define (largest l)
+  (apply max l))
+\end{verbatim}
+\end{soln}
+\end{ps}
+
+\begin{ps}
+\begin{problemcit}{Chapter 15, Problem 15}Write a Scheme function that takes a simple list of numbers as its parameter and returns a list containing two values: the largest value in the list followed by the smallest value in the list.\end{problemcit}
+\begin{soln}
+\begin{verbatim}
+(define (largest-smallest l)
+  (list (apply (max l)) (apply (min l))))
+\end{verbatim}
+\end{soln}
+\end{ps}
+
+\end{document}
