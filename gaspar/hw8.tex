@@ -1,0 +1,109 @@
+%%% Alpha Chen
+
+\documentclass[11pt]{article}
+\usepackage[pdftex]{graphics}
+\usepackage{graphics}
+\usepackage{fancyhdr}
+\usepackage{amssymb,amsmath}
+\oddsidemargin0cm \topmargin-2cm \textwidth 16.5cm \textheight
+23.5cm
+
+\begin{document}
+\input{epsf.sty}
+
+\newcounter{problem}
+
+\newenvironment{ps}
+{\noindent}
+{\bigskip\bigskip}
+
+\newenvironment{problem}
+{\refstepcounter{problem}\noindent{\large \textbf{Problem \theproblem}}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{problemcit}[1]
+{\refstepcounter{problem}\noindent{\large \textbf{Problem \theproblem}: #1}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+\newenvironment{subproblem}[1]
+{\noindent\textbf{Part (#1)}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\medskip \medskip
+\begin{flushright}
+Alpha Chen \\
+Homework 8 \\
+December 7th, 2004
+\end{flushright}
+
+\sffamily{
+
+\begin{ps}\begin{problemcit}{21.3.2(a)-(b)(i)}\end{problemcit}
+
+\begin{subproblem}{a}See attached.\end{subproblem}
+
+\begin{subproblem}{b}See attached.\end{subproblem}
+
+\end{ps}
+
+\begin{ps}\begin{problemcit}{21.6.3}\end{problemcit}
+
+The system in figure P21.6.3 is a cascade interconnection structure. $H_1(z)$ is a transfer function in Direct Form I, and $H_2(z)$ is a transfer function in Direct Form II. Both of these transfer functions can be found:
+
+\begin{eqnarray*}
+H_1(z) & = & \frac{1}{-0.81z^{-2}} \\
+H_2(z) & = & 1+2.41z^{-1}+2.41z^{-2}+z^{-3}
+\end{eqnarray*}
+
+Because $H(z) = H_1(z)H_2(z)$ for cascade interconnections,
+
+\begin{equation*}
+H(z) = \frac{1+2.41z^{-1}+2.41z^{-2}+z^{-3}}{-0.81z^{-2}}\text{.}
+\end{equation*}
+
+Therefore, the difference equations for this system are
+
+\begin{eqnarray*}
+w(n) & = & x(n) - 0.81w(n-2) \text{ and} \\
+y(n) & = & w(n) + 2.41w(n-1) + 2.41w(n-2) + w(n-3) \text{.}
+\end{eqnarray*}
+
+\end{ps}
+
+\begin{ps}\begin{problemcit}{23.1.4(i)}\end{problemcit}
+
+\begin{eqnarray*}
+x(n) & = & \sin(2n) \\
+& = & \cos(2n - \frac{\pi}{2}) \\
+& = & \cos(\Omega_in) \\
+\Omega_i & = & 2
+\end{eqnarray*}
+
+\begin{eqnarray*}
+y_{ss}(n) & = & \big|H(\Omega_i)\big|\cos\left(\Omega_in+\angle H(\Omega_in)\right) \\
+& = & 0.5\cos\left(2n-\frac{\pi}{2}+2\right)
+\end{eqnarray*}
+
+\end{ps}
+
+\begin{ps}\begin{problemcit}{23.2.3}\end{problemcit}
+
+The notch in Figure P23.2.3 has cutoff frequencies of $\Omega=0.9$ and $\Omega=1.3$.
+
+\begin{subproblem}{a}For $f_s=1$ kHz, $\Omega = f_s\Omega$. Thus, the continuous cutoff frequencies are 900 and 1300 Hz.\end{subproblem}
+
+\begin{subproblem}{b}For $f_s=4$ kHz, $\Omega = f_s\Omega$. Thus, the continuous cutoff frequencies are 2800 and 5200 Hz.\end{subproblem}
+
+\begin{subproblem}{c}The input signal for this filter is
+\begin{equation*}
+x(n) = 1.5\cos(400\pi t) + 0.3\cos(800\pi t + 1.2)
+\end{equation*}
+
+For $f_s=1$ kHz, $\Omega_i$ is $400\pi/1000 = 0.4\pi = 1.26$ for the first term and $800\pi/1000 = 0.8\pi = 2.52$ for the second term. The amplitude of the steady state response can be found to be 0.9 for the first term and 1 for the second term.
+
+For $f_s=4$ kHz, $\Omega_i$ is $400\pi/4000 = 0.1\pi = 0.31$ for the first term and $800\pi/4000 = 0.2\pi = 0.62$ for the second term. The amplitude of the steady state response can be found to be 1 for both the first term and the second term.
+
+\end{subproblem}
+
+\end{ps}
+
+\end{document}

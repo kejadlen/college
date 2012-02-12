@@ -1,0 +1,93 @@
+\documentclass[11pt]{report}
+\oddsidemargin0cm \topmargin-2cm \textwidth 16.5cm \textheight23.5cm
+
+\usepackage{graphicx}
+\usepackage{lgrind}
+
+\title{Project 3 - Comparisons Between HTTP Servers}
+\author{ECE 4564 - CRN 91645\\
+Compiled with VC6\\
+Tested locally on Windows XP\\
+Implemented options: \\
+Alpha Chen\\
+137-82-8382\\
+alchen@vt.edu}
+\date{November 5th, 2004}
+
+\begin{document}
+
+\maketitle
+
+\chapter{Asynchronous and Overlapped HTTP Servers}
+
+\section{Optional Features}
+
+The request processing time of the original multithreaded Project 2 server was found. This was executed in the same manner as with the Project 3 servers; \verb QueryPerformanceCounter(...) is used to find the total time that the server takes to process requests. Global variables are modified to keep track of the total time and number of requests made by the server.
+
+An optional server was written using overlapped I/O and notification with callback routines. As with the other three servers, the average request processing time is measured as a benchmark. This program was very similar to the overlapped program required by the project specification, but does not use events to find when the overlapped process finishes. This made the program easier to write, especially with a server written with overlapped I/O to use as the base.
+
+\newpage
+
+\section{Testing Results}
+
+The \verb mtGetv2 program was modified to use as a benchmark. The original program requests a file \verb n number of times from the server, sending requests and receiving the file concurrently. However, there are several problems with using the program as provided. One is that retrieving the same file repeatedly would cause the operating system to cache the file, which would skew the results. This was avoided by modifying the \verb mtGetv2 program to retrieve a different file for each thread. However, there are only thirty files provided in \verb|c:/webfiles|, so there may be some disk caching occuring with benchmarking higher request loads.
+
+Another problem was with the threading. The \verb WaitForMultipleEvents(...) call is supposed to wait for all of the child threads to exit before closing the main thread (and therefore shutting down Winsock by calling \verb|WSACleanup()|). However, this call occasionally fails to work properly, and had to be modified so that no 10093 errors were received from child threads by the closing of Winsock.
+
+The average request processing time for each server was collected, and the results are shown below in milliseconds. Both small and high loads were tested. However, the higher loads may have skewed data because of caching, as only the provided \verb c:/webfiles data was used for these tests. The HTTP server was restarted for each of these measurements, due to the method used for taking the average processing time.
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+& threaded & async & overlapped event & overlapped callback & kB\\
+\hline\hline
+4 & 1.59 & 2.95 & 5.55 & 7.73 & 199 \\
+\hline
+8 & 1.27 & 2.49 & 5.51 & 7.60 & 253 \\
+\hline
+12 & 1.33 & 2.67 & 6.10 & 10.42 & 431 \\
+\hline
+16 & 1.38 & 2.67 & 6.38 & 13.02 & 585 \\
+\hline
+20 & 1.20 & 2.14 & 6.14 & 10.88 & 604 \\
+\hline\hline
+10 & 1.37 & 2.61 & 6.03 & 10.50 & 351 \\
+\hline
+20 & 1.22 & 2.27 & 6.12 & 14.61 & 604 \\
+\hline
+30 & 1.21 & 2.33 & 6.54 & 10.03 & 903 \\
+\hline
+40 & 1.36 & 2.47 & 5.93 & 12.87 & 1199 \\
+\hline
+50 & 1.42 & 2.44 & 6.39 & 12.61 & 1463 \\
+\hline
+\end{tabular}
+
+\includegraphics{temp.pdf}
+
+\section{Summary}
+
+It can be seen that the best server is clearly the multithreaded HTTP server, followed by the asychronous I/O and then overlapped I/O with event-driven notification. The overlapped I/O with callback performed the worst out of all of the servers. All of the servers work with both Firefox and IE on Windows XP. Stability was tested by rapidly refreshing the page, to ensure that the server could deal with concurrent connections being accepted and closed.
+
+\appendix
+
+\chapter{httpServer.cpp}
+
+\lgrindfile{httpServer.tex}
+
+\chapter{httpasync.cpp}
+
+\lgrindfile{httpasync.tex}
+
+\chapter{httpoverlap.cpp}
+
+\lgrindfile{httpoverlap.tex}
+
+\chapter{overlapcallback.cpp}
+
+\lgrindfile{overlapcallback.tex}
+
+\chapter{mtGetv2.cpp}
+
+\lgrindfile{mtget.tex}
+
+\end{document}

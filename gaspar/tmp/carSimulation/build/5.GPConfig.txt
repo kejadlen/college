@@ -1,0 +1,14 @@
+Name:	Main Street
+Lanes:	8
+Length:	12
+;	test one car, barrier across road case
+vehicle	turbo	343434	3	6
+;	one barrier across entire road
+barrier	0	7
+barrier	1	7
+barrier	2	7
+barrier	3	7
+barrier	4	7
+barrier	5	7
+barrier	6	7
+barrier	7	7

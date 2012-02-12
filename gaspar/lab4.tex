@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+
+\begin{document}
+\section{titlepage}
+\newpage
+
+\section{Objectives and Procedure}
+This experiment involves simple harmonic motion.  A torsion spring will be
+used and its motion demonstrated to be SHM.  Further examination will be
+used to show that the period is the same, regardless of angular displacement.
+Finally, the moment of inertia of the pendulum will be found by modifiying
+its moment of inertia.
+
+\newpage
+
+\section{Motion of a Torsion Pendulum}
+\begin{center}
+(The two printouts follow this section.)
+\end{center}
+
+\paragraph{a)}
+See printout.
+
+\paragraph{b)}
+At time 0.250 s, the angular position, velocity, and acceleration is reported
+as -1.343 rad, -1.842 rad/s, and 13.498 rad/s/s, respectively.  The equation 
+obtained for the motion of the pendulum is \(\theta=A\cos(\omega t + \phi)\),
+where \(A = 1.45\) rad, \(\omega = 3.142\) rad/s, and \(\phi = 2\) rad.  
+Plugging in these values for \(t = 0.25\) s:
+
+\[\theta=1.45 \cos(3.142 t + 2) = -1.359\]
+
+The velocity and acceleration functions can be found by simple manipulation
+of the position function.  Respectively, \(d\theta/dt =
+-A\omega\sin(\omega t + \phi)\) and \(d^2\theta/{dt}^2 = -A\omega^2\cos(
+\omega t + \phi)\).  Again plugging in for t:
+
+\[d\theta/dt = -1.45\cdot 3.142\sin(3.142t + 2) = -1.579\]
+\[d^2\theta/{dt}^2 = -1.45\cdot 3.142^2\cos(3.142t + 2) = 13.263\]
+
+\newpage
+
+\section{Amplitude Dependence of Frequency}
+
+\paragraph{a)}
+\begin{tabular}{|c|c|}
+\hline
+amplitude & measured angular frequency\\
+\hline
+$90^\circ$ & 0.511 Hz \\
+$45^\circ$ & 0.511 Hz \\
+$20^\circ$ & 0.511 Hz \\
+\hline
+\end{tabular}
+
+It can be seen from the data collected that regardless of the amplitude,
+the angular frequency is a constant value.  In this case, it is 0.511 Hz.
+
+\newpage
+
+\section{Relationship of Frequency to Mechanical Parameters}
+
+\paragraph{A-a)}
+
+The period of oscillation of just the pendulum was 1.958 seconds, or 0.511
+Hz.  A disc ring was placed on top of the platform in order to add to the
+moment of inertia of just the pendulum.  The ring had an inner radius of 
+0.0317 m, and an outer radius of 0.0762 m.  Its mass was measured to be 
+0.5160 kg.  The moment of inertia of such a disc (with uniform density) is
+equal to \(\frac{1}{2}M({R_i}^2 + {R_o}^2)\).  Thus, the moment of inertia
+of the disc was found to be \(\frac{1}{2}0.0762(0.0317^2 + 0.0762^2)
+= 0.0018\) kg$\cdot$m$^2$.  Earlier on, a formula was derived such that the moment
+of inertia of a platform in SHM could be found by adding a known moment of
+inertia and comparing the initial period against the new period:
+
+\[I_0 = \frac{I_c}{1+(T_1/T_0)^2}\]
+
+$T_1$ was found to be 2.804 seconds.  With this data,
+
+\[I_0 = \frac{0.0018}{1+(2.804/1.958)^2} = 0.0017 \textrm{kg$\cdot$m$^2$}\]
+
+\paragraph{B-a)}
+\begin{center}
+(The plot follows this section.)
+\end{center}
+
+Since \(\theta = - \frac{Rmg}{\kappa}\), \(\kappa = - \frac{Rmg}{\theta}\).
+The projected line seems to fall through the point where mass \(= 0.01\) kg
+and angle \(= 0.25\) rad.  Plugging into the above equation gives us
+\(\kappa = - \frac{0.05715\cdot -9.8\cdot 0.01}{0.25} = 0.0224\) N m/rad.
+
+\paragraph{C-a)}
+From the above section, the torsion constant of the wire was calculated to
+be 0.0224 N m/rad.  The moment of inertia was calculated to be 0.0017 kg
+m$^2$, also found above.  With \(\omega = \sqrt{\frac{\kappa}{I_0}}\), the
+angular velocity can be calculated to be \(\sqrt{\frac{0.0224}{0.0017}} =
+3.63\) rad/s.  However, the angular velocity was observed to be actually
+3.21 rad/s in part two.  This is a percent difference of \(100\cdot
+|\frac{C - M}{M}| = 11.5\) percent.  
+
+\newpage
+
+\section{Conclusions}
+
+\paragraph{}
+
+This experiment shows several interesting facts about simple harmonic motion
+with a torsion pendulum.  These results may be extrapolated to simple 
+harmonic motion in general.  It is first seen that the change in position
+is indeed \(\theta = A\cos(\omega t + \phi)\).   By taking the derivative of
+this equation, the velocity function can be found.  And by taking the derivative
+of that, the acceleration function can also be found.  The frequency
+is then observed to be independent of the position.  Finally, it is possible
+to find the moment of inertia of the initial pendulum from an added moment
+of inertia and the ratio of the two periods.
+
+\end{document}

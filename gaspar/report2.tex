@@ -1,0 +1,378 @@
+\documentclass[11pt]{report}
+\oddsidemargin0cm \topmargin-2cm \textwidth 16.5cm \textheight23.5cm
+
+\usepackage{lgrind}
+
+\title{Project 2 - The Lookup Protocol}
+\author{ECE 4564 - CRN 91645\\
+Compiled with VS6\\
+Tested on Windows XP, OS X\\
+Implemented options: hyperlinked directory listing\\
+Alpha Chen\\
+137-82-8382\\
+alchen@vt.edu}
+\date{October 17, 2004}
+
+\begin{document}
+
+\maketitle
+
+\chapter{Partial Implementation of the HTTP/1.1 Protocol}
+
+\section{Optional Features}
+
+The only optional feature implemented in this server is the hyperlinked directory listing when there is no index.htm\[l\] file in the requested directory. This feature was easily added using Windows methods to retrieve the contents of a directory. Each file (as long as it was not . or ..) was placed into a string as a relative link. The string content is easily made into an HTML "file" to be sent to the client. This method also makes it simple to find the length of the "file"; it is simply the length of the string.
+
+An interesting aspect of the hyperlinked directory listing comes from the possibility of the current path not ending with a slash. When the relative links are then appended to the path, they will lack the slash separating the directory and file and be incorrect. The recommended way to solve this is by only accepting directories with a slash on the end. However, this is an inelegant way to solve the problem, especially when the correct solution is trivial to implement. This server returns a 301 status code if a directory is requested without a slash. This essentially redirects the client to the proper URL, and relative links will then work correctly.
+
+\newpage
+
+\section{Testing Results}
+
+This server was tested through several means. It was compiled with MS Visual C++ 6.0 and run on Windows XP. Both Internet Explorer and Firefox were tested with the server locally by entering "localhost" as the address. The LiveHTTPHeaders extension for Firefox is used to examine the headers being sent and received from Firefox. The server was also tested remotely using OS X; Safari, Camino (another Mozilla variant), and telnet were used to test the server.
+
+\subsection{Windows XP}
+
+\subsubsection{Internet Explorer}
+
+Entering "localhost" as the address renders the page perfectly (all the text and images load, the links work, and the "bad image" has the appropriate "file not found" picture). 
+
+The output from the server is shown below. Note that the requests are all from 127.0.0.1; this test was done locally. Also, note the effect of threading on the output in the GET /kingstrt.jpg line. The two receiving errors are generated when IE is closed; the two connections that it has with the server are abruptly terminated from the client-side, resulting in the two receiving errors.
+
+\begin{verbatim}
+"GET /" received from 127.0.0.1 (keep-alive)
+"GET /images/vt.gif" received from 127.0.0.1 (keep-alive)
+"GET /images/neb001.jpg" received from 127.0.0.1 (keep-alive)
+"GET /images/thm001.gif" received from 127.0.0.1 (keep-alive)
+"GET /images/neb002.jpg" received from 127.0.0.1 (keep-alive)
+"GET /images/thm002.gif" received from 127.0.0.1 (keep-alive)
+"GET /images/neb003.jpg" received from 127.0.0.1 (keep-alive)
+"GET /images/thm003.gif" received from 127.0.0.1 (keep-alive)
+"GET /images/neb004.jpg" received from 127.0.0.1 (keep-alive)
+"GET /images/thm004.gif" received from 127.0.0.1 (keep-alive)
+"GET /images/neb005.jpg" received from 127.0.0.1 (keep-alive)
+"GET /images/neb006.jpg" received from 127.0.0.1 (keep-alive)
+"GET /images/thm005.gif" received from 127.0.0.1 (keep-alive)
+"GET /images/thm006.jpg" received from 127.0.0.1 (keep-alive)
+"GET /marina.jpg" received from 127.0.0.1 (keep-alive)
+"GET /potomac.jpg" received from 127.0.0.1 (keep-alive)
+"GET /kingstrt.jpg" received from 127.0.0.1 (keep-a"GET /images/balive)
+dfile.gif" received from 127.0.0.1 (keep-alive)
+receiving error: 10054
+receiving error: 10054
+\end{verbatim}
+
+On asking for a non-existant file, IE has its own error page, which it shows.
+
+\subsubsection{Firefox}
+
+The page was again rendered perfectly. Again, note the effects of threading on the output. This can be fixed by using mutual exclusion, but that was not required for the server.
+
+\begin{verbatim}
+"GET /" received from 127.0.0.1 (keep-alive)
+"GET /images/vt.gif""GET /images/ne received fb001.jpg" rrom 127.0.0eceived fro.
+1 (keep-alm 127.0.0.1ive)
+"G (keep-alivET /images/e)
+"GETthm001.gif" /images/ne received fb002.jpg" rrom 127.0.0eceived fro.1 (keep-a
+lm 127.0.0.1ive)
+"G (keep-alivET /images/e)
+"GETthm002.gif" /images/ne received fb003.jpg" rrom 127.0.0eceived fro.1 (keep-a
+lm 127.0.0.1ive)
+(keep"GET /imag-alive)
+es/thm"GET /imag003.gif" rees/neb004.jceived frompg" receive 127.0.0.1 d from 12
+7.(keep-alive0.0.1 (keep)
+"GET -alive)
+/image"GET /imags/thm004.gies/neb005.jf" receivedpg" receive from 127.0d from 12
+7..0.1 (keep-0.0.1 (keepalive)
+-alive"GET /image)
+s/thm0"GET /imag05.gif" reces/neb006.jeived from pg" receive127.0.0.1 (d from 12
+7.keep-alive)0.0.1 (keep
+"GET-alive)
+/imag"GET /maries/thm006.jna.jpg" recpg" receiveeived from d from 127.127.0.0.1
+(0.0.1 (keepkeep-alive)-alive)
+
+"GET "GET /kings/potomac.jptrt.jpg" reg" receivedceived from from 127.0 127.0.0.
+1 .0.1 (keep-(keep-alivealive)
+)
+"GET /images/badfile.gif" received from 127.0.0.1 (keep-alive)
+\end{verbatim}
+
+The headers can be examined through the LiveHTTPHeaders extension. Note here that each file has an appropriate and correct Content-Type header. Also, it can be seen that the 404 returns a small page that Firefox shows on directly getting a 404 status from the server.
+
+\begin{verbatim}
+http://localhost/
+
+GET / HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7)
+	Gecko/20040707 Firefox/0.9.2
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;
+	q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+
+HTTP/1.x 200 OK
+Content-Length: 5136
+Content-Type: text/html
+----------------------------------------------------------
+http://localhost/images/vt.gif
+
+GET /images/vt.gif HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7)
+	Gecko/20040707 Firefox/0.9.2
+Accept: image/png,*/*;q=0.5
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Connection: keep-alive
+Referer: http://localhost/
+Pragma: no-cache
+Cache-Control: no-cache
+
+HTTP/1.x 200 OK
+Content-Length: 4505
+Content-Type: image/gif
+----------------------------------------------------------
+...
+----------------------------------------------------------
+http://localhost/kingstrt.jpg
+
+GET /kingstrt.jpg HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7)
+	Gecko/20040707 Firefox/0.9.2
+Accept: image/png,*/*;q=0.5
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Connection: keep-alive
+Referer: http://localhost/
+Pragma: no-cache
+Cache-Control: no-cache
+
+HTTP/1.x 200 OK
+Content-Length: 89436
+Content-Type: image/jpeg
+----------------------------------------------------------
+http://localhost/images/badfile.gif
+
+GET /images/badfile.gif HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7)
+	Gecko/20040707 Firefox/0.9.2
+Accept: image/png,*/*;q=0.5
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Connection: keep-alive
+Referer: http://localhost/
+Pragma: no-cache
+Cache-Control: no-cache
+
+HTTP/1.x 404 Not Found
+Content-Length: 500
+----------------------------------------------------------
+\end{verbatim}
+
+This section shows the 301 status code being employed on a request for a directory without a slash on the end.
+
+\begin{verbatim}
+http://localhost/images
+
+GET /images HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7)
+	Gecko/20040707 Firefox/0.9.2
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;
+	q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Connection: keep-alive
+
+HTTP/1.x 301 Moved Permanently
+Location: http://localhost/images/
+Content-Length: 585
+----------------------------------------------------------
+http://localhost/images/
+
+GET /images/ HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7)
+	Gecko/20040707 Firefox/0.9.2
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;
+	q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Connection: keep-alive
+
+HTTP/1.x 200 OK
+Content-Length: 649
+Content-Type: text/html
+----------------------------------------------------------
+\end{verbatim}
+
+On receiving a 404, Firefox shows the HTML code that the server sends, instead of its default "file not found" page:
+
+\begin{verbatim}
+404 Not Found
+GET /images/bad HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7)
+	Gecko/20040707 Firefox/0.9.2
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;
+	q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300 Connection: keep-alive 
+\end{verbatim}
+
+\subsection{OS X}
+
+\subsubsection{Safari}
+
+Safari renders the page perfectly.
+
+It appears that Safari only uses one connection, as there are no apparent threading effects in the output from the server. However, Safari does request a favicon after getting the page. There is no output from Safari on a 404; I do not know whether this is supposed to happen or not.
+
+\begin{verbatim}
+"GET /" received from 69.162.157.65 (keep-alive)
+"GET /images/vt.gif" received from 69.162.157.65 (keep-alive)
+"GET /images/neb001.jpg" received from 69.162.157.65 (keep-alive)
+"GET /images/thm001.gif" received from 69.162.157.65 (keep-alive)
+"GET /images/neb002.jpg" received from 69.162.157.65 (keep-alive)
+"GET /images/thm002.gif" received from 69.162.157.65 (keep-alive)
+"GET /images/neb003.jpg" received from 69.162.157.65 (keep-alive)
+"GET /images/thm003.gif" received from 69.162.157.65 (keep-alive)
+"GET /images/neb004.jpg" received from 69.162.157.65 (keep-alive)
+"GET /images/thm004.gif" received from 69.162.157.65 (keep-alive)
+"GET /images/neb005.jpg" received from 69.162.157.65 (keep-alive)
+"GET /images/thm005.gif" received from 69.162.157.65 (keep-alive)
+"GET /images/neb006.jpg" received from 69.162.157.65 (keep-alive)
+"GET /images/thm006.jpg" received from 69.162.157.65 (keep-alive)
+"GET /marina.jpg" received from 69.162.157.65 (keep-alive)
+"GET /potomac.jpg" received from 69.162.157.65 (keep-alive)
+"GET /kingstrt.jpg" received from 69.162.157.65 (keep-alive)
+"GET /images/badfile.gif" received from 69.162.157.65 (keep-alive)
+"GET /favicon.ico" received from 69.162.157.65 (keep-alive)
+\end{verbatim}
+
+\subsubsection{Camino}
+
+Camino is an OS X branch off the Mozilla tree. This should and does render exactly the same as Firefox does, down to the 404 page. However, this does seem to differ in the number of connections sent to the server.
+
+\begin{verbatim}
+"GET /" received from 69.162.157.65 (keep-alive)
+"GET /images/vt.gif" received from 69.162.157.65 (keep-alive)
+"GET /images/neb001.jpg" received from 69.162.157.65 (keep-alive)
+"GET /images/thm001.gif" received from 69.162.157.65 (keep-alive)
+"GET /images/neb002.jpg" received from 69.162.157.65 (keep-alive)
+"GET /images/thm002.gif" received from 69.162.157.65 (keep-alive)
+"GET /images/neb003.jpg" received from 69.162.157.65 (keep-alive)
+"GET /images/thm003.gif" received from 69.162.157.65 (keep-alive)
+"GET /images/neb004.jpg" received from 69.162.157.65 (keep-alive)
+"GET /images/thm004.gif" received from 69.162.157.65 (keep-alive)
+"GET /images/neb005.jpg" received from 69.162.157.65 (keep-alive)
+"GET /images/thm005.gif" received from 69.162.157.65 (keep-alive)
+"GET /images/neb006.jpg" received" fromG 69.1ET /image62.157.65 (s/thm006.jpkeep
+-alive)g" received
+from 69.162.157.65 (keep-alive)
+"GET /marina.jpg" received from 69.162.157.65 (keep-alive)
+"GET /potomac.jpg" received from 69.162.157.65 (keep-alive)
+"GET /kingstrt.jpg" received from 69.162.157.65 (keep-alive)
+"GET /images/badfile.gif" received from 69.162.157.65 (keep-alive)
+\end{verbatim}
+
+\subsubsection{telnet}
+
+telnet can be used much like the Connecting Sockets application, to watch what the server actually sends back to the client.
+
+The Host: field is required when getting a directory without a slash at the end of the path, for the 301 status. When getting the hyperlinked directory listing of images/, the HTML string is actually all one line. It has been broken up to be easier for the reader.
+
+\begin{verbatim}
+mirepoix:~ alpha$ telnet gaspar.kejadlen.net 80
+Trying 206.158.102.3...
+Connected to 206-158-102-3.prx.blacksburg.ntc-com.net.
+Escape character is '^]'.
+GET / HTTP/1.1
+
+HTTP/1.1 200 OK
+Content-Length: 5136
+Content-Type: text/html
+
+<HTML>
+...
+</HTML>GET /badfile HTTP/1.1
+
+HTTP/1.1 404 Not Found
+Content-Length: 121
+Content-Type: text/html
+
+<html>...</html>GET /images HTTP/1.1
+Host: gaspar.kejadlen.net
+
+HTTP/1.1 301 Moved Permanently
+Location: http://gaspar.kejadlen.net/images/
+Content-Length: 255
+Content-Type: text/html
+
+<html><head><title>404 Not Found</title</head><body>404 Not Found<br />
+<pre>GET /bad HTTP/1.1
+
+</pre></body></html>GET /images/ HTTP/1.1
+
+HTTP/1.1 200 OK
+Content-Length: 649
+Content-Type: text/html
+
+<html><head><title>Index of /images</title></head><a href = "neb001.jpg">neb001.jpg</a>
+<br /><a href = "neb002.jpg">neb002.jpg</a><br /><a href = "neb003.jpg">neb003.jpg</a>
+<br /><a href = "neb004.jpg">neb004.jpg</a><br /><a href = "neb005.jpg">neb005.jpg</a>
+<br /><a href = "neb006.jpg">neb006.jpg</a><br /><a href = "page.html">page.html</a>
+<br /><a href = "thm001.gif">thm001.gif</a><br /><a href = "thm002.gif">thm002.gif</a>
+<br /><a href = "thm003.gif">thm003.gif</a><br /><a href = "thm004.gif">thm004.gif</a>
+<br /><a href = "thm005.gif">thm005.gif</a><br /><a href = "thm006.jpg">thm006.jpg</a>
+<br /><a href = "vt.gif">vt.gif</a><br /></html>GET /images/neb001.jpg HTTP/1.1
+
+HTTP/1.1 200 OK
+Content-Length: 41508
+Content-Type: image/jpeg
+
+...
+GET /bad HTTP/1.1
+Connection: close
+
+HTTP/1.1 404 Not Found
+Content-Length: 136
+
+<html><head><title>404 Not Found</title</head><body>404 Not Found<br />
+<pre>GET /bad HTTP/1.1
+Connection: close
+
+</pre></body></html>Connection closed by foreign host.
+\end{verbatim}
+
+\section{Summary}
+
+Testing shows that the server works, across two different platforms and three different types of browsers. telnet was used for more in-depth testing; it was used to test the unseen aspects of the client-server interaction. So far, no flaws in the server have been found. However, one interesting observation is that browsers receive 404s differently from Apache and from this server. Safari will only render the error page from Apache. The only discernable difference is that Apache sends a Transfer-Encoding: chunked, but I do not know enough about the HTTP protocol to tell why Safari will not render the error page sent from this server.
+
+\appendix
+
+\chapter{httpServer.cpp}
+
+\lgrindfile{httpServer.tex}
+
+\end{document}

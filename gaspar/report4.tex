@@ -1,0 +1,111 @@
+\documentclass[11pt]{report}
+\oddsidemargin0cm \topmargin-2cm \textwidth 16.5cm \textheight23.5cm
+
+\usepackage{graphicx}
+\usepackage{lgrind}
+
+\title{Project 4 - Implementation of a CGI Gateway in an HTTP Server}
+\author{ECE 4564 - CRN 91645\\
+Compiled with VC6\\
+Tested locally on Windows XP\\
+Implemented options: firewall, FTP timeout
+Alpha Chen\\
+137-82-8382\\
+alchen@vt.edu}
+\date{November 15th, 2004}
+
+\begin{document}
+
+\maketitle
+
+\chapter{CGI Gateway in an HTTP Server}
+
+\section{Optional Features}
+
+Both options for the project were implemented. The firewall exists as a hash of IP addresses inside the Perl script. The server sends the script the originating IP address of the request through an argument. The script then checks the IP against the hash before retrieving the requested file. The timeout option was also programmed. This adds a timeout value for the FTP connection, and returns a 401 error if the connection does not work.
+
+\newpage
+
+\section{Testing Results}
+
+There are four aspects of the gateway interface which must be tested. The first is testing with a working FTP server. The server must return the exact text file as on the FTP server. The server should also be able to handle concurrent CGI requests. The second is testing with a non-text file, in which case the server must return a 403 Access Denied status code. The third test is for the firewall. When a request is made from an IP which is not specified, a 401 Unauthorized Access must be sent to the client. Last, the server should send "FTP site down" to the client if a connection cannot be made to the FTP server.
+
+\subsection{Basic Functionality}
+
+\begin{center}
+\includegraphics{1.png}
+\includegraphics{2.png}
+\end{center}
+
+The following is the output from the mtget.exe program, which has been modified to request the CGI URL.
+
+\begin{verbatim}
+F:\School\College\2004 - 2\ece4564\Project 3\mtget\Debug>mtget.exe 5
+GET /cgi-bin/Retrieve_Doc?ftp_site=ftp.rfc-editor.org&sub_dir=internet-drafts&fi
+le=all_id.txt sent
+GET /cgi-bin/Retrieve_Doc?ftp_site=ftp.freebsd.org&sub_dir=pub/FreeBSD/updates&f
+ile=README.TXT sent
+GET /cgi-bin/Retrieve_Doc?ftp_site=ftp.microsoft.com&sub_dir=softlib&file=readme
+.txt sent
+GET /cgi-bin/Retrieve_Doc?ftp_site=ftp.purdue.edu&sub_dir=pub/gtap/book&file=rea
+dme.txt sent
+GET /cgi-bin/Retrieve_Doc?ftp_site=ftp.rfc-editor.org&sub_dir=internet-drafts&fi
+le=all_id.txt sent
+Got file /cgi-bin/Retrieve_Doc?ftp_site=ftp.purdue.edu&sub_dir=pub/gtap/book&fil
+e=readme.txt
+Got file /cgi-bin/Retrieve_Doc?ftp_site=ftp.freebsd.org&sub_dir=pub/FreeBSD/upda
+tes&file=README.TXT
+Got file /cgi-bin/Retrieve_Doc?ftp_site=ftp.microsoft.com&sub_dir=softlib&file=r
+eadme.txt
+Got file /cgi-bin/Retrieve_Doc?ftp_site=ftp.rfc-editor.org&sub_dir=internet-draf
+ts&file=all_id.txt
+Got file /cgi-bin/Retrieve_Doc?ftp_site=ftp.rfc-editor.org&sub_dir=internet-draf
+ts&file=all_id.txt
+Closing... total bytes received: 1939.598633
+
+F:\School\College\2004 - 2\ece4564\Project 3\mtget\Debug>
+\end{verbatim}
+
+\subsection{403 Access Denied}
+
+Here, the non-existant file "readme.doc" is requested.
+
+\begin{center}
+\includegraphics{3.png}
+\end{center}
+
+\subsection{401 Unauthorized Access}
+
+For this screenshot, the firewall was changed so that 127.0.0.1 was not allowed access to the gateway program. Since the client is on the same machine as the server, it has the IP address 127.0.0.1
+
+\begin{center}
+\includegraphics{4.png}
+\end{center}
+
+\subsection{FTP Site Down}
+
+A non-existant text file is requested for this screenshot.
+
+\begin{center}
+\includegraphics{5.png}
+\end{center}
+
+\section{Summary}
+
+The Retrieve\_Doc program works as specified, providing a gateway interface to FTP servers from an HTTP server. The gateway was written in Perl, returning error codes to the HTTP server when appropriate. When a connection cannot be made to the FTP server, an error page is instead returned instead of the requested text document.
+
+\appendix
+
+\chapter{httpServer.cpp}
+
+\lgrindfile{httpServer.tex}
+
+\chapter{Retrieve\_Doc}
+
+\lgrindfile{Retrieve_Doc.tex}
+
+\chapter{mtGetv2.cpp}
+
+\lgrindfile{mtget.tex}
+
+\end{document}

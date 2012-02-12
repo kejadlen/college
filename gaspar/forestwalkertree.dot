@@ -1,0 +1,18 @@
+digraph G {
+	subgraph leg0 {
+		node [shape=plaintext];
+		"upper arm" -> "lower arm" -> "foot";
+		label = "legs x6";
+	}
+	subgraph grabber0 {
+		node [shape=plaintext];
+		"segment 1" -> "segment 2" -> "segment 3" -> grabber;
+		label = "grabber";
+	}
+
+	node [shape=plaintext];	
+	world -> body
+	body -> "upper arm";
+	body -> "segment 1";
+	world -> tree;
+}

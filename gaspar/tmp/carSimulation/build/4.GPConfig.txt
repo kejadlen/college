@@ -1,0 +1,65 @@
+Name:	Main Street
+Lanes:	8
+Length:	12
+;	test squished U case
+vehicle	turbo	VSH 408	1	0
+;	test big U case
+vehicle	turbo	ZFL 8473	3	2
+;	test two	cars big U case
+vehicle	turbo	ALPHA	4	4
+vehicle	turbo	RU ABOZO	2	4
+;	test one car, barrier across road case
+vehicle	turbo	343434	3	6
+;	test lots of cars, barrier across road case
+vehicle	turbo	1	1	8
+vehicle	turbo	3	3	8
+;vehicle	turbo	5	5	8
+vehicle	turbo	7	7	8
+;	test car on top of car
+vehicle	standard	error	1	0
+;
+;	squished U case
+barrier	0	0
+barrier	1	1
+barrier	2	0
+;
+;	big U case
+barrier	0	2
+barrier	1	3
+barrier	2	3
+barrier	3	3
+barrier	4	3
+barrier	5	2
+;
+;	two cars big U case
+barrier	0	4
+barrier	1	5
+barrier	2	5
+barrier	3	5
+barrier	4	5
+barrier	5	5
+barrier	6	5
+barrier	7	4
+;
+;	one barrier across entire road
+barrier	0	7
+barrier	1	7
+barrier	2	7
+barrier	3	7
+barrier	4	7
+barrier	5	7
+barrier	6	7
+barrier	7	7
+;
+;	one barrier across entire road
+barrier	0	9
+barrier	1	9
+barrier	2	9
+barrier	3	9
+barrier	4	9
+barrier	5	9
+barrier	6	9
+barrier	7	9
+;
+;	barrier on top of car
+barrier	1	0

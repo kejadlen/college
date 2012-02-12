@@ -1,0 +1,184 @@
+\documentclass[11pt]{report}
+\oddsidemargin0cm \topmargin-2cm \textwidth 16.5cm \textheight23.5cm
+
+\usepackage{graphicx}
+\usepackage{lgrind}
+
+\title{Project 5 - Implementation of a Multicast Chat Client}
+\author{ECE 4564 - CRN 91645\\
+Compiled with VC6\\
+Tested locally on Windows XP\\
+Implemented options: list IP, multiword user names,\\
+group address check, ttl command,\\
+port command, message filter \\ 
+Alpha Chen\\
+137-82-8382\\
+alchen@vt.edu}
+\date{November 15th, 2004}
+
+\begin{document}
+
+\maketitle
+
+\chapter{Multicast Chat Client}
+
+\section{Compilation}
+
+This project is multithreaded, so multithreading must be enabled in the compiler options. In Microsoft Visual C++ 6, this can be done through the Project Settings, under the C/C++ tab. The Code Generation category must be selected, with either "Multithreaded" or "Debug Multithreaded" chosen.
+
+\section{Optional Features}
+
+\subsection{"list" IP}
+
+The chat client output the IP of each user alongside the username when the "list" command is entered. This was implemented by recording the IP from the sockaddr\_in structure and associating it to the username in the packet.
+
+\subsection{Multiword User Names}
+
+This allows the user name to allow spaces. The user name is changed via the "user" command, and this collects the argument that follows the command, assuming that the entire argument is wanted as a user name.
+
+\subsection{Group Address Check}
+
+The group address check ensures that the group address for a "join" command is a valid group address. I.e., the argument must be an IP address between 234.0.0.1 and 234.255.255.255.
+
+\subsection{"ttl" Command}
+
+The "ttl" command allows the user to change the time-to-live value of the IP packets. This controls how far the packets go over the network and is implemented by changing the socket TTL option.
+
+\subsection{"port" Command}
+
+The "port" command allows the user to change the port the program runs on. This requires the current socket to be closed and reinitialized and bound to the new port.
+
+\subsection{Message Filtering}
+
+This filters messages sent from the same program instance. The specification requires that all messages are not displayed, but this seems like a strange option to implement in a chat client. As such, this program will color its own messages blue instead of white to show the user what message he or she has sent.
+
+\section{Simultaneous Servicing of User and Network Input}
+
+This program takes input from the console and from the network at the same time. This is accomplished by multithreading. The main thread reads from the screen buffer (and therefore the keyboard), spawning a network reception thread on joining a group. This secondary thread is unneeded unless the chat program is connected to a group, as there is no network input otherwise. Having two threads is necessary because blocking commands are used when retrieving data in both threads. The threads do not need to communicate with each other, as the only reason to do so is to close the network thread. This problem is circumvented by using the multicast chat protocol. When the keyboard thread sends a depart packet, the network thread receives that and recognizes that it must drop membership from the group and stop running.
+
+\section{Testing Results}
+
+\subsection{Basic Functionality}
+
+The following is an edited session with two chat clients. Because the chat client does not keep track of the user input, that has been added to the output from the program. Note that because of protocol limitations, the "list" command only picks up active chat clients.
+
+\begin{verbatim}
+A:
+user a
+	user name changed to 'a'
+join 234.5.6.7
+	joined group 234.5.6.7 on port 4564 with ttl 1
+	a (192.168.1.2) has joined the group
+	b (192.168.1.2) has joined the group
+	b: testing message, 1, 2, 3...
+list
+	current group members:
+	a (192.168.1.2)
+	b (192.168.1.2)
+send testing from a
+	a: testing from a
+	b (192.168.1.2) has left the group
+list
+	current group members:
+	a (192.168.1.2)
+	b (192.168.1.2) has joined the group
+list
+	current group members:
+	a (192.168.1.2)
+	c (192.168.1.2)
+	c: test
+	c (192.168.1.2) has left the group
+exit
+	left group 234.5.6.7
+	a (192.168.1.2) has left the group
+	
+B:
+user b
+	user name changed to 'b'
+join 234.5.6.7
+	joined group 234.5.6.7 on port 4564 with ttl 1
+	b (192.168.1.2) has joined the group
+send testing message, 1, 2, 3...
+	b: testing message, 1, 2, 3...
+list
+	current group members:
+	b (192.168.1.2)
+	a: testing from a
+list
+	current group members:
+	b (192.168.1.2)
+	a (192.168.1.2)
+leave
+	left group 234.5.6.7
+	b (192.168.1.2) has left the group
+join 234.5.6.7
+	joined group 234.5.6.7 on port 4564 with ttl 1
+	b (192.168.1.2) has joined the group
+user c
+	left group 234.5.6.7
+	b (192.168.1.2) has left the group
+	c (192.168.1.2) has joined the group
+	user name changed to "c"
+send test
+	c: test
+exit
+	left group 234.5.6.7
+	c (192.168.1.2) has left the group
+\end{verbatim}
+
+To test the TTL and port changing capabilities of the client, Ethereal is used. Here, the TTL is changed from 1 to 2, and then the port from 4564 to 4654. The relevant portions of the packets follow.
+
+\begin{verbatim}
+Internet Protocol, Src Addr: 192.168.1.2 (192.168.1.2), Dst Addr: 234.5.6.7 (234.5.6.7)
+    Time to live: 1
+    Protocol: UDP (0x11)
+    Source: 192.168.1.2 (192.168.1.2)
+    Destination: 234.5.6.7 (234.5.6.7)
+User Datagram Protocol, Src Port: 4564 (4564), Dst Port: 4564 (4564)
+Data (10 bytes)
+
+0000  02 08 4a 6f 68 6e 20 44 6f 65                     ..John Doe
+
+Internet Protocol, Src Addr: 192.168.1.2 (192.168.1.2), Dst Addr: 234.5.6.7 (234.5.6.7)
+    Time to live: 2
+    Protocol: UDP (0x11)
+    Source: 192.168.1.2 (192.168.1.2)
+    Destination: 234.5.6.7 (234.5.6.7)
+User Datagram Protocol, Src Port: 4564 (4564), Dst Port: 4564 (4564)
+Data (19 bytes)
+
+0000  01 08 4a 6f 68 6e 20 44 6f 65 0c 01 03 10 02 10   ..John Doe......
+0010  02 10 02                                          ...
+
+Internet Protocol, Src Addr: 192.168.1.2 (192.168.1.2), Dst Addr: 234.5.6.7 (234.5.6.7)
+    Time to live: 2
+    Protocol: UDP (0x11)
+    Source: 192.168.1.2 (192.168.1.2)
+    Destination: 234.5.6.7 (234.5.6.7)
+User Datagram Protocol, Src Port: 4564 (4564), Dst Port: 4564 (4564)
+Data (10 bytes)
+
+0000  02 08 4a 6f 68 6e 20 44 6f 65                     ..John Doe
+
+Internet Protocol, Src Addr: 192.168.1.2 (192.168.1.2), Dst Addr: 234.5.6.7 (234.5.6.7)
+    Time to live: 2
+    Protocol: UDP (0x11)
+    Source: 192.168.1.2 (192.168.1.2)
+    Destination: 234.5.6.7 (234.5.6.7)
+User Datagram Protocol, Src Port: 4654 (4654), Dst Port: 4654 (4654)
+Data (14 bytes)
+
+0000  01 08 4a 6f 68 6e 20 44 6f 65 0c 74 ff 12         ..John Doe.t..
+\end{verbatim}
+
+\section{Summary}
+
+The multicastchat program has all of the functionality the specification requires. The only issue is the lack of mutexes to protect the output buffer from the input buffer. Though this feature is not required by the spec, it would be trivial to implement.
+
+\appendix
+
+\chapter{multicastchat.cpp}
+
+\lgrindfile{multicastchat.tex}
+
+\end{document}

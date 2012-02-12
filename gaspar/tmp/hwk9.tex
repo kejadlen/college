@@ -1,0 +1,50 @@
+\documentclass[10pt]{article}
+
+\pagestyle{plain}
+\setlength{\topmargin}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\topskip}{0in}
+\setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6.5in}
+\setlength{\footskip}{1.0in}
+\raggedright
+\renewcommand{\baselinestretch}{1}
+
+\usepackage{graphicx}
+
+
+\begin{document}
+
+\thispagestyle{empty}
+
+Alpha Chen
+
+ECE 3204, Power Amplifier Project
+
+\bigskip
+
+This was as far as I was able to get on the project. I couldn't figure out how to get a driver stage to amplify the 10mV up to 60 V, which was what I needed as the amplitude of the input to deliver 60W of power.
+
+\bigskip
+
+I started with the generic average power equation to get the maximum value of $V_o$ and $I_o$:
+
+\[P_{out} = \frac{|V_o|^2}{2R_L}\]
+\[V_o = \sqrt{2 P_{out} R_L} = \sqrt{2 \cdot 60 \cdot 8} = \sqrt{960} = 30.984 \textrm{V}\]
+\[P_{out} = \frac{R_L |I_o|^2}{2}\]
+\[I_o = \sqrt{\frac{2 P_{out}}{R_L}} = \sqrt{\frac{2 \cdot 60}{8}} = \sqrt{15} = 3.873 \textrm{A}\]
+
+So, I chose $V_cc$ to be 35 V and $I_c$ to be 5 A. Because $I_b = \frac{I_c}{\beta}$, $I_b$ would be 50 mA. The minimum positive voltage under the base resistor is $-31 + 0.8$, so the resistor value can be found:
+
+\[R_b = \frac{V_{cc} - V_o - 0.8}{I_b} = \frac{35 - 31 - 0.8}{0.05} = 64 \textrm{\Omega}\]
+
+At this point, I put these values into a PSpice simulation to see how the output looked with different inputs. With some fiddling around, I found that the output looked reasonable with an input that had an amplitude of 60 V and resistance of 50 $\Omega$. The gain seemed lower when testing at the bandwidth limits (10 Hz and 15 kHz), but I could not get the frequency response to work right.
+
+\bigskip
+
+I have no idea where to go from here. I tried to use common-base and common-emitter amplifiers, but could not get either to work.
+
+\end{document}

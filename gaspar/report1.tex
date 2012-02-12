@@ -1,0 +1,117 @@
+\documentclass[11pt]{report}
+
+\usepackage{lgrind}
+
+\title{Project 1 - The Lookup Protocol}
+\author{ECE 4564 - CRN 91645\\
+Tested on Windows XP\\
+Implemented options: CLR, ALL\\
+Alpha Chen\\
+137-82-8382\\
+alchen@vt.edu}
+\date{September 26, 2004}
+
+\begin{document}
+
+\maketitle
+
+\chapter{Implementation of the Lookup Protocol}
+
+\section{Optional Features}
+
+The optional features implemented in this version of the lookup protocol client and server include the CLR and ALL methods. The first method removes a key-value pair from the table. The second method prompts the server to return all of the key-value pairs currently in the lookup table. Both of these methods were described in the spec, and were trivial to implement using an STL map of strings to strings. The STL map included both a function to remove a key-value pair by key, and also iterator functionality to iterate through all of the data.
+
+The CLR method is sent like the GET method on the client side. The key follows the command, separated by a single space. However, only an OK or ERROR needs to be returned from the server. The ALL method is sent by itself, with no arguments necessary from the client to the server. The response from the server is unique, as it needs to send all of the key and value pairs. This requires special handling by the client, in case the ALL response is longer than the buffer length in the client.
+
+\newpage
+
+\section{Testing Results}
+
+This program was tested on Windows XP, using MS Visual C++ 6.0. There was no opportunity to test on multiple computers, so localhost was used in client testing. All features were found to work properly for small sets of data. There was no opportunity to do unit tests or test large lookup tables, so there is still a possibility of bugs existing there. Each method was tested for: when the set was empty, when the key existed, and when the key did not exist. The "uber evil" client was also tested against the server to ensure that keys and values had to be at most 64 bytes.
+
+An excerpt of the results from manual testing follow:
+
+\begin{verbatim}
+E:\>client.exe
+Beware! This is the Project 1 EVIL client (09/22/2001)
+
+Enter host name: localhost
+Enter port number: 4564
+
+Enter KEY (or just Enter to quit): virginia tech
+Enter VALUE (or just Enter to query server):
+The client received: ERROR "virginia tech" not found.
+Request failed: ERROR "virginia tech" not found.
+
+Enter KEY (or just Enter to quit): virginia tech
+Enter VALUE (or just Enter to query server): hokies
+The client received: OK PUT virginia tech,hokies
+Request was successful: OK PUT virginia tech,hokies
+
+Enter KEY (or just Enter to quit): virginia tech
+Enter VALUE (or just Enter to query server):
+The client received: OK virginia tech,hokies
+Request was successful: Key=virginia tech, Value=hokies
+
+Enter KEY (or just Enter to quit): virginia tech
+Enter VALUE (or just Enter to query server): blacksburg
+The client received: OK PUT virginia tech,blacksburg
+Request was successful: OK PUT virginia tech,blacksburg
+
+Enter KEY (or just Enter to quit): virginia tech
+Enter VALUE (or just Enter to query server):
+The client received: OK virginia tech,blacksburg
+Request was successful: Key=virginia tech, Value=blacksburg
+
+Enter KEY (or just Enter to quit): george mason
+Enter VALUE (or just Enter to query server): fairfax
+The client received: OK PUT george mason,fairfax
+Request was successful: OK PUT george mason,fairfax
+
+Enter KEY (or just Enter to quit):
+\end{verbatim}
+
+The above was also tested with the lookupClient.exe which I wrote.
+
+\begin{verbatim}
+E:\>lookupClient.exe
+Operation (PUT, GET, CLR, ALL, or QUIT)? ALL
+Request was successful.
+All key-value pairs follow:
+
+george mason,fairfax
+virginia tech,blacksburg
+
+Operation (PUT, GET, CLR, ALL, or QUIT)? CLR
+Key? virginia tech
+Request was successful.
+Operation (PUT, GET, CLR, ALL, or QUIT)? ALL
+Request was successful.
+All key-value pairs follow:
+
+george mason,fairfax
+
+Operation (PUT, GET, CLR, ALL, or QUIT)? CLR
+Key? george mason
+Request was successful.
+Operation (PUT, GET, CLR, ALL, or QUIT)? ALL
+Request was successful.
+All key-value pairs follow:
+
+
+Operation (PUT, GET, CLR, ALL, or QUIT)? QUIT
+
+E:\>
+\end{verbatim}
+
+\appendix
+
+\chapter{lookupClient.cpp}
+
+\lgrindfile{lookupClient.tex}
+
+\chapter{lookupServer.cpp}
+
+\lgrindfile{lookupServer.tex}
+
+\end{document}

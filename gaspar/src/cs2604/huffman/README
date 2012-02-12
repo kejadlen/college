@@ -1,0 +1,28 @@
+//	Programmer:	Alpha Chen
+//	Course:		CS2604
+//	Project:	Project 3 - Huffman Coding
+
+//	This set of programs uses a Huffman coding tree to encode
+//  and decode files.
+
+//	For the full specifications, view the link below:
+//	http://courses.cs.vt.edu/~cs2604/fall03/project3.pdf
+
+// On my honor:
+//
+// - I have not used C++ language code obtained from another student,
+// or any other unauthorized source, either modified or unmodified.
+//
+// - All C++ language code and documentation used in my program
+// is either my original work, or was derived, by me, from the source
+// code published in the textbook for this course.
+//
+// - I have not discussed coding details about this project with anyone
+// other than my instructor, ACM/UPE tutors or the GTAs assigned to this
+// course. I understand that I may discuss the concepts of this program
+// with other students, and that another student may help me debug my
+// program so long as neither of us writes anything during the
+// discussion or modifies any computer file during the discussion.
+// I have violated neither the spirit nor letter of this restriction. 
+
+//	Alpha Chen

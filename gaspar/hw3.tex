@@ -1,0 +1,139 @@
+%%% Alpha Chen
+
+\documentclass[11pt]{article}
+\usepackage[pdftex]{graphics}
+\usepackage{graphics}
+\usepackage{fancyhdr}
+\usepackage{amssymb,amsmath}
+\oddsidemargin0cm \topmargin-2cm \textwidth 16.5cm \textheight
+23.5cm
+
+\begin{document}
+\input{epsf.sty}
+
+\newcounter{problem}
+
+\newenvironment{ps}
+{\noindent}
+{\bigskip\bigskip}
+
+\newenvironment{problem}
+{\refstepcounter{problem}\noindent{\large \textbf{Problem \theproblem}}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\newenvironment{problemcit}[1]
+{\refstepcounter{problem}\noindent{\large \textbf{Problem \theproblem}: #1}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+\newenvironment{subproblem}[1]
+{\noindent\textbf{Part (#1)}\\\noindent\begin{itshape}}
+{\end{itshape}\medskip}
+
+\medskip \medskip
+\begin{flushright}
+Alpha Chen \\
+Homework 8 \\
+December 7th, 2004
+\end{flushright}
+
+\sffamily{
+
+\begin{ps}\begin{problemcit}{11.2}Show that the moment of inertia matrix ${}^bI^B$ is symmetric for any choice of reference triad $b$ and reference point $B$.\end{problemcit}
+
+The moment of inertia matrix can be found through the equation
+
+\begin{equation*}
+{}^bI^B_{ij} = \int_V (||r^{BP}||^2\delta_{ij} - {}^b(r^{BP})_i{}^b(r^{BP})_j)\rho(P)dV\text{.}
+\end{equation*}
+
+${}^bI^B$ is symmetric when ${}^bI^B_{ij}={}^bI^B_{ji}$. This is automatically true for $i = j$. Thus, when $i \not = j$,
+
+\begin{eqnarray*}
+{}^bI^B_{ij} & = & -\int_V {}^w(r^{AP})_i{}^w(r^{AP})_j\rho(P)dV\text{,} \\
+{}^bI^B_{ji} & = & -\int_V {}^w(r^{AP})_j{}^w(r^{AP})_i\rho(P)dV\text{,} \\
+{}^bI^B_{ij} & = & {}^bI^B_{ji}\text{,}
+\end{eqnarray*}
+
+and the moment of inertia matrix is symmetric.
+
+\end{ps}
+
+\begin{ps}\begin{problemcit}{11.5}Show that the moment of inertia matrix of a homogeneous cube about its centroid (i.e., its geometric center) is independent of the triad.\end{problemcit}
+
+\begin{equation*}
+{}^wI^A_{ij} = \int_V (||r^{AP}||^2\delta_{ij} - {}^w(r^{AP})_i{}^w(r^{AP})_j)\rho(P)dV
+\end{equation*}
+
+Let the homogeneous cube be represented by
+
+\begin{equation*}
+r^{WP} = w\left(\begin{array}{ccc}x \\ y \\ z\end{array}\right)
+\end{equation*}
+
+\begin{eqnarray*}
+{}^wI^A_{11} & = & \rho_0\int_0^l\int_0^l\int_0^l(y^2+z^2)dxdydz = \frac{2l^5\rho_0}{3} = \frac{2Ml^2}{3} \\
+{}^wI^A_{22} & = & \rho_0\int_0^l\int_0^l\int_0^l(x^2+z^2)dxdydz = \frac{2Ml^2}{3} \\
+{}^wI^A_{33} & = & \rho_0\int_0^l\int_0^l\int_0^l(x^2+y^2)dxdydz = \frac{2Ml^2}{3} \\
+{}^wI^A_{12} & = & {}^wI^A_{21} = -\rho_0\int_0^l\int_0^l\int_0xydxdydz = \frac{-l^5\rho}{4} = \frac{-Ml^2}{4} \\
+{}^wI^A_{23} & = & {}^wI^A_{32} = -\rho_0\int_0^l\int_0^l\int_0yzdxdydz = \frac{-Ml^2}{4} \\
+{}^wI^A_{13} & = & {}^wI^A_{31} = -\rho_0\int_0^l\int_0^l\int_0xzdxdydz = \frac{-Ml^2}{4} \\
+\end{eqnarray*}
+
+This doesn't seem to work correctly. It seems like if the elements of the matrix where $i \not = j$ were 0, then this would work?
+
+\end{ps}
+
+\begin{ps}\begin{problemcit}{11.11}Suppose that there is a force applied to every element of matter in a rigid body whose magnitude is proportional to the amount of mass in the element and whose direction is independent of position in the rigid body. Show that the net force acting on the rigid body is independent of position and orientation of the rigid body and has a magnitude that is proportional to the total mass $M$ of the rigid body. Show that there is no net torque acting on the rigid body.\end{problemcit}
+
+Each element of force can be represented by 
+
+\begin{equation*}
+F_p = (k\rho(P)dV)r{,}
+\end{equation*}
+
+where the magnitude is $k\rho(P)dV$ and the direction is the vector $r$. Thus, the total force exerted can be found by summing up all of the force elements for every element in the rigid body.
+
+\begin{eqnarray*}
+F & = & \int_Vk\rho(P)rdV \\
+& = & kr\int_V\rho(P)dV \\
+& = & krM
+\end{eqnarray*}
+
+It can be seen that the total force has a magnitude proportional to the total mass of the body and a direction independent of the position and orientation of the body. The torque is found by crossing each element of force with the distance from the center of mass of the body.
+
+\begin{equation*}
+T = k\int_V(r^{BP}\times r)\rho(P)dV
+\end{equation*}
+
+The center of mass $B$ from a point $A$ is
+
+\begin{equation*}
+r^{AB} = \frac{1}{M}\int_V r^{AP}\rho(P)dV\text{.}
+\end{equation*}
+
+Thus,
+
+\begin{equation*}
+r^{BB} = 0 = \frac{1}{M}\int_V r^{BP}\rho(P)dV\text{.}
+\end{equation*}
+
+The equation for torque can be rewritten as
+
+\begin{equation*}
+T = k\int_V(r^{BP}\rho(P)dV\times r)\text{.}
+\end{equation*}
+
+Because $r$ is constant,
+
+\begin{eqnarray*}
+T & = & k\left(\int_V(r^{BP}\rho(P)dV\right) \times r \\
+& = & k(0) \times r \\
+& = & 0
+\end{eqnarray*}
+
+\end{ps}
+
+\begin{ps}\begin{problemcit}{11.13}Suppose that the center of mass of a rigid body moves along an elliptical curve with linear speed inversely proportional to the distance from the center of the ellipse. Find the net force that must be acting on the rigid body.\end{problemcit}
+
+\end{ps}
+
+\end{document}
